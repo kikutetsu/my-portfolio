@@ -1,11 +1,19 @@
 import React from "react"
 import HelloList from "./HelloList"
 
-const HelloWorld = props => {
+const HelloWorld = ({datas}) => {
+  let list = []
+  datas.map((data) => {
+    list.push(
+      <div>
+        <h3>hello, {data.content}</h3>
+        <HelloList />
+      </div>
+    )
+  })
   return (
     <div>
-      <h3>hello, {props.data.content}</h3>
-      <HelloList />
+      {list}
     </div>
   );
 }
