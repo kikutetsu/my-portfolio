@@ -23,9 +23,19 @@ class PostsController < ApplicationController
   end
 
   def edit
+    @post = Post.find_by(id: params[:id])
   end
 
   def update
+    @post = Post.find_by(id: params[:id])
+    @post.content = params[:content]
+    if @post.save
+      flash[:notice] = "おっけー"
+      redirect_to("/posts/#{@post.id}")
+    else
+      flash[:notice] = "だめー"
+      render("posts/edit")
+    end
   end
 
   def destroy
