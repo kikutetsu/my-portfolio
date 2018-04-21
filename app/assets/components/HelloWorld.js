@@ -4,7 +4,7 @@ import HelloList from "./HelloList"
 const HelloWorld = props => {
   return (
     <div>
-      <h3>hello, {props.data}</h3>
+      <h3>hello, {props.data.content}</h3>
       <HelloList />
     </div>
   );
