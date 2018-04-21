@@ -1,5 +1,7 @@
 <%= form_tag("/works/create") do %>
-  <input type="text" name="title" value="<%= @work.content %>">
-  <textarea name="content"><%= @work.content %></textarea>
+  <input type="text" name="title" value="<%= @work.title %>">
+  <input type="text" name="category" value="<%= @work.category %>">
+  <input type="text" name="slug" value="<%= @work.slug %>">
+  <textarea name="description"><%= @work.description %></textarea>
   <input type="submit" value="作成">
 <% end %>

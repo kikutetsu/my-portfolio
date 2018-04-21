@@ -1,5 +1,6 @@
 class WorksController < ApplicationController
   def index
+    @works = Work.all
   end
 
   def show
@@ -11,10 +12,10 @@ class WorksController < ApplicationController
   end
 
   def create
-    @work = Work.new(title: params[:title], content: params[:content])
+    @work = Work.new(title: params[:title], category: params[:category], slug: params[:slug], description: params[:description])
     if @work.save
       flash[:notice] = "おっけー"
-      render("works/new")
+      redirect_to("/works/#{@work.id}")
     else
       flash[:notice] = "だめー"
       render("works/new")
@@ -28,7 +29,9 @@ class WorksController < ApplicationController
   def update
     @work = Work.find_by(id: params[:id])
     @work.title = params[:title]
-    @work.content = params[:content]
+    @work.category = params[:category]
+    @work.slug = params[:slug]
+    @work.description = params[:description]
     if @work.save
       flash[:notice] = "おっけー"
       redirect_to("/works/#{@work.id}")

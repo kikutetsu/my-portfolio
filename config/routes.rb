@@ -1,7 +1,15 @@
 Rails.application.routes.draw do
   get 'home/top'
+
+  #works
   get 'works/' => 'works#index'
+  get 'works/new' => 'works#new'
+  post 'works/create' => 'works#create'
+  get 'works/:id/edit' => 'works#edit'
+  post 'works/:id/update' => 'works#update'
   get 'works/:id' => 'works#show'
+
+  #posts
   get 'posts/' => 'posts#index'
   get 'posts/new' => 'posts#new'
   post 'posts/create' => 'posts#create'
