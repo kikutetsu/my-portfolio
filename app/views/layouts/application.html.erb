@@ -3,8 +3,8 @@
   <head>
     <title>MyPortfolio</title>
     <%= csrf_meta_tags %>
-
     <%= stylesheet_pack_tag 'app' %>
+    <%= yield :page_specific_styles %>
     <%= javascript_pack_tag 'app' %>
   </head>
 

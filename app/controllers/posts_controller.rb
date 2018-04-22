@@ -41,7 +41,7 @@ class PostsController < ApplicationController
     end
     if @post.save
       flash[:notice] = "おっけー"
-      redirect_to("/posts/#{@post.id}")
+      redirect_to("/notes/#{@post.id}")
     else
       flash[:notice] = "だめー"
       render("posts/edit")

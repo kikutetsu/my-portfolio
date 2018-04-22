@@ -1,3 +1,9 @@
+<% content_for :page_specific_styles do %>
+  <style>
+    <%= Rouge::Themes::Monokai.render(:scope => '.highlight') %>
+  </style>
+<% end %>
+
 <h2><%= @post.title %></h2><p><%= @post.tag %></p>
 <%= image_tag("/posts/main_images/#{@post.main_image}") %>
 <%= sanitize markdown(@post.content) %>
