@@ -2,6 +2,7 @@
   <input type="text" name="title" value="<%= @work.title %>">
   <%= select :category, :name, {"design" => "design", "editorial" => "editorial", "web" => "web", "UI/UX" => "UI/UX"}, :selected => @work.category %>
   <input type="text" name="slug" value="<%= @work.slug %>">
+  <input type="number" name="image_length" value="<%= @work.image_length %>">
   <textarea name="description"><%= @work.description %></textarea>
   <input type="submit" value="作成">
 <% end %>
