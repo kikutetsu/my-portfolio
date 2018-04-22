@@ -29,7 +29,7 @@ class WorksController < ApplicationController
   def update
     @work = Work.find_by(id: params[:id])
     @work.title = params[:title]
-    @work.category = params[:category]
+    @work.category = params[:category][:name]
     @work.slug = params[:slug]
     @work.description = params[:description]
     @work.image_length = params[:image_length]
