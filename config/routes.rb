@@ -9,12 +9,12 @@ Rails.application.routes.draw do
   post 'works/:id/update' => 'works#update'
   get 'works/:id' => 'works#show'
 
-  #posts
-  get 'posts/' => 'posts#index'
-  get 'posts/new' => 'posts#new'
-  post 'posts/create' => 'posts#create'
-  get 'posts/:id/edit' => 'posts#edit'
-  post 'posts/:id/update' => 'posts#update'
-  get 'posts/:id' => 'posts#show'
+  #notes
+  get 'notes/' => 'posts#index'
+  get 'notes/new' => 'posts#new'
+  post 'notes/create' => 'posts#create'
+  get 'notes/:id/edit' => 'posts#edit'
+  post 'notes/:id/update' => 'posts#update'
+  get 'notes/:id' => 'posts#show'
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end

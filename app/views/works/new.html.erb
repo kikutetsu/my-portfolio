@@ -1,6 +1,6 @@
 <%= form_tag("/works/create") do %>
   <input type="text" name="title" value="<%= @work.title %>">
-  <input type="text" name="category" value="<%= @work.category %>">
+  <%= select :category, :name, {"design" => "design", "editorial" => "editorial", "web" => "web", "UI/UX" => "UI/UX"}, :selected => @work.category %>
   <input type="text" name="slug" value="<%= @work.slug %>">
   <textarea name="description"><%= @work.description %></textarea>
   <input type="submit" value="作成">

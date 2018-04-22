@@ -12,7 +12,7 @@ class WorksController < ApplicationController
   end
 
   def create
-    @work = Work.new(title: params[:title], category: params[:category], slug: params[:slug], description: params[:description])
+    @work = Work.new(title: params[:title], category: params[:category][:name], slug: params[:slug], description: params[:description])
     if @work.save
       flash[:notice] = "おっけー"
       redirect_to("/works/#{@work.id}")
