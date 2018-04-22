@@ -1,7 +1,8 @@
 <% content_for :page_specific_styles do %>
   <style>
-    <%= Rouge::Themes::Monokai.render(:scope => '.highlight') %>
+    <%= Rouge::Themes::Molokai.render(:scope => '.highlight') %>
   </style>
+  <%= stylesheet_pack_tag 'rouge_custom' %>
 <% end %>
 
 <h2><%= @post.title %></h2><p><%= @post.tag %></p>

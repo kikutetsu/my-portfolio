@@ -1,0 +1,24 @@
+div.highlight {
+  line-height: 1.8;
+  padding: 15px 30px;
+  margin: 20px 0;
+  background-color: #364549;
+  > pre {
+    padding: 10px;
+    margin: 0;
+    background-color: #364549;
+  }
+  .k { color: #ebd247; }
+  .nc { color: #8bdf4c;}
+  .no { color: #ebd247;}
+  .nx { color: #8bdf4c; }
+  .nl { color: #e3e3e3; }
+  .n { color: #e3e3e3; }
+  .ss { color: #41b7d7; }
+  .c1 { color: #9dabae; }
+  .mi { color: #a980f5; }
+  .m { color: #a980f5; }
+  .p { color: #e3e3e3; }
+  .nd { color: #8bdf4c; }
+  .mh { color: #a980f5; }
+}
