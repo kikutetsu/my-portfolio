@@ -1,5 +1,8 @@
 <% @works.each do |work| %>
   <div>
-    <img src="<%= asset_pack_path "images/works/#{work.category}/#{work.slug}/#{work.id}.jpg" %>">
+    <img src="<%= asset_pack_path "images/works/#{work.category}/#{work.slug}/thumb.jpg" %>">
+    <h3><%= work.title %></h3>
+    <p><%= work.category %></p>
+    <p>見る</p>
   </div>
 <% end %>
