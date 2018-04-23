@@ -7,4 +7,6 @@
 
 <h2><%= @post.title %></h2><p><%= @post.tag %></p>
 <%= image_tag("/posts/main_images/#{@post.main_image}") %>
-<%= sanitize markdown(@post.content) %>
+<div class="content">
+  <%= sanitize markdown(@post.content) %>
+</div>

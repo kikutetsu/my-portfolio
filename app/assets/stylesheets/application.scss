@@ -1,1 +1,56 @@
 @import 'normalize';
+
+$main-color: #F8E71C;
+
+body {
+  margin: 0;
+  padding: 0;
+  border: 30px solid transparent;
+  &:before,
+  &:after {
+      z-index: 0;
+      content: '';
+      user-select: none;
+      pointer-events: none;
+      position: fixed;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      top: 0;
+      border: inherit;
+      border-bottom-width: 0;
+      border-color: $main-color;
+      will-change: border-color;
+  }
+  &:after {
+      border-width: 0;
+      border-bottom-width: 30px;
+      // z-index: 101;
+  }
+}
+
+.wrapper {
+    margin: auto;
+    position: relative;
+    z-index: 100;
+}
+
+.wrapper {
+    margin: auto;
+    &.inner {
+      max-width: 680px;
+    }
+}
+
+.content {
+  padding: 0 30px;
+  img {
+    width: 100%;
+  }
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+}

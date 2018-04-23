@@ -1,12 +1,13 @@
 div.highlight {
   line-height: 1.8;
   padding: 15px 30px;
-  margin: 20px 0;
+  margin: 20px -30px;
   background-color: #364549;
   > pre {
     padding: 10px;
     margin: 0;
     background-color: #364549;
+    overflow-x: auto;
   }
   .k { color: #ebd247; }
   .nc { color: #8bdf4c;}

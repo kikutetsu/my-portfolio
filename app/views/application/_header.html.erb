@@ -1,0 +1,18 @@
+<header class="header">
+  <nav>
+    <ul>
+      <li><%= link_to("notes", "/notes") %></li>
+      <li><%= link_to("works", "/works") %></li>
+      <% if session[:user_id] %>
+        <li>
+          <%= @current_user.name %>
+          <%= link_to "ログアウト", "/logout", {method: "post"} %>
+        </li>
+      <% else %>
+        <li>
+          <%= link_to("login", "/login") %>
+        </li>
+      <% end %>
+    </ul>
+  </nav>
+</header>
