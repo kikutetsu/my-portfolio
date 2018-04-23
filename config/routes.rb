@@ -1,6 +1,11 @@
 Rails.application.routes.draw do
   get 'home/top'
 
+  #users
+  get 'login' => 'users#login_form'
+  post 'login' => 'users#login'
+  post 'logout' => 'users#logout'
+
   #works
   get 'works/' => 'works#index'
   get 'works/new' => 'works#new'

@@ -14,6 +14,12 @@
         <%= flash[:notice] %>
       </div>
     <% end %>
+    <% if session[:user_id] %>
+      <p><%= @current_user.name %></p>
+      <%= link_to "ログアウト", "/logout", {method: "post"} %>
+    <% else %>
+      <%= link_to("login", "/login") %>
+    <% end %>
     <%= yield %>
   </body>
 </html>

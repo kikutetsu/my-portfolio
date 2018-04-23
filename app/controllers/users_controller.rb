@@ -1,4 +1,6 @@
 class UsersController < ApplicationController
+  before_action :authenticate_user, {only: [:index, :new, :show, :edit]}
+
   def index
     @users = User.all
   end
@@ -39,4 +41,31 @@ class UsersController < ApplicationController
     end
   end
 
+  def login_form
+  end
+
+  def login
+    @user = User.find_by(name: params[:name])
+    if @user && @user.authenticate(params[:password])
+      session[:user_id] = @user.id
+      flash[:notice] = "ろぐいーん"
+      redirect_to("/users/")
+    else
+      flash[:notice] = "できませんでしたー"
+      render("users/new")
+    end
+  end
+
+  def logout
+    session[:user_id] = nil
+    flash[:notice] = "ろぐあーうと"
+    redirect_to("/")
+  end
+
+  def ensure_correct_user
+    if @current_user.id != params[:id].to_i
+      flash[:notice] = "できませんでしたー"
+      redirect_to("/")
+    end
+  end
 end
