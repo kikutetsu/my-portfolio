@@ -16,5 +16,12 @@ Rails.application.routes.draw do
   get 'notes/:id/edit' => 'posts#edit'
   post 'notes/:id/update' => 'posts#update'
   get 'notes/:id' => 'posts#show'
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  #users
+  get 'users/' => 'users#index'
+  get 'users/new' => 'users#new'
+  post 'users/create' => 'users#create'
+  get 'users/:id/edit' => 'users#edit'
+  post 'users/:id/update' => 'users#update'
+  get 'users/:id' => 'users#show'
 end
