@@ -1,5 +1,7 @@
 <h1><%= @work.title %></h1>
 <p><%= @work.category %></p>
 <p><%= @work.description %></p>
-<img src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/#{@work.id}.jpg" %>">
+<% @work.image_length.times do |image| %>
+  <img src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/#{image + 1}.jpg" %>">
+<% end %>
 <%= link_to("編集", "/works/#{@work.id}/edit") %>
