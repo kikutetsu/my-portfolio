@@ -1,6 +1,6 @@
 <%= form_tag("/users/create") do %>
   <input type="text" name="name" value="<%= @user.name %>">
   <input type="password" name="password" value="<%= @user.password %>">
-  <%= check_box 'user_type', 'admin', {:checked => false}, true, false %>
+  <%= check_box 'user_type', 'admin', {:checked => "false"}, "true", "false" %>
   <input type="submit" value="作成">
 <% end %>
