@@ -12,4 +12,11 @@ class ApplicationController < ActionController::Base
       redirect_to("/")
     end
   end
+
+  def user_admin?
+    if @current_user == nil || @current_user.user_type?
+      flash[:notice] = "権限がありません"
+      redirect_to("/")
+    end
+  end
 end
