@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  before_action :authenticate_user, {only: [:index, :new, :show, :edit]}
+  # before_action :authenticate_user, {only: [:index, :new, :show, :edit]}
 
   def index
     @users = User.all
@@ -14,7 +14,7 @@ class UsersController < ApplicationController
   end
 
   def create
-    @user = User.new(name: params[:name], password: params[:password])
+    @user = User.new(name: params[:name], password: params[:password], user_type: params[:user_type][:admin])
     if @user.save
       flash[:notice] = "おっけー"
       redirect_to("/users/")
@@ -32,6 +32,7 @@ class UsersController < ApplicationController
     @user = User.find_by(id: params[:id])
     @user.name = params[:name]
     @user.password = params[:password]
+    @user.user_type = params[:user_type][:admin]
     if @user.save
       flash[:notice] = "おっけー"
       redirect_to("/users/")
