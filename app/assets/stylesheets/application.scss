@@ -1,19 +1,27 @@
-@import "//fonts.googleapis.com/earlyaccess/notosansjp.css";
+@import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import "//fonts.googleapis.com/css?family=Open+Sans";
 @import 'normalize';
 
-$main-color: #F8E71C;
+$main-color: #47ffd4;
+$font-color: #222;
 
 html {
   font-family: "Open Sans", 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
+*,
+*:before,
+*:after,
+a {
+  transition: all .2s ease;
+}
+
 body {
   margin: 0;
   padding: 0;
-  border: 30px solid transparent;
+  border: 50px solid transparent;
   overflow-x: hidden;
-  color: #222222;
+  color: $font-color;
   line-height: 1.5;
   word-wrap: break-word;
   &:before,
@@ -29,20 +37,49 @@ body {
       top: 0;
       border: inherit;
       border-bottom-width: 0;
+      border-top-width: 0;
       border-color: $main-color;
       will-change: border-color;
   }
-  &:after {
-      border-width: 0;
-      border-bottom-width: 30px;
-      // z-index: 101;
-  }
+  // &:after {
+  //     border-width: 0;
+  //     border-bottom-width: 50px;
+  //     z-index: 101;
+  // }
 }
 
+// reset
+h1,h2,h3,h4,h5,h6,ul,ol {
+  padding: 0;
+  margin: 0;
+}
+li {
+  list-style: none;
+}
+
+p {
+  font-size: 18px;
+  line-height: 2;
+}
+
+img {
+  width: 100%;
+}
+
+a {
+  text-decoration: none;
+}
+
+img {
+  box-sizing: border-box;
+  border: 4px solid #f5f5f5;
+}
+// layout
+
 .wrapper {
-  margin: auto;
+  margin: 40px auto;
   position: relative;
-  z-index: 100;
+  z-index: 110;
   &.inner {
     max-width: 680px;
   }
@@ -57,10 +94,152 @@ body {
 
 .header {
   position: fixed;
+  display: flex;
+  width: 100%;
   top: 0;
   left: 0;
+  padding: 30px;
+  box-sizing: border-box;
+  z-index: 200;
+  pointer-events: none;
+  .header-logo {
+    flex-basis: 200px;
+    pointer-events: painted;
+    a {
+      display: block;
+      font-weight: 900;
+      font-size: 24px;
+      line-height: 40px;
+      color: $font-color;
+      &:hover {
+        span {
+          margin-right: 30px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+  .header-blank {
+    flex-basis: 100%;
+    height: 0;
+  }
+  .header-nav {
+    padding-top: 100px;
+    flex-basis: auto;
+    pointer-events: painted;
+    .nav-list {
+      li {
+        margin-bottom: 20px;
+      }
+      a {
+        position: relative;
+        display: block;
+        padding: 8px 0;
+        font-size: 24px;
+        font-weight: 700;
+        color: $font-color;
+        &:before {
+          content: "";
+          display: block;
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 20px;
+          height: 4px;
+          background-color: $font-color;
+        }
+        &:hover {
+          &:before {
+            width: 60px;
+          }
+        }
+      }
+    }
+    .user-action {
+      a {
+        display: block;
+        font-size: 14px;
+        font-weight: 700;
+        color: $font-color;
+        &:hover {
+          span {
+            margin-right: 3px;
+          }
+        }
+      }
+    }
+  }
 }
 
-li {
-  list-style: none;
+.page-title {
+  position: fixed;
+  left: 30px;
+  bottom: 20px;
+  color: $font-color;
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: -2px;
+  line-height: 1.2;
+  z-index: 100;
+}
+
+// works
+
+.card-container {
+  display: flex;
+  flex-flow: row wrap;
+  * {
+    line-height: 1.2;
+  }
+  a {
+    display: block;
+    color: $font-color;
+    &:hover {
+      img {
+        transform: scale(.9, .9);
+      }
+      .title {
+        color: $main-color;
+      }
+    }
+  }
+  .card {
+    box-sizing: border-box;
+    width: 50%;
+    padding: 30px;
+    .title {
+      margin: 10px 0;
+      font-size: 20px;
+      font-weight: 900;
+    }
+    .category {
+      display: inline-block;
+      margin: 0;
+      padding: 1px;
+      font-size: 11px;
+      font-weight: 700;
+      position: relative;
+      background-color: white;
+      color: $main-color;
+      &:hover {
+        background-color: $main-color;
+        color: white;
+      }
+    }
+  }
+}
+
+.works-img {
+  margin-bottom: 30px;
+}
+
+.content-title {
+  font-size: 36px;
+  font-weight: 900;
+}
+
+.content-meta {
+  margin: 0;
+  font-size: 14px;
+  color: #aaa;
 }

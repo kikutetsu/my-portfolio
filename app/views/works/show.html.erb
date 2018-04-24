@@ -1,8 +1,13 @@
-<h1><%= @work.title %></h1>
-<p><%= @work.category %></p>
+<% content_for :page_title do%>
+  <h2 class="page-title">notes</h2>
+<% end %>
+
+<!-- <%= link_to("編集", "/works/#{@work.id}/edit") %>
+<%= link_to("削除", "/works/#{@work.id}/destroy", {method: :post}) %> -->
+
+<h3 class="content-title"><%= @work.title %></h1>
+<p class="content-meta"><%= @work.category %></p>
 <p><%= @work.description %></p>
 <% @work.image_length.times do |image| %>
-  <img src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/#{image + 1}.jpg" %>">
+  <img class="works-img" src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/#{image + 1}.jpg" %>">
 <% end %>
-<%= link_to("編集", "/works/#{@work.id}/edit") %>
-<%= link_to("削除", "/works/#{@work.id}/destroy", {method: :post}) %>

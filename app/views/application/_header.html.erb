@@ -1,18 +1,27 @@
 <header class="header">
-  <nav>
-    <ul>
+  <div class="header-logo">
+    <%= link_to("/") do %>
+      <span>デ</span><span>ザ</span><span>イ</span><span>ン</span><span>、</span><br>
+      <span>開</span><span>発</span><span>、</span><br>
+      <span>た</span><span>の</span><span>し</span><span>い</span><span>。</span>
+    <% end %>
+  </div>
+  <div class="header-blank"></div>
+  <nav class="header-nav">
+    <ul class="nav-list">
       <li><%= link_to("notes", "/notes") %></li>
       <li><%= link_to("works", "/works") %></li>
-      <% if session[:user_id] %>
-        <li>
-          <%= @current_user.name %>
-          <%= link_to "ログアウト", "/logout", {method: "post"} %>
-        </li>
-      <% else %>
-        <li>
-          <%= link_to("login", "/login") %>
-        </li>
-      <% end %>
     </ul>
+    <div class="user-action">
+      <% if session[:user_id] %>
+        <%= link_to "/logout", {method: "post"} do %>
+          <span>l</span><span>o</span><span>g</span><span>o</span><span>u</span><span>t</span>
+        <% end %>
+        <!-- admin only -->
+        <%= link_to("users", "/users") %>
+      <% else %>
+        <%= link_to("login", "/login") %>
+      <% end %>
+    </div>
   </nav>
 </header>

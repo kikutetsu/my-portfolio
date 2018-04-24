@@ -1,12 +1,17 @@
 <!-- <%= react_component("PostList", {datas: @posts}) %> -->
+<% content_for :page_title do%>
+  <h2 class="page-title">notes</h2>
+<% end %>
+
 <%= link_to("追加", "/notes/new") %>
+<div class="card-container">
 <% @posts.each do |post| %>
-  <div>
+  <div class="card">
     <%= link_to("/notes/#{post.id}") do %>
       <%= image_tag("/posts/main_images/#{post.main_image}") %>
       <h3><%= post.title %></h3>
       <p><%= post.tag %></p>
-      <p>見る</p>
     <% end %>
   </div>
 <% end %>
+</div>
