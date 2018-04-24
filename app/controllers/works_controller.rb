@@ -43,5 +43,9 @@ class WorksController < ApplicationController
   end
 
   def destroy
+    @work = Work.find_by(id: params[:id])
+    @work.destroy
+    flash[:notice] = "削除しました"
+    redirect_to("/works")
   end
 end

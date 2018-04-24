@@ -10,3 +10,6 @@
 <div class="content">
   <%= sanitize markdown(@post.content) %>
 </div>
+
+<%= link_to("編集", "/notes/#{@post.id}/edit" %>
+<%= link_to("削除", "/notes/#{@post.id}/destroy", {method: :post}) %>

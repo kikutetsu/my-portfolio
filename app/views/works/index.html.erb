@@ -1,8 +1,11 @@
+<%= link_to("追加", "/works/new") %>
 <% @works.each do |work| %>
   <div>
-    <img src="<%= asset_pack_path "images/works/#{work.category}/#{work.slug}/thumb.jpg" %>">
-    <h3><%= work.title %></h3>
-    <p><%= work.category %></p>
-    <p>見る</p>
+    <%= link_to("/works/#{work.id}") do %>
+      <img src="<%= asset_pack_path "images/works/#{work.category}/#{work.slug}/thumb.jpg" %>">
+      <h3><%= work.title %></h3>
+      <p><%= work.category %></p>
+      <p>見る</p>
+    <% end %>
   </div>
 <% end %>

@@ -1,9 +1,12 @@
 <!-- <%= react_component("PostList", {datas: @posts}) %> -->
+<%= link_to("追加", "/notes/new") %>
 <% @posts.each do |post| %>
   <div>
-    <%= image_tag("/posts/main_images/#{post.main_image}") %>
-    <h3><%= post.title %></h3>
-    <p><%= post.tag %></p>
-    <p>見る</p>
+    <%= link_to("/notes/#{post.id}") do %>
+      <%= image_tag("/posts/main_images/#{post.main_image}") %>
+      <h3><%= post.title %></h3>
+      <p><%= post.tag %></p>
+      <p>見る</p>
+    <% end %>
   </div>
 <% end %>

@@ -1,6 +1,8 @@
+<%= link_to("追加", "/users/new") %>
 <% @users.each do |user| %>
   <div>
-    <p><%= user.name %></p>
-    <p><%= user.password %></p>
+    <%= link_to("/users/#{user.id}") do %>
+      <p><%= user.name %></p>
+    <% end %>
   </div>
 <% end %>

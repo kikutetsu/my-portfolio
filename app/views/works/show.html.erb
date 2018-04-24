@@ -5,3 +5,4 @@
   <img src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/#{image + 1}.jpg" %>">
 <% end %>
 <%= link_to("編集", "/works/#{@work.id}/edit") %>
+<%= link_to("削除", "/works/#{@work.id}/destroy", {method: :post}) %>
