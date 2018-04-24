@@ -1,11 +1,21 @@
+@import "//fonts.googleapis.com/earlyaccess/notosansjp.css";
+@import "//fonts.googleapis.com/css?family=Open+Sans";
 @import 'normalize';
 
 $main-color: #F8E71C;
+
+html {
+  font-family: "Open Sans", 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+}
 
 body {
   margin: 0;
   padding: 0;
   border: 30px solid transparent;
+  overflow-x: hidden;
+  color: #222222;
+  line-height: 1.5;
+  word-wrap: break-word;
   &:before,
   &:after {
       z-index: 0;
@@ -30,16 +40,12 @@ body {
 }
 
 .wrapper {
-    margin: auto;
-    position: relative;
-    z-index: 100;
-}
-
-.wrapper {
-    margin: auto;
-    &.inner {
-      max-width: 680px;
-    }
+  margin: auto;
+  position: relative;
+  z-index: 100;
+  &.inner {
+    max-width: 680px;
+  }
 }
 
 .content {
@@ -53,4 +59,8 @@ body {
   position: fixed;
   top: 0;
   left: 0;
+}
+
+li {
+  list-style: none;
 }
