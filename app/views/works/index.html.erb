@@ -1,7 +1,10 @@
-<!-- <%= link_to("追加", "/works/new") %> -->
 <% content_for :page_title do%>
   <h2 class="page-title">works</h2>
 <% end %>
+
+<div class="admin-action">
+  <%= link_to("追加", "/works/new") %>
+</div>
 
 <div class="card-container">
 <% @works.each do |work| %>

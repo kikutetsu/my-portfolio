@@ -3,14 +3,17 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
-<%= link_to("追加", "/notes/new") %>
+<div class="admin-action">
+  <%= link_to("追加", "/notes/new") %>
+</div>
+
 <div class="card-container">
 <% @posts.each do |post| %>
   <div class="card">
     <%= link_to("/notes/#{post.id}") do %>
       <%= image_tag("/posts/main_images/#{post.main_image}") %>
-      <h3><%= post.title %></h3>
-      <p><%= post.tag %></p>
+      <h3 class="title"><%= post.title %></h3>
+      <p class="category"><%= post.tag %></p>
     <% end %>
   </div>
 <% end %>

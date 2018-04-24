@@ -2,8 +2,10 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
-<%= link_to("編集", "/notes/#{@post.id}/edit") %>
-<%= link_to("削除", "/notes/#{@post.id}/destroy", {method: :post}) %>
+<div class="admin-action">
+  <%= link_to("編集", "/notes/#{@post.id}/edit") %>
+  <%= link_to("削除", "/notes/#{@post.id}/destroy", {method: :post}) %>
+</div>
 
 <% content_for :page_specific_styles do %>
   <style>
@@ -12,7 +14,8 @@
   <%= stylesheet_pack_tag 'rouge_custom' %>
 <% end %>
 
-<h2><%= @post.title %></h2><p><%= @post.tag %></p>
+<h2 class="content-title"><%= @post.title %></h2>
+<p class="content-meta"><%= @post.tag %></p>
 <%= image_tag("/posts/main_images/#{@post.main_image}") %>
 <div class="content">
   <%= sanitize markdown(@post.content) %>

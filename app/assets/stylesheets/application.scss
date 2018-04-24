@@ -2,8 +2,9 @@
 @import "//fonts.googleapis.com/css?family=Open+Sans";
 @import 'normalize';
 
-$main-color: #47ffd4;
+$main-color: #ffe500;
 $font-color: #222;
+$text-color: #444;
 
 html {
   font-family: "Open Sans", 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
@@ -36,8 +37,8 @@ body {
       bottom: 0;
       top: 0;
       border: inherit;
-      border-bottom-width: 0;
-      border-top-width: 0;
+      border-bottom-width: 30px;
+      border-top-width: 30px;
       border-color: $main-color;
       will-change: border-color;
   }
@@ -49,7 +50,7 @@ body {
 }
 
 // reset
-h1,h2,h3,h4,h5,h6,ul,ol {
+h1,h2,h3,h4,h5,h6,ul,ol,p {
   padding: 0;
   margin: 0;
 }
@@ -60,6 +61,8 @@ li {
 p {
   font-size: 18px;
   line-height: 2;
+  font-weight: 350;
+  color: $text-color;
 }
 
 img {
@@ -183,6 +186,11 @@ img {
   z-index: 100;
 }
 
+.admin-action {
+  position: absolute;
+  right: 0;
+}
+
 // works
 
 .card-container {
@@ -234,12 +242,17 @@ img {
 }
 
 .content-title {
-  font-size: 36px;
-  font-weight: 900;
+  font-size: 48px;
+  font-weight: 700;
+  padding-top: 30px;
 }
 
 .content-meta {
-  margin: 0;
+  margin-bottom: 20px;
   font-size: 14px;
-  color: #aaa;
+  color: $main-color;
+}
+
+.content-description {
+  margin-bottom: 40px;
 }
