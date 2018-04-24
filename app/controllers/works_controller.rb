@@ -1,4 +1,6 @@
 class WorksController < ApplicationController
+  before_action :check_admin_user, except: %i[show index]
+
   def index
     @works = Work.all
   end

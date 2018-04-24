@@ -7,16 +7,14 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user
-    if @current_user == nil
-      flash[:notice] = "ログインしてください"
-      redirect_to("/")
-    end
+    return if @current_user
+    flash[:notice] = "ログインしてください"
+    redirect_to("/")
   end
 
-  def user_admin?
-    if @current_user == nil || @current_user.user_type?
-      flash[:notice] = "権限がありません"
-      redirect_to("/")
-    end
+  def check_admin_user
+    return if @current_user && @current_user.user_type?
+    flash[:notice] = "権限がありません"
+    redirect_to("/")
   end
 end

@@ -1,4 +1,6 @@
 class PostsController < ApplicationController
+  before_action :check_admin_user, except: %i[show index]
+
   def index
     @posts = Post.all
   end

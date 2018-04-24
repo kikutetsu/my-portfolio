@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :authenticate_user, {only: [:index, :new, :show, :edit]}
+  before_action :check_admin_user, except: %i[login_form login logout]
 
   def index
     @users = User.all
