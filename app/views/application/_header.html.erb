@@ -17,10 +17,9 @@
         <%= link_to "/logout", {method: "post"} do %>
           <span>l</span><span>o</span><span>g</span><span>o</span><span>u</span><span>t</span>
         <% end %>
-        <!-- admin only -->
-        <%= link_to("users", "/users") %>
-      <% else %>
-        <%= link_to("login", "/login") %>
+        <% if is_admin? %>
+          <%= link_to("users", "/users") %>
+        <% end %>
       <% end %>
     </div>
   </nav>

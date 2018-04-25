@@ -3,9 +3,11 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
-<div class="admin-action">
-  <%= link_to("追加", "/notes/new") %>
-</div>
+<% if is_admin? %>
+  <div class="admin-action">
+    <%= link_to("追加", "/notes/new") %>
+  </div>
+<% end %>
 
 <div class="card-container">
 <% @posts.each do |post| %>

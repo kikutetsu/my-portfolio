@@ -2,9 +2,11 @@
   <h2 class="page-title">works</h2>
 <% end %>
 
-<div class="admin-action">
-  <%= link_to("追加", "/works/new") %>
-</div>
+<% if is_admin? %>
+  <div class="admin-action">
+    <%= link_to("追加", "/works/new") %>
+  </div>
+<% end %>
 
 <div class="card-container">
 <% @works.each do |work| %>

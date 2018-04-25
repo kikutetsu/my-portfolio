@@ -7,14 +7,25 @@ class ApplicationController < ActionController::Base
   end
 
   def authenticate_user
-    return if @current_user
+    return if is_login?
     flash[:notice] = "ログインしてください"
-    redirect_to("/")
+    redirect_to("/login")
   end
 
   def check_admin_user
-    return if @current_user && @current_user.user_type?
+    return if is_admin?
     flash[:notice] = "権限がありません"
     redirect_to("/")
   end
+
+  def is_admin?
+    @current_user && @current_user.user_type?
+  end
+
+  def is_login?
+    @current_user.present?
+  end
+
+  helper_method :is_admin?
+  helper_method :is_login?
 end
