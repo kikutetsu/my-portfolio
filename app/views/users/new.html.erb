@@ -1,6 +1,11 @@
-<%= form_tag("/users/create") do %>
-  <input type="text" name="name" value="<%= @user.name %>">
-  <input type="password" name="password" value="<%= @user.password %>">
-  <%= check_box 'user_type', 'admin', {checked: 'false'}, 'true', 'false' %>
-  <input type="submit" value="作成">
-<% end %>
+<div class="form-container">
+  <%= form_tag("/users/create") do %>
+    <label>ユーザーID</label>
+    <input type="text" name="name" value="<%= @user.name %>">
+    <label>パスワード</label>
+    <input type="password" name="password" value="<%= @user.password %>">
+    <label>管理者権限</label>
+    <%= check_box 'user_type', 'admin', {checked: @user.user_type}, 'true', 'false' %>
+    <button type="submit">作成</button>
+  <% end %>
+</div>

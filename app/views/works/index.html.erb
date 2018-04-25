@@ -4,7 +4,7 @@
 
 <% if is_admin? %>
   <div class="admin-action">
-    <%= link_to("追加", "/works/new") %>
+    <%= link_to("/works/new") do %><span>追加</span></%><% end %>
   </div>
 <% end %>
 

@@ -1,6 +1,11 @@
-<%= form_tag("/users/#{@user.id}/update") do %>
-  <input type="text" name="name" value="<%= @user.name %>">
-  <input type="password" name="password" value="<%= @user.password %>">
-  <%= check_box 'user_type', 'admin', {checked: @user.user_type}, 'true', 'false' %>
-  <input type="submit" value="修正">
-<% end %>
+<div class="form-container">
+  <%= form_tag("/users/#{@user.id}/update") do %>
+    <label>ユーザーID</label>
+    <input type="text" name="name" value="<%= @user.name %>">
+    <label>パスワード</label>
+    <input type="password" name="password" value="<%= @user.password %>">
+    <label>管理者権限</label>
+    <%= check_box 'user_type', 'admin', {checked: @user.user_type}, 'true', 'false' %>
+    <input type="submit" value="修正">
+  <% end %>
+</div>

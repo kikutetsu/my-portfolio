@@ -1,17 +1,23 @@
-<%= form_tag("/notes/#{@post.id}/update", {multipart: true}) do %>
-  <input type="text" name="title" value="<%= @post.title %>">
-  <%= select :post, :tag, {
-      "design" => "design",
-      "html" => "html",
-      "css" => "css",
-      "javascript" => "javascript",
-      "rails" => "rails"
-    }, selected: @post.tag %>
-  <input type="file" name="main_image">
-  <textarea name="content"><%= @post.content %></textarea>
-  <%= select :post, :status, {
-      "下書き" => "pre",
-      "公開" => "opened"
-    }, selected: @post.post_status %>
-  <input type="submit" value="修正">
-<% end %>
+<div class="form-container">
+  <%= form_tag("/notes/#{@post.id}/update", {multipart: true}) do %>
+    <label>記事タイトル</label>
+    <input type="text" name="title" value="<%= @post.title %>">
+    <label>カテゴリー</label>
+    <%= select :post, :tag, {
+        "design" => "design",
+        "html" => "html",
+        "css" => "css",
+        "javascript" => "javascript",
+        "rails" => "rails"
+      }, selected: @post.tag %>
+    <input type="file" name="main_image">
+    <label>本文</label>
+    <textarea name="content"><%= @post.content %></textarea>
+    <label>ステータス</label>
+    <%= select :post, :status, {
+        "下書き" => "pre",
+        "公開" => "opened"
+      }, selected: @post.post_status %>
+    <button type="submit">修正</button>
+  <% end %>
+</div>

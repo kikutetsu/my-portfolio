@@ -3,8 +3,8 @@
 <% end %>
 
 <div class="admin-action">
-  <%= link_to("編集", "/notes/#{@post.id}/edit") %>
-  <%= link_to("削除", "/notes/#{@post.id}/destroy", {method: :post}) %>
+  <%= link_to("/notes/#{@post.id}/edit") do %><span>編集</span><% end %>
+  <%= link_to("/notes/#{@post.id}/destroy", {method: :post}) do %><span>削除</span><% end %>
 </div>
 
 <% content_for :page_specific_styles do %>

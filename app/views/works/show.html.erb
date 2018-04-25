@@ -3,8 +3,8 @@
 <% end %>
 
 <div class="admin-action">
-  <%= link_to("編集", "/works/#{@work.id}/edit") %>
-  <%= link_to("削除", "/works/#{@work.id}/destroy", {method: :post}) %>
+  <%= link_to("/works/#{@work.id}/edit") do %><span>編集</span><% end %>
+  <%= link_to("/works/#{@work.id}/destroy", {method: :post}) do %><span>削除</span><% end %>
 </div>
 
 <h3 class="content-title"><%= @work.title %></h1>

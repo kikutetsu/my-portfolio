@@ -1,4 +1,6 @@
-<%= link_to("追加", "/users/new") %>
+<div class="admin-action">
+  <%= link_to("/users/new") do %><span>追加</span><% end %>
+</div>
 <% @users.each do |user| %>
   <div>
     <%= link_to("/users/#{user.id}") do %>

@@ -1,5 +1,7 @@
-<%= link_to("編集", "/users/#{@user.id}/edit") %>
-<%= link_to("削除", "/users/#{@user.id}/destroy", {method: :post}) %>
+<div class="admin-action">
+  <%= link_to("/users/#{@user.id}/edit") do %><span>編集</span><% end %>
+  <%= link_to("/users/#{@user.id}/destroy", {method: :post}) do %><span>削除</span><% end %>
+</div>
 
 <h1><%= @user.name %></h1>
 <p><%= @user.password %></p>

@@ -2,7 +2,7 @@ class PostsController < ApplicationController
   before_action :check_admin_user, except: %i[show index]
 
   def index
-    @posts = Post.all
+    @posts = Post.where(post_status: "opened")
   end
 
   def show
@@ -34,7 +34,7 @@ class PostsController < ApplicationController
     @post.tag = params[:post][:tag]
     @post.content = params[:content]
     @post.main_image = params[:main_image]
-    @post.post_status = params[:post_status]
+    @post.post_status = params[:post][:status]
     if params[:main_image]
       @post.main_image = "#{@post.id}.jpg"
       main_image = params[:main_image]
@@ -55,6 +55,6 @@ class PostsController < ApplicationController
     @post = Post.find_by(id: params[:id])
     @post.destroy
     flash[:notice] = "削除しました"
-    redirect_to("/posts")
+    redirect_to("/notes")
   end
 end

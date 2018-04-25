@@ -1,11 +1,12 @@
 <% content_for :page_title do%>
   <h2 class="page-title">Let's<br>login</h2>
 <% end %>
-
-<%= form_tag("/login") do %>
-  <p>name</p>
-  <input type="text" name="name">
-  <p>password</p>
-  <input type="password" name="password">
-  <input type="submit" value="ログイン">
-<% end %>
+<div class="form-container">
+  <%= form_tag("/login") do %>
+    <label>ユーザーID</label>
+    <input type="text" name="name">
+    <label>パスワード</label>
+    <input type="password" name="password">
+    <button type="submit">ログイン</button>
+  <% end %>
+</div>

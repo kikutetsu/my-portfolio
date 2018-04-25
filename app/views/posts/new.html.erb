@@ -1,5 +1,8 @@
+<div class="form-container">
 <%= form_tag("/notes/create") do %>
+  <label>記事タイトル</label>
   <input type="text" name="title" value="<%= @post.title %>">
+  <label>カテゴリー</label>
   <%= select :post, :tag, {
       "design" => "design",
       "html" => "html",
@@ -7,10 +10,13 @@
       "javascript" => "javascript",
       "rails" => "rails"
     }, selected: @post.tag %>
+  <label>本文</label>
   <textarea name="content"><%= @post.content %></textarea>
+  <label>ステータス</label>
   <%= select :post, :status, {
       "下書き" => "pre",
       "公開" => "opened"
     }, selected: @post.post_status %>
-  <input type="submit" value="投稿">
+  <button type="submit">投稿</button>
 <% end %>
+</div>

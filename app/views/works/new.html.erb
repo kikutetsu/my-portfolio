@@ -1,8 +1,15 @@
+<div class="form-container">
 <%= form_tag("/works/create") do %>
+  <label>記事タイトル</label>
   <input type="text" name="title" value="<%= @work.title %>">
+  <label>カテゴリー</label>
   <%= select :category, :name, {"graphic" => "graphic", "editorial" => "editorial", "web" => "web", "UI/UX" => "UI/UX"}, :selected => @work.category %>
+  <label>スラッグ</label>
   <input type="text" name="slug" value="<%= @work.slug %>">
+  <label>イメージ数</label>
   <input type="number" name="image_length" value="<%= @work.image_length %>">
+  <label>概要テキスト</label>
   <textarea name="description"><%= @work.description %></textarea>
-  <input type="submit" value="作成">
+  <button type="submit">作成</button>
 <% end %>
+</div>
