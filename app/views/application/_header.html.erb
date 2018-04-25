@@ -13,6 +13,7 @@
       <li><%= link_to("works", "/works") %></li>
     </ul>
     <div class="user-action">
+      <%= link_to("users", "/users") %>
       <% if session[:user_id] %>
         <%= link_to "/logout", {method: "post"} do %>
           <span>l</span><span>o</span><span>g</span><span>o</span><span>u</span><span>t</span>
