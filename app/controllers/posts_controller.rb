@@ -14,7 +14,7 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(content: params[:content], title: params[:title], tag: params[:post][:tag], main_image: "default.png")
+    @post = Post.new(content: params[:content], title: params[:title], tag: params[:post][:tag], main_image: "default.png", post_status: params[:post][:status])
     if @post.save
       flash[:notice] = "おっけー"
       render("posts/new")
@@ -34,6 +34,7 @@ class PostsController < ApplicationController
     @post.tag = params[:post][:tag]
     @post.content = params[:content]
     @post.main_image = params[:main_image]
+    @post.post_status = params[:post_status]
     if params[:main_image]
       @post.main_image = "#{@post.id}.jpg"
       main_image = params[:main_image]

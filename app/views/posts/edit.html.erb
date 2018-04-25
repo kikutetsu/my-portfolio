@@ -9,5 +9,9 @@
     }, selected: @post.tag %>
   <input type="file" name="main_image">
   <textarea name="content"><%= @post.content %></textarea>
+  <%= select :post, :status, {
+      "下書き" => "pre",
+      "公開" => "opened"
+    }, selected: @post.post_status %>
   <input type="submit" value="修正">
 <% end %>

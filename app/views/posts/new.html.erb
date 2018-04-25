@@ -8,5 +8,9 @@
       "rails" => "rails"
     }, selected: @post.tag %>
   <textarea name="content"><%= @post.content %></textarea>
+  <%= select :post, :status, {
+      "下書き" => "pre",
+      "公開" => "opened"
+    }, selected: @post.post_status %>
   <input type="submit" value="投稿">
 <% end %>
