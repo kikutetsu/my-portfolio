@@ -1,6 +1,6 @@
+require.context('images', true, /\.(png|jpg|jpeg|svg)$/)
 import 'javascripts/application'
 import 'stylesheets/application'
-require.context('images', true, /\.(png|jpg|jpeg|svg)$/)
 
 // Support component names relative to this directory:
 // var componentRequireContext = require.context("components", true)
