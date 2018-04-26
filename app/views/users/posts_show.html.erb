@@ -4,7 +4,7 @@
 
 <div class="admin-action">
   <%= link_to("/notes/#{@post.id}/edit") do %><span>編集</span><% end %>
-  <%= link_to("/notes/#{@post.id}/destroy", {method: :post, data: { confirm: '本当に削除しますよ？' }}) do %><span>削除</span><% end %>
+  <%= link_to("/notes/#{@post.id}/destroy", {method: :post}) do %><span>削除</span><% end %>
 </div>
 
 <% content_for :page_specific_styles do %>

@@ -31,5 +31,9 @@ Rails.application.routes.draw do
   get 'users/:id/edit' => 'users#edit'
   post 'users/:id/update' => 'users#update'
   post 'users/:id/destroy' => 'users#destroy'
+  get 'users/posts' => 'users#posts_index'
+  get 'users/posts/:id' => 'users#posts_show'
+  get 'users/works' => 'users#works_index'
+  get 'users/works/:id' => 'users#works_show'
   get 'users/:id' => 'users#show'
 end

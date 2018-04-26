@@ -4,7 +4,7 @@
 
 <div class="admin-action">
   <%= link_to("/works/#{@work.id}/edit") do %><span>編集</span><% end %>
-  <%= link_to("/works/#{@work.id}/destroy", {method: :post, data: { confirm: '本当に削除しますよ？' }}) do %><span>削除</span><% end %>
+  <%= link_to("/works/#{@work.id}/destroy", {method: :post}) do %><span>削除</span><% end %>
 </div>
 
 <h3 class="content-title"><%= @work.title %></h1>

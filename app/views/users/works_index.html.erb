@@ -1,0 +1,13 @@
+<div class="admin-action">
+  <%= link_to("/works/new") do %><span>追加</span><% end %>
+</div>
+
+<div class="card-container">
+<% @works.each do |work| %>
+  <div class="card">
+    <%= link_to("/works/#{work.id}") do %><h3 class="title"><%= work.title %></h3><% end %>
+    <%= link_to("/works/#{work.id}/edit") do %><span>編集</span><% end %>
+    <%= link_to("/works/#{work.id}/destroy", {method: :post, data: { confirm: '本当に削除しますよ？' }}) do %><span>削除</span><% end %>
+  </div>
+<% end %>
+</div>

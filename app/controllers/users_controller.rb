@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :check_admin_user, except: %i[login_form login logout]
+  before_action :check_admin_user, except: %i[login_form login logout]
 
   def index
     @users = User.all
@@ -75,5 +75,21 @@ class UsersController < ApplicationController
       flash[:notice] = "できませんでしたー"
       redirect_to("/")
     end
+  end
+
+  def posts_index
+    @posts = Post.all
+  end
+
+  def posts_show
+    @posts = Post.find_by(id: params[:id])
+  end
+
+  def works_index
+    @works = Work.all
+  end
+
+  def works_show
+    @work = Work.find_by(id: params[:id])
   end
 end
