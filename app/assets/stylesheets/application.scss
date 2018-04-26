@@ -26,6 +26,11 @@ body {
   margin: 0;
   padding: 0;
   border: 50px solid transparent;
+  @media screen and (max-width: 800px) {
+    border: 20px solid transparent;
+    border-bottom-width: 0;
+    border-top-width: 0;
+  }
   border-bottom-width: 0;
   border-top-width: 0;
   overflow-x: hidden;
@@ -97,7 +102,9 @@ button {
   cursor: pointer;
 }
 
-//button
+// button
+//---------------------------------------
+
 button{
   display: block;
   padding: 15px 20px;
@@ -109,6 +116,7 @@ button{
 }
 
 // layout
+//---------------------------------------
 
 .wrapper {
   margin: 0 auto;
@@ -242,6 +250,7 @@ button{
 }
 
 // works
+//---------------------------------------
 
 .card-container {
   display: flex;
@@ -319,6 +328,8 @@ button{
   margin-bottom: 40px;
 }
 
+// form
+//---------------------------------------
 .form-container {
   // display: flex;
   // height: 100%;
@@ -389,6 +400,8 @@ button{
   }
 }
 
+// notify-bar
+//---------------------------------------
 .notify-bar {
   position: absolute;
   top: 0;
