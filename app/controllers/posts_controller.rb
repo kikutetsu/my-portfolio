@@ -16,10 +16,10 @@ class PostsController < ApplicationController
   def create
     @post = Post.new(content: params[:content], title: params[:title], tag: params[:post][:tag], main_image: "default.png", post_status: params[:post][:status])
     if @post.save
-      flash[:notice] = "おっけー"
+      flash[:notice] = "作成しました"
       render("posts/new")
     else
-      flash[:notice] = "だめー"
+      flash[:notice] = "作成できませんでした"
       render("posts/new")
     end
   end
@@ -43,10 +43,10 @@ class PostsController < ApplicationController
       @post.main_image ||= "default.png"
     end
     if @post.save
-      flash[:notice] = "おっけー"
+      flash[:notice] = "保存しました"
       redirect_to("/notes/#{@post.id}")
     else
-      flash[:notice] = "だめー"
+      flash[:notice] = "保存できませんでした"
       render("posts/edit")
     end
   end

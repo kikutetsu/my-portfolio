@@ -14,7 +14,7 @@ class ApplicationController < ActionController::Base
 
   def check_admin_user
     return if is_admin?
-    flash[:notice] = "権限がありません"
+    flash[:notice] = "編集権限がありません"
     redirect_to("/")
   end
 

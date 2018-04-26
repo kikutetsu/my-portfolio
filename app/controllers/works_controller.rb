@@ -17,10 +17,10 @@ class WorksController < ApplicationController
   def create
     @work = Work.new(title: params[:title], category: params[:category][:name], slug: params[:slug], description: params[:description], image_length: params[:image_length])
     if @work.save
-      flash[:notice] = "おっけー"
+      flash[:notice] = "作成しました"
       redirect_to("/works/#{@work.id}")
     else
-      flash[:notice] = "だめー"
+      flash[:notice] = "作成できませんでした"
       render("works/new")
     end
   end
@@ -37,10 +37,10 @@ class WorksController < ApplicationController
     @work.description = params[:description]
     @work.image_length = params[:image_length]
     if @work.save
-      flash[:notice] = "おっけー"
+      flash[:notice] = "保存しました"
       redirect_to("/works/#{@work.id}")
     else
-      flash[:notice] = "だめー"
+      flash[:notice] = "保存できませんでした"
       render("works/edit")
     end
   end

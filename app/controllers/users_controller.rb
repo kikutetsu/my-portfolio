@@ -16,10 +16,10 @@ class UsersController < ApplicationController
   def create
     @user = User.new(name: params[:name], password: params[:password], user_type: params[:user_type][:admin])
     if @user.save
-      flash[:notice] = "おっけー"
+      flash[:notice] = "作成しました"
       redirect_to("/users/")
     else
-      flash[:notice] = "だめー"
+      flash[:notice] = "作成できませんでした"
       render("users/new")
     end
   end
@@ -34,10 +34,10 @@ class UsersController < ApplicationController
     @user.password = params[:password]
     @user.user_type = params[:user_type][:admin]
     if @user.save
-      flash[:notice] = "おっけー"
+      flash[:notice] = "保存しました"
       redirect_to("/users/")
     else
-      flash[:notice] = "だめー"
+      flash[:notice] = "保存できませんでした"
       render("users/edit")
     end
   end
@@ -56,23 +56,23 @@ class UsersController < ApplicationController
     @user = User.find_by(name: params[:name])
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
-      flash[:notice] = "ろぐいーん"
+      flash[:notice] = "ログアウトしました"
       redirect_to("/works")
     else
-      flash[:notice] = "できませんでしたー"
+      flash[:notice] = "ID,パスワードが違います"
       render("users/new")
     end
   end
 
   def logout
     session[:user_id] = nil
-    flash[:notice] = "ろぐあーうと"
+    flash[:notice] = "ログアウトしました"
     redirect_to("/")
   end
 
   def ensure_correct_user
     if @current_user.id != params[:id].to_i
-      flash[:notice] = "できませんでしたー"
+      flash[:notice] = "ログインしてください"
       redirect_to("/")
     end
   end
