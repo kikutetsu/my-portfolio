@@ -8,10 +8,10 @@
 </div>
 
 <% if @work.previous %>
-<%= link_to("前", "/works/#{@post.previous.id}") %>
+<%= link_to("前", "/works/#{@work.previous.id}") %>
 <% end %>
 <% if @work.next %>
-<%= link_to("次", "/works/#{@post.next.id}") %>
+<%= link_to("次", "/works/#{@work.next.id}") %>
 <% end %>
 
 <h3 class="content-title"><%= @work.title %></h1>
