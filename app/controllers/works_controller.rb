@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
-  before_action :check_admin_user, except: %i[show index]
-  before_action :authenticate_user, only: %i[show index]
+  before_action :check_admin_user, except: %i[show index category]
+  before_action :authenticate_user, only: %i[show index category]
 
   def index
     @works = Work.all
@@ -8,6 +8,11 @@ class WorksController < ApplicationController
 
   def show
     @work = Work.find_by(id: params[:id])
+  end
+
+  def category
+    @works = Work.where("category = ?", params[:slug])
+    render("works/index")
   end
 
   def new

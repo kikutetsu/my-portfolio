@@ -1,5 +1,5 @@
 class PostsController < ApplicationController
-  before_action :check_admin_user, except: %i[show index]
+  before_action :check_admin_user, except: %i[show index category]
 
   def index
     @posts = Post.where(post_status: "opened")
@@ -7,6 +7,11 @@ class PostsController < ApplicationController
 
   def show
     @post = Post.find_by(id: params[:id])
+  end
+
+  def category
+    @posts = Post.where("tag = ?", params[:slug])
+    render("posts/index")
   end
 
   def new

@@ -8,6 +8,7 @@ Rails.application.routes.draw do
 
   #works
   get 'works/' => 'works#index'
+  get 'works/category/:slug' => 'works#category'
   get 'works/new' => 'works#new'
   post 'works/create' => 'works#create'
   get 'works/:id/edit' => 'works#edit'
@@ -17,6 +18,7 @@ Rails.application.routes.draw do
 
   #notes
   get 'notes/' => 'posts#index'
+  get 'notes/category/:slug' => 'posts#category'
   get 'notes/new' => 'posts#new'
   post 'notes/create' => 'posts#create'
   get 'notes/:id/edit' => 'posts#edit'
