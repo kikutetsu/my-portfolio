@@ -125,7 +125,7 @@ button{
   position: relative;
   z-index: 110;
   @media screen and (max-width: 800px) {
-    padding: 120px 20px 0;
+    padding: 120px 20px 60px;
   }
   &.inner {
     max-width: 600px;
@@ -672,7 +672,7 @@ button{
 }
 
 .category-list {
-  margin-bottom: 20px;
+  margin-bottom: 50px;
   text-align: center;
   a {
     margin: 0 3px;
