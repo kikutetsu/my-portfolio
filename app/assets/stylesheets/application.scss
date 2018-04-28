@@ -432,12 +432,12 @@ button{
   position: fixed;
   display: block;
   top: 50%;
-  background-color: $point-color;
-  color: white;
+  // background-color: $point-color;
+  color: $point-color;
   height: 30px;
   width: 30px;
   line-height: 30px;
-  border-radius: 50%;
+  // border-radius: 50%;
   text-align: center;
   z-index: 210;
   &.previous {
@@ -474,6 +474,8 @@ button{
 //---------------------------------------
 .form-container {
   padding-top: 20px;
+  margin: 0 auto;
+  max-width: 450px;
   form {
     margin: -10px auto 0;
     label {

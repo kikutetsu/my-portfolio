@@ -60,7 +60,7 @@ class UsersController < ApplicationController
       redirect_to("/works")
     else
       flash[:notice] = "ID,パスワードが違います"
-      render("users/new")
+      render("users/login_form")
     end
   end
 

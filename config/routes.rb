@@ -38,4 +38,6 @@ Rails.application.routes.draw do
   get 'users/works' => 'users#works_index'
   get 'users/works/:id' => 'users#works_show'
   get 'users/:id' => 'users#show'
+
+  get '*path', controller: 'application', action: 'render_404'
 end

@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // notify_bar
   var notifyBar = document.getElementById("notify-bar");
-  var notifyBarDelay = 3000
+  var notifyBarDelay = 2000
   if (notifyBar) {
     notifyBarSlideIn();
     setInterval(notifyBarSlideOut, notifyBarDelay);
