@@ -5,9 +5,7 @@
   <label>カテゴリー</label>
   <%= select :post, :tag, {
       "design" => "design",
-      "html" => "html",
-      "css" => "css",
-      "javascript" => "javascript",
+      "frontend" => "frontend",
       "rails" => "rails"
     }, selected: @post.tag %>
   <label>本文</label>

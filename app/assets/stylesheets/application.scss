@@ -70,7 +70,7 @@ li {
 }
 
 p {
-  font-size: 18px;
+  font-size: 16px;
   line-height: 2;
   font-weight: 400;
   color: $text-color;
@@ -79,6 +79,8 @@ p {
 img {
   max-width: 100%;
   box-sizing: border-box;
+  border: 1px #eee solid;
+  border-radius: 8px;
 }
 
 a {
@@ -207,10 +209,10 @@ button{
         font-size: 14px;
         font-weight: 700;
         color: $font-color;
+        padding: 5px 0;
+        margin-bottom: 5px;
         &:hover {
-          span {
-            margin-right: 3px;
-          }
+          color: $point-color;
         }
       }
     }
@@ -387,8 +389,12 @@ button{
     }
     .title {
       margin: 10px 0;
-      font-size: 20px;
-      font-weight: 900;
+      font-size: 16px;
+      line-height: 1.4;
+      font-weight: 700;
+      white-space: nowrap;
+      overflow: hidden;
+      text-overflow: ellipsis;
       @media screen and (max-width: 800px) {
         font-size: 14px;
       }
@@ -399,7 +405,7 @@ button{
       padding: 0 8px;
       height: 20px;
       font-size: 11px;
-      font-weight: 700;
+      font-weight: 600;
       position: relative;
       line-height: 20px;
       border-radius: 10px;
@@ -424,27 +430,25 @@ button{
 }
 
 .content-title {
-  font-size: 48px;
+  font-size: 42px;
+  line-height: 1.2;
   font-weight: 700;
+  margin-bottom: 10px;
 }
 
 .content-nav {
   position: fixed;
   display: block;
-  top: 50%;
-  // background-color: $point-color;
-  color: $point-color;
-  height: 30px;
-  width: 30px;
-  line-height: 30px;
-  // border-radius: 50%;
-  text-align: center;
+  bottom: 30px;
+  right: 30px;
   z-index: 210;
-  &.previous {
-    left: 150px;
-  }
-  &.next {
-    right: 150px;
+  font-size: 14px;
+  a {
+    font-weight: 900;
+    color: $font-color;
+    &:hover {
+      color: $point-color;
+    }
   }
 }
 
@@ -590,9 +594,42 @@ button{
   }
 }
 
+// markdown style
 .content {
-  h1,h2,h3,h4,h5,h6,p {
+  p {
     margin: 20px 0;
+  }
+  h1,h2,h3,h4,h5,h6 {
+    margin: 40px 0 20px;
+  }
+  h1 {
+    padding-bottom: 5px;
+    border-bottom: $point-color 2px solid;
+  }
+  a {
+    color: $point-color;
+    &:hover {
+      color: $main-color;
+    }
+  }
+  blockquote {
+    border-left: 4px #ccc solid;
+    margin: 20px 0;
+    padding: 5px 10px 5px 30px;
+    p {
+      color: #999;
+    }
+  }
+  code {
+    background-color: #eee;
+    padding: .1em .4em;
+    border-radius: 3px;
+    color: #444;
+  }
+  .highlight {
+    code {
+      background-color: inherit;
+    }
   }
 }
 
@@ -602,11 +639,12 @@ button{
   a {
     margin: 0 3px;
     font-size: 12px;
+    font-weight: 600;
     display: inline-block;
     background: #eee;
     padding: 0 10px;
     height: 24px;
-    color: #999;
+    color: $font-color;
     line-height: 24px;
     border-radius: 15px;
     &:hover {

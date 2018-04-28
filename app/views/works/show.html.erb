@@ -2,12 +2,17 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
+<div class="content-nav">
 <% if @work.previous %>
-<%= link_to("＜", "/works/#{@work.previous.id}", class: "content-nav previous") %>
+<%= link_to("< previous", "/works/#{@work.previous.id}", class: "previous") %>
+<% end %>
+<% if @work.previous && @work.next %>
+ <span>|</span>
 <% end %>
 <% if @work.next %>
-<%= link_to("＞", "/works/#{@work.next.id}", class: "content-nav next") %>
+<%= link_to("next >", "/works/#{@work.next.id}", class: "next") %>
 <% end %>
+</div>
 
 <h3 class="content-title"><%= @work.title %></h1>
 <p class="content-meta"><%= @work.category %></p>

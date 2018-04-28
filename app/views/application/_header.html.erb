@@ -15,11 +15,9 @@
     <div class="user-action">
       <% if session[:user_id] %>
         <% if is_admin? %>
-          <%= link_to(@current_user.name, "/users/#{@current_user.id}") %>
+          <%= link_to("- #{@current_user.name}", "/users/#{@current_user.id}") %>
         <% end %>
-        <%= link_to "/logout", {method: "post"} do %>
-          <span>l</span><span>o</span><span>g</span><span>o</span><span>u</span><span>t</span>
-        <% end %>
+        <%= link_to "- logout", "/logout", {method: "post"} %>
       <% end %>
     </div>
   </nav>

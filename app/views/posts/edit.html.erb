@@ -4,11 +4,9 @@
     <input type="text" name="title" value="<%= @post.title %>">
     <label>カテゴリー</label>
     <%= select :post, :tag, {
-        "design" => "design",
-        "html" => "html",
-        "css" => "css",
-        "javascript" => "javascript",
-        "rails" => "rails"
+      "design" => "design",
+      "frontend" => "frontend",
+      "rails" => "rails"
       }, selected: @post.tag %>
     <input type="file" name="main_image">
     <label>本文</label>
