@@ -11,16 +11,16 @@
 
 <article class="content-wrap">
 <div class="content-nav">
-  <div class="nav-left"><%= link_to("notes", "/notes") %></div>
+  <div class="nav-left"><%= link_to("< notes", "/notes") %></div>
   <div class="nav-right">
     <% if @post.previous %>
-    <%= link_to("< previous", "/notes/#{@post.previous.id}", class: "previous") %>
+    <%= link_to("back", "/notes/#{@post.previous.id}", class: "previous") %>
     <% end %>
     <% if @post.previous && @post.next %>
      <span>|</span>
     <% end %>
     <% if @post.next %>
-    <%= link_to("next >", "/notes/#{@post.next.id}", class: "next") %>
+    <%= link_to("next", "/notes/#{@post.next.id}", class: "next") %>
     <% end %>
   </div>
 </div>

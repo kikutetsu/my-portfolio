@@ -4,16 +4,16 @@
 
 <article class="content-wrap">
 <div class="content-nav">
-  <div class="nav-left"><%= link_to("works", "/works") %></div>
+  <div class="nav-left"><%= link_to("< works", "/works") %></div>
   <div class="nav-right">
     <% if @work.previous %>
-    <%= link_to("< previous", "/works/#{@work.previous.id}", class: "previous") %>
+    <%= link_to("back", "/works/#{@work.previous.id}", class: "previous") %>
     <% end %>
     <% if @work.previous && @work.next %>
      <span>|</span>
     <% end %>
     <% if @work.next %>
-    <%= link_to("next >", "/works/#{@work.next.id}", class: "next") %>
+    <%= link_to("next", "/works/#{@work.next.id}", class: "next") %>
     <% end %>
   </div>
 </div>
