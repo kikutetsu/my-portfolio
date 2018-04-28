@@ -2,10 +2,6 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
-<div class="admin-action">
-  <%= link_to("/works/#{@work.id}/edit") do %><span>編集</span><% end %>
-</div>
-
 <% if @work.previous %>
 <%= link_to("＜", "/works/#{@work.previous.id}", class: "content-nav previous") %>
 <% end %>

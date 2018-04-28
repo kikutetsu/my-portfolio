@@ -1,12 +1,9 @@
 <div class="admin-action">
   <%= link_to("/users") do %><span>一覧</span><% end %>
-  <%= link_to("/users/#{@user.id}/edit") do %><span>編集</span><% end %>
-  <%= link_to("/users/#{@user.id}/destroy", {method: :post}) do %><span>削除</span><% end %>
 </div>
 
-<% if is_admin? %>
-<h1><%= @user.name %></h1>
-<p><%= @user.password %></p>
-<%= link_to("記事一覧", "/users/posts") %>
-<%= link_to("実績一覧", "/users/works") %>
-<% end %>
+<h1><%= @user.name %></h1><%= link_to("編集", "/users/#{@user.id}/edit", class: "card") %>
+<div class="card-container">
+<%= link_to("記事一覧", "/users/posts", class: "card") %>
+<%= link_to("実績一覧", "/users/works", class: "card") %>
+</div>

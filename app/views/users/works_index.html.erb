@@ -1,13 +1,13 @@
-<div class="admin-action">
-  <%= link_to("/works/new") do %><span>追加</span><% end %>
-</div>
-
 <div class="card-container">
 <% @works.each do |work| %>
   <div class="card">
     <%= link_to("/works/#{work.id}") do %><h3 class="title"><%= work.title %></h3><% end %>
-    <%= link_to("/works/#{work.id}/edit") do %><span>編集</span><% end %>
-    <%= link_to("/works/#{work.id}/destroy", {method: :post, data: { confirm: '本当に削除しますよ？' }}) do %><span>削除</span><% end %>
+    <div class="links">
+      <%= link_to("編集", "/works/#{work.id}/edit") %>
+      <span>|</span>
+      <%= link_to("削除", "/works/#{work.id}/destroy", {method: :post, data: { confirm: '本当に削除しますよ？' }}) %>
+    </div>
   </div>
 <% end %>
+<%= link_to("追加", "/works/new", class: "add-card") %>
 </div>

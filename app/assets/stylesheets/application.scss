@@ -556,7 +556,7 @@ button{
     border-radius: 15px;
     height: 30px;
     padding: 0 15px;
-    transform: translate(0, 40px);
+    transform: translate(0, 30px);
     color: white;
     font-size: 14px;
     font-weight: 700;
@@ -576,13 +576,13 @@ button{
   }
 
   100% {
-    transform: translate(0, 40px);
+    transform: translate(0, 30px);
   }
 }
 
 @keyframes notify_slide_out {
   0% {
-    transform: translate(0, 40px);
+    transform: translate(0, 30px);
   }
 
   100% {
@@ -611,6 +611,68 @@ button{
     border-radius: 15px;
     &:hover {
       background: $main-color;
+    }
+  }
+}
+
+.users-works_index,
+.users-posts_index,
+.users-index {
+  .card-container {
+    .card {
+      width: 100%;
+      border: 1px #eee solid;
+      padding: 10px 20px;
+      background-color: #f7f7f7;
+      border-radius: 4px;
+      margin-bottom: 20px;
+      .title {
+        font-size: 14px;
+        font-weight: 600;
+      }
+      .links {
+        text-align: right;
+        font-size: 12px;
+        span {
+          color: #999;
+          vertical-align: 1px;
+        }
+        a {
+          display: inline-block;
+          color: $point-color;
+          &:hover {
+            color: $main-color;
+          }
+        }
+      }
+    }
+    .add-card {
+      display: block;
+      width: 100%;
+      background-color: $point-color;
+      color: white;
+      padding: 20px;
+      text-align: center;
+      border-radius: 4px;
+    }
+  }
+}
+
+.users-show {
+  h1 {
+    display: inline-block;
+    margin: 0 20px 20px 0;
+  }
+  .card-container {
+    display: block;
+    .card {
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 20px;
+      color: white;
+      background-color: $point-color;
+      border-radius: 4px;
     }
   }
 }

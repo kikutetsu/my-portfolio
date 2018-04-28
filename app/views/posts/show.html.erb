@@ -10,10 +10,6 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
-<div class="admin-action">
-  <%= link_to("/notes/#{@post.id}/edit") do %><span>編集</span><% end %>
-</div>
-
 <% if @post.previous %>
 <%= link_to("＜", "/notes/#{@post.previous.id}", class: "content-nav previous") %>
 <% end %>

@@ -3,12 +3,6 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
-<% if is_admin? %>
-  <div class="admin-action">
-    <%= link_to("/notes/new") do %><span>追加</span><% end %>
-  </div>
-<% end %>
-
 <div class="category-list">
 <%= link_to("/notes/category/design") do %><span>design</span><% end %>
 <%= link_to("/notes/category/html") do %><span>html</span><% end %>

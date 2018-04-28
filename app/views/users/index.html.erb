@@ -1,10 +1,13 @@
-<div class="admin-action">
-  <%= link_to("/users/new") do %><span>追加</span><% end %>
-</div>
+<div class="card-container">
 <% @users.each do |user| %>
-  <div>
-    <%= link_to("/users/#{user.id}") do %>
-      <p><%= user.name %></p>
-    <% end %>
+  <div class="card">
+    <%= link_to("/users/#{user.id}") do %><h3 class="title"><%= user.name %></h3><% end %>
+    <div class="links">
+      <%= link_to("編集", "/users/#{user.id}/edit") %>
+      <span>|</span>
+      <%= link_to("削除", "/users/#{user.id}/destroy", {method: :post, data: { confirm: '本当に削除しますよ？' }}) %>
+    </div>
   </div>
 <% end %>
+<%= link_to("追加", "/users/new", class: "add-card") %>
+</div>

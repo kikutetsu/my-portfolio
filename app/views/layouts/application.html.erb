@@ -19,7 +19,7 @@
     <% end %>
     <%= render "header" %>
     <%= yield :page_title %>
-    <div class="inner wrapper">
+    <div class="inner wrapper <%= "#{controller_name}-#{action_name}" %>">
       <%= yield %>
     </div>
   </body>

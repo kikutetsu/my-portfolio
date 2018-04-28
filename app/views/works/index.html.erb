@@ -2,12 +2,6 @@
   <h2 class="page-title">works</h2>
 <% end %>
 
-<% if is_admin? %>
-  <div class="admin-action">
-    <%= link_to("/works/new") do %><span>追加</span></%><% end %>
-  </div>
-<% end %>
-
 <div class="category-list">
 <%= link_to("/works/category/editorial") do %><span>editorial</span><% end %>
 <%= link_to("/works/category/graphic") do %><span>graphic</span><% end %>
