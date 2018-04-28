@@ -172,7 +172,7 @@ button{
     height: 0;
   }
   .header-nav {
-    padding-top: 100px;
+    padding-top: 20px;
     flex-basis: auto;
     pointer-events: painted;
     .nav-list {
@@ -440,12 +440,13 @@ button{
 }
 
 .content-nav {
-  position: fixed;
   display: block;
-  bottom: 30px;
-  right: 30px;
+  text-align: right;
   z-index: 210;
   font-size: 14px;
+  padding: 0;
+  text-align: right;
+  margin-bottom: 20px;
   a {
     font-weight: 900;
     color: $font-color;
