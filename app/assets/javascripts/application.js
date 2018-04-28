@@ -1,4 +1,6 @@
 document.addEventListener("DOMContentLoaded", function(){
+
+  // mobile_menu
   var menu = document.getElementById("menu");
   var menuBtn = document.getElementById("menu-open");
   var isActive = false;
@@ -13,4 +15,18 @@ document.addEventListener("DOMContentLoaded", function(){
     isActive = !isActive;
   }
 
+  // notify_bar
+  var notifyBar = document.getElementById("notify-bar");
+  var notifyBarDelay = 3000
+  if (notifyBar) {
+    notifyBarSlideIn();
+    setInterval(notifyBarSlideOut, notifyBarDelay);
+  }
+  function notifyBarSlideIn() {
+    notifyBar.classList.add('notify-slide-in');
+  }
+  function notifyBarSlideOut() {
+    notifyBar.classList.remove('notify-slide-in');
+    notifyBar.classList.add('notify-slide-out');
+  }
 }, false);

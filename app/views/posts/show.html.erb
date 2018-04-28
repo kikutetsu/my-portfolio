@@ -1,24 +1,24 @@
+<% content_for :page_specific_styles do %>
+  <style>
+    <%= Rouge::Themes::Github.render(:scope => '.highlight') %>
+  </style>
+  <!-- <%= stylesheet_pack_tag 'rouge_custom' %> -->
+<% end %>
+
+<div class="notes">
 <% content_for :page_title do%>
   <h2 class="page-title">notes</h2>
 <% end %>
 
 <div class="admin-action">
   <%= link_to("/notes/#{@post.id}/edit") do %><span>編集</span><% end %>
-  <%= link_to("/notes/#{@post.id}/destroy", {method: :post, data: { confirm: '本当に削除しますよ？' }}) do %><span>削除</span><% end %>
 </div>
 
-<% content_for :page_specific_styles do %>
-  <style>
-    <%= Rouge::Themes::Molokai.render(:scope => '.highlight') %>
-  </style>
-  <%= stylesheet_pack_tag 'rouge_custom' %>
-<% end %>
-
 <% if @post.previous %>
-<%= link_to("前", "/notes/#{@post.previous.id}") %>
+<%= link_to("＜", "/notes/#{@post.previous.id}", class: "content-nav previous") %>
 <% end %>
 <% if @post.next %>
-<%= link_to("次", "/notes/#{@post.next.id}") %>
+<%= link_to("＞", "/notes/#{@post.next.id}", class: "content-nav next") %>
 <% end %>
 
 <h2 class="content-title"><%= @post.title %></h2>
@@ -26,4 +26,5 @@
 <%= image_tag("/posts/main_images/#{@post.main_image}") %>
 <div class="content">
   <%= sanitize markdown(@post.content) %>
+</div>
 </div>

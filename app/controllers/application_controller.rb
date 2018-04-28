@@ -7,11 +7,11 @@ class ApplicationController < ActionController::Base
   rescue_from Exception, with: :render_500
 
   def render_404
-    render template: 'errors/error_404', status: 404, layout: 'application', content_type: 'text/html'
+    render 'errors/404', status: 404, layout: 'application', content_type: 'text/html'
   end
 
   def render_500
-    render template: 'errors/error_500', status: 500, layout: 'application', content_type: 'text/html'
+    render 'errors/500', status: 500, layout: 'application', content_type: 'text/html'
   end
 
   def set_current_user

@@ -14,7 +14,7 @@
   <body>
     <% if flash[:notice] %>
       <div class="notify-bar">
-        <span><%= flash[:notice] %></span>
+        <span id="notify-bar"><%= flash[:notice] %></span>
       </div>
     <% end %>
     <%= render "header" %>

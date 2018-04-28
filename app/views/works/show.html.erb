@@ -4,14 +4,13 @@
 
 <div class="admin-action">
   <%= link_to("/works/#{@work.id}/edit") do %><span>編集</span><% end %>
-  <%= link_to("/works/#{@work.id}/destroy", {method: :post, data: { confirm: '本当に削除しますよ？' }}) do %><span>削除</span><% end %>
 </div>
 
 <% if @work.previous %>
-<%= link_to("前", "/works/#{@work.previous.id}") %>
+<%= link_to("＜", "/works/#{@work.previous.id}", class: "content-nav previous") %>
 <% end %>
 <% if @work.next %>
-<%= link_to("次", "/works/#{@work.next.id}") %>
+<%= link_to("＞", "/works/#{@work.next.id}", class: "content-nav next") %>
 <% end %>
 
 <h3 class="content-title"><%= @work.title %></h1>
