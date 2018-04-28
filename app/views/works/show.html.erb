@@ -2,21 +2,26 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
+<article class="content-wrap">
 <div class="content-nav">
-<% if @work.previous %>
-<%= link_to("< previous", "/works/#{@work.previous.id}", class: "previous") %>
-<% end %>
-<% if @work.previous && @work.next %>
- <span>|</span>
-<% end %>
-<% if @work.next %>
-<%= link_to("next >", "/works/#{@work.next.id}", class: "next") %>
-<% end %>
+  <div class="nav-left"><%= link_to("works", "/works") %></div>
+  <div class="nav-right">
+    <% if @work.previous %>
+    <%= link_to("< previous", "/works/#{@work.previous.id}", class: "previous") %>
+    <% end %>
+    <% if @work.previous && @work.next %>
+     <span>|</span>
+    <% end %>
+    <% if @work.next %>
+    <%= link_to("next >", "/works/#{@work.next.id}", class: "next") %>
+    <% end %>
+  </div>
 </div>
 
 <h3 class="content-title"><%= @work.title %></h1>
-<p class="content-meta"><%= @work.category %></p>
+<%= link_to @work.category, "/works/category/#{@work.category}", class: "content-meta" %>
 <p class="content-description"><%= @work.description %></p>
 <% @work.image_length.times do |image| %>
   <img class="works-img" src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/#{image + 1}.jpg" %>">
 <% end %>
+</article>

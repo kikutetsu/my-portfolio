@@ -125,7 +125,7 @@ button{
   position: relative;
   z-index: 110;
   @media screen and (max-width: 800px) {
-    padding: 120px 20px 60px;
+    padding: 120px 10px 30px;
   }
   &.inner {
     max-width: 600px;
@@ -223,7 +223,7 @@ button{
   .header {
     position: fixed;
     display: block;
-    padding: 10px 30px 30px 10px;
+    padding: 20px 30px 30px 30px;
     box-sizing: border-box;
     z-index: 200;
     pointer-events: none;
@@ -306,8 +306,8 @@ button{
 .menu-btn {
   display: none;
   position: absolute;
-  top: 20px;
-  right: 20px;
+  top: 30px;
+  right: 30px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -376,7 +376,7 @@ button{
     color: $font-color;
     &:hover {
       .title {
-        color: $main-color;
+        color: $point-color;
       }
     }
   }
@@ -442,11 +442,23 @@ button{
 .content-nav {
   display: block;
   text-align: right;
+  overflow: hidden;
   z-index: 210;
   font-size: 14px;
   padding: 0;
-  text-align: right;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+  margin-bottom: 40px;
+  border-bottom: 1px #999 solid;
+  @media screen and (max-width: 800px) {
+    margin-bottom: 20px;
+    font-size: 12px;
+  }
+  .nav-left {
+    float: left;
+  }
+  .nav-right {
+    float: right;
+  }
   a {
     font-weight: 900;
     color: $font-color;
@@ -675,6 +687,9 @@ button{
 .category-list {
   margin-bottom: 50px;
   text-align: center;
+  @media screen and (max-width: 800px) {
+    margin-bottom: 30px;
+  }
   a {
     margin: 0 3px;
     font-size: 12px;
@@ -686,6 +701,11 @@ button{
     color: $font-color;
     line-height: 24px;
     border-radius: 15px;
+    @media screen and (max-width: 800px) {
+      font-size: 10px;
+      height: 20px;
+      line-height: 20px;
+    }
     &:hover {
       background: $main-color;
     }
@@ -751,5 +771,11 @@ button{
       background-color: $point-color;
       border-radius: 4px;
     }
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .content-wrap {
+    padding: 10px;
   }
 }
