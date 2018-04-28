@@ -1,9 +1,6 @@
-<div class="admin-action">
-  <%= link_to("/users") do %><span>一覧</span><% end %>
-</div>
-
-<h1><%= @user.name %></h1><%= link_to("編集", "/users/#{@user.id}/edit", class: "card") %>
+<h1><%= @user.name %></h1>
 <div class="card-container">
 <%= link_to("記事一覧", "/users/posts", class: "card") %>
 <%= link_to("実績一覧", "/users/works", class: "card") %>
+<%= link_to("ユーザー一覧", "/users/", class: "card") %>
 </div>
