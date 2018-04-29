@@ -29,4 +29,13 @@ document.addEventListener("DOMContentLoaded", function(){
     notifyBar.classList.remove('notify-slide-in');
     notifyBar.classList.add('notify-slide-out');
   }
+
+  // fixed-login-form
+  // var loginForm = document.getElementById("login-form");
+  // if (loginForm) {
+  //   window.addEventListener("resize", function(){
+  //     console.log(window.innerHeight);
+  //     console.log(loginForm.clientHeight);
+  //   }, false);
+  // }
 }, false);

@@ -61,7 +61,7 @@ body {
 }
 
 // reset
-h1,h2,h3,h4,h5,h6,ul,ol,p {
+h1,h2,h3,h4,h5,h6,ul,ol,p,figure {
   padding: 0;
   margin: 0;
 }
@@ -129,7 +129,7 @@ button{
   position: relative;
   z-index: 110;
   @media screen and (max-width: 800px) {
-    padding: 120px 10px 30px;
+    padding: 0 10px 30px;
   }
   &.inner {
     max-width: 600px;
@@ -225,9 +225,10 @@ button{
 
 @media screen and (max-width: 800px) {
   .header {
-    position: fixed;
+    position: relative;
     display: block;
-    padding: 20px 30px 30px 30px;
+    padding: 20px;
+    margin: 0 0 10px;
     box-sizing: border-box;
     z-index: 200;
     pointer-events: none;
@@ -263,6 +264,9 @@ button{
       background-color: $main-color;
       .nav-list {
         padding: 30px;
+        @media screen and (max-width: 800px) {
+          padding-top: 50px;
+        }
         li {
           margin-bottom: 20px;
         }
@@ -273,6 +277,9 @@ button{
           font-size: 24px;
           font-weight: 700;
           color: $font-color;
+          @media screen and (max-width: 800px) {
+            display: inline-block;
+          }
           &:before {
             content: "";
             display: block;
@@ -302,6 +309,10 @@ button{
             }
           }
         }
+        @media screen and (max-width: 800px) {
+          display: inline-block;
+          padding: 0 30px;
+        }
       }
     }
   }
@@ -310,8 +321,8 @@ button{
 .menu-btn {
   display: none;
   position: absolute;
-  top: 30px;
-  right: 30px;
+  top: 50%;
+  right: 20px;
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -322,8 +333,11 @@ button{
   text-align: center;
   line-height: 40px;
   background: $main-color;
+  pointer-events: painted;
+  transform: translate(0, -50%);
   @media screen and (max-width: 800px) {
     display: block;
+
   }
 }
 
@@ -391,6 +405,15 @@ button{
     @media screen and (max-width: 800px) {
       padding: 10px;
     }
+    figure {
+      overflow: hidden;
+      border-radius: 8px;
+      img{
+        display: block;
+        border-radius: 0;
+        border: none;
+      }
+    }
     .title {
       margin: 10px 0;
       font-size: 16px;
@@ -435,12 +458,12 @@ button{
 
 .content-title {
   font-size: 42px;
+  line-height: 1.2;
+  font-weight: 900;
+  margin-bottom: 10px;
   @media screen and (max-width: 800px) {
     font-size: 30px;
   }
-  line-height: 1.2;
-  font-weight: 700;
-  margin-bottom: 10px;
 }
 
 .content-nav {
@@ -464,7 +487,7 @@ button{
     float: right;
   }
   a {
-    font-weight: 900;
+    font-weight: 700;
     color: $font-color;
     &:hover {
       color: $point-color;
@@ -499,7 +522,14 @@ button{
 .form-container {
   padding: 20px 10px;
   margin: 0 auto;
-  max-width: 450px;
+  width: 100%;
+  &.login {
+    max-width: 450px;
+    padding-top: 40px;
+    p {
+      margin-bottom: 40px;
+    }
+  }
   form {
     margin: -10px auto 0;
     label {
@@ -793,8 +823,14 @@ button{
   }
 }
 
-@media screen and (max-width: 800px) {
-  .content-wrap {
+
+
+.content-wrap {
+  background-color: #fafafa;
+  border-radius: 8px;
+  padding: 30px;
+  @media screen and (max-width: 800px) {
+    background-color: white;
     padding: 10px;
   }
 }
