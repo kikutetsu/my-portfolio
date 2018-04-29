@@ -1,4 +1,4 @@
-<header class="header">
+<header class="header" id="header">
   <div class="header-logo">
     <%= link_to("/") do %>
       <span>デ</span><span>ザ</span><span>イ</span><span>ン</span><span>、</span><br>
@@ -7,7 +7,7 @@
     <% end %>
   </div>
   <div class="header-blank"></div>
-  <nav class="header-nav" id="menu">
+  <nav class="header-nav">
     <ul class="nav-list">
       <li><%= link_to("notes", "/notes") %></li>
       <li><%= link_to("works", "/works") %></li>
@@ -21,8 +21,9 @@
       <% end %>
     </div>
   </nav>
-  <div class="menu-btn" id="menu-open"><div class="menu-icon" id="menu-icon"><span class="mi mi1"></span><span class="mi mi2"></span></div></div>
 </header>
+<div class="menu-btn" id="menu-open"><div class="menu-icon"><span class="mi mi1"></span><span class="mi mi2"></span></div></div>
+<div class="menu-bg" id="menu-bg"></div>
 <div class="top-btn" id="to-top-btn">
   <div class="btn-inner"><span class="s1"></span><span class="s2"></span></div>
 </div>

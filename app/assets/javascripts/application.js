@@ -2,19 +2,23 @@ document.addEventListener("DOMContentLoaded", function(){
 
   // mobile_menu
   var menuToggle = function(){
-    var menu = document.getElementById("menu");
-    var menuIcon = document.getElementById("menu-icon");
+    var header = document.getElementById("header");
     var menuBtn = document.getElementById("menu-open");
+    var menuBg = document.getElementById("menu-bg");
     var isActive = false;
     menuBtn.addEventListener("click", changeActive, false);
 
     function changeActive(){
       if (isActive) {
-        menuIcon.classList.remove('is-active');
-        menu.classList.remove('is-active');
+        header.classList.add('is-deactive');
+        menuBtn.classList.remove('is-active');
+        menuBg.classList.remove('is-active');
+        header.classList.remove('is-active');
       } else {
-        menuIcon.classList.add('is-active');
-        menu.classList.add('is-active');
+        menuBtn.classList.add('is-active');
+        menuBg.classList.add('is-active');
+        header.classList.add('is-active');
+        header.classList.remove('is-deactive');
       }
       isActive = !isActive;
     }
