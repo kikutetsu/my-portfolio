@@ -14,9 +14,13 @@
 <% @posts.each do |post| %>
   <div class="card">
     <%= link_to("/notes/#{post.id}") do %>
-      <figure class="content-main-image"><%= image_tag("/posts/main_images/#{post.main_image}") %></figure>
-      <h3 class="title"><%= post.title %></h3>
-      <p class="category"><%= post.tag %></p>
+      <div class="card-inner">
+        <figure class="content-main-image"><%= image_tag("/posts/main_images/#{post.main_image}") %></figure>
+        <h3 class="title"><%= post.title %></h3>
+        <div class="category-wrap">
+          <p class="category"><%= post.tag %></p>
+        </div>
+      </div>
     <% end %>
   </div>
 <% end %>

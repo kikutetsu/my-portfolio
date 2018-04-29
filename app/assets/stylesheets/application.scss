@@ -3,12 +3,13 @@
 @import 'normalize';
 
 $main-color: #ffe500;
-$point-color: #5bcbd7;
+$point-color: #20d9ac;
 $font-color: #222;
 $text-color: #444;
 
 html {
   font-family: "Open Sans", 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
+  background-color: #f7f7f7;
 }
 
 * {
@@ -386,6 +387,10 @@ button{
 .card-container {
   display: flex;
   flex-flow: row wrap;
+  margin: 0 -20px;
+  @media screen and (max-width: 800px) {
+    margin: 0;
+  }
   * {
     line-height: 1.2;
   }
@@ -402,14 +407,26 @@ button{
     box-sizing: border-box;
     width: 50%;
     padding: 20px;
+    @media screen and (max-width: 800px) {
+      padding: 5px;
+    }
     > a {
       position: relative;
+      overflow: hidden;
+      border: 1px #eee solid;
+      border-radius: 8px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.1);
+      &:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 4px 16px rgba(0,0,0,.1);
+      }
     }
-    @media screen and (max-width: 800px) {
-      padding: 10px;
+    .card-inner {
+      background-color: white;
     }
     .title {
       margin: 10px 0;
+      padding: 0 20px;
       font-size: 16px;
       line-height: 1.4;
       font-weight: 700;
@@ -417,7 +434,15 @@ button{
       overflow: hidden;
       text-overflow: ellipsis;
       @media screen and (max-width: 800px) {
-        font-size: 14px;
+        font-size: 11px;
+        padding: 0 10px;
+      }
+    }
+    .category-wrap {
+      padding: 0 20px 15px;
+      text-align: right;
+      @media screen and (max-width: 800px) {
+        padding: 0 10px 15px;
       }
     }
     .category {
@@ -425,7 +450,7 @@ button{
       margin: 0;
       padding: 0 8px;
       height: 20px;
-      font-size: 11px;
+      font-size: 10px;
       font-weight: 600;
       position: relative;
       line-height: 20px;
@@ -437,10 +462,6 @@ button{
         height: 16px;
         line-height: 16px;
         padding: 0 6px;
-      }
-      &:hover {
-        background-color: $main-color;
-        color: white;
       }
     }
   }
@@ -820,22 +841,20 @@ button{
 
 
 .content-wrap {
-  background-color: #fafafa;
+  background-color: white;
   border-radius: 8px;
-  border-top: 10px $main-color solid;
   padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
   @media screen and (max-width: 800px) {
     background-color: white;
-    padding: 10px;
-    border: none;
+    padding: 10px 15px;
+    margin: 0 10px;
   }
 }
 
 .content-main-image {
   position: relative;
   overflow: hidden;
-  border-radius: 8px;
-  border: 1px #eee solid;
   &:after {
     width: 100%;
     padding-top: 60%;

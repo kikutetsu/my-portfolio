@@ -20,7 +20,7 @@
 
 <h3 class="content-title"><%= @work.title %></h1>
 <%= link_to @work.category, "/works/category/#{@work.category}", class: "content-meta" %>
-<figure class="content-main-image"><img src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/thumb.jpg" %>"></figure>
+<!-- <figure class="content-main-image"><img src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/thumb.jpg" %>"></figure> -->
 <p class="content-description"><%= @work.description %></p>
 <% @work.image_length.times do |image| %>
   <img class="works-img" src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/#{image + 1}.jpg" %>">
