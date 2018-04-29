@@ -13,11 +13,11 @@
   <div class="nav-left"></div>
   <div class="nav-right">
     <% if @post.previous %>
-    <%= link_to("< back", "/notes/#{@post.previous.id}", class: "previous") %>
+    <%= link_to("< back", "/notes/#{@post.previous.id}", class: "previous") %><span>|</span>
     <% end %>
-   <span>|</span><%= link_to("notes", "/notes") %><span>|</span>
+   <%= link_to("notes", "/notes") %>
     <% if @post.next %>
-    <%= link_to("next >", "/notes/#{@post.next.id}", class: "next") %>
+    <span>|</span><%= link_to("next >", "/notes/#{@post.next.id}", class: "next") %>
     <% end %>
   </div>
 </div>

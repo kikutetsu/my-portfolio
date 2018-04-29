@@ -1,7 +1,7 @@
 <div class="card-container">
 <% @posts.each do |post| %>
   <div class="card">
-    <%= link_to("/notes/#{post.id}") do %><h3 class="title"><%= post.title %></h3><% end %>
+    <div><%= link_to("/notes/#{post.id}") do %><h3 class="title"><%= post.title %></h3><% end %></div>
     <div class="links">
       <%= link_to("編集", "/notes/#{post.id}/edit") %>
       <span>|</span>

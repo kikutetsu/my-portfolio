@@ -1,7 +1,7 @@
 <div class="card-container">
 <% @users.each do |user| %>
   <div class="card">
-    <%= link_to("/users/#{user.id}") do %><h3 class="title"><%= user.name %></h3><% end %>
+    <div><%= link_to("/users/#{user.id}") do %><h3 class="title"><%= user.name %></h3><% end %></div>
     <div class="links">
       <%= link_to("編集", "/users/#{user.id}/edit") %>
       <span>|</span>

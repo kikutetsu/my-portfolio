@@ -1,7 +1,7 @@
 <div class="card-container">
 <% @works.each do |work| %>
   <div class="card">
-    <%= link_to("/works/#{work.id}") do %><h3 class="title"><%= work.title %></h3><% end %>
+    <div><%= link_to("/works/#{work.id}") do %><h3 class="title"><%= work.title %></h3><% end %></div>
     <div class="links">
       <%= link_to("編集", "/works/#{work.id}/edit") %>
       <span>|</span>

@@ -6,11 +6,11 @@
   <div class="nav-left"></div>
   <div class="nav-right">
     <% if @work.previous %>
-    <%= link_to("< back", "/works/#{@work.previous.id}", class: "previous") %>
+    <%= link_to("< back", "/works/#{@work.previous.id}", class: "previous") %><span>|</span>
     <% end %>
-    <span>|</span><%= link_to("works", "/works") %><span>|</span>
+    <%= link_to("works", "/works") %>
     <% if @work.next %>
-    <%= link_to("next >", "/works/#{@work.next.id}", class: "next") %>
+    <span>|</span><%= link_to("next >", "/works/#{@work.next.id}", class: "next") %>
     <% end %>
   </div>
 </div>
