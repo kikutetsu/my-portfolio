@@ -27,7 +27,7 @@
 
 <h2 class="content-title"><%= @post.title %></h2>
 <%= link_to @post.tag, "/notes/category/#{@post.tag}", class: "content-meta" %>
-<%= image_tag("/posts/main_images/#{@post.main_image}") %>
+<figure class="content-main-image"><%= image_tag("/posts/main_images/#{@post.main_image}") %></figure>
 <div class="content">
   <%= sanitize markdown(@post.content) %>
 </div>

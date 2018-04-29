@@ -14,7 +14,7 @@
 <% @works.each do |work| %>
   <div class="card">
     <%= link_to("/works/#{work.id}") do %>
-      <figure><img src="<%= asset_pack_path "images/works/#{work.category}/#{work.slug}/thumb.jpg" %>"></figure>
+      <figure class="content-main-image"><img src="<%= asset_pack_path "images/works/#{work.category}/#{work.slug}/thumb.jpg" %>"></figure>
       <h3 class="title"><%= work.title %></h3>
       <%= link_to("/", class: "category") do %><%= work.category %><% end %>
     <% end %>

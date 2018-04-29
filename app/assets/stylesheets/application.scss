@@ -408,25 +408,6 @@ button{
     @media screen and (max-width: 800px) {
       padding: 10px;
     }
-    figure {
-      position: relative;
-      overflow: hidden;
-      border-radius: 8px;
-      &:after {
-        width: 100%;
-        padding-top: 50%;
-        display: block;
-        content: "";
-        background-color: $main-color;
-      }
-      img{
-        position: absolute;
-        width: 100%;
-        display: block;
-        border-radius: 0;
-        border: none;
-      }
-    }
     .title {
       margin: 10px 0;
       font-size: 16px;
@@ -470,10 +451,10 @@ button{
 }
 
 .content-title {
-  font-size: 42px;
+  font-size: 36px;
   line-height: 1.2;
   font-weight: 900;
-  margin-bottom: 10px;
+  margin-bottom: 15px;
   @media screen and (max-width: 800px) {
     font-size: 30px;
   }
@@ -841,9 +822,32 @@ button{
 .content-wrap {
   background-color: #fafafa;
   border-radius: 8px;
+  border-top: 10px $main-color solid;
   padding: 30px;
   @media screen and (max-width: 800px) {
     background-color: white;
     padding: 10px;
+    border: none;
+  }
+}
+
+.content-main-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 8px;
+  border: 1px #eee solid;
+  &:after {
+    width: 100%;
+    padding-top: 50%;
+    display: block;
+    content: "";
+    background-color: $main-color;
+  }
+  img{
+    position: absolute;
+    width: 100%;
+    display: block;
+    border-radius: 0;
+    border: none;
   }
 }
