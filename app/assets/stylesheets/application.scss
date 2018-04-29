@@ -342,6 +342,41 @@ button{
   }
 }
 
+.top-btn {
+  cursor: pointer;
+  width: 50px;
+  height: 100px;
+  background-color: #eee;
+  position: fixed;
+  bottom: 20px;
+  right: 40px;
+  z-index: 200;
+  .btn-inner {
+    position: relative;
+  }
+  // .s1 {
+  //   position: absolute;
+  //   bottom: 50px;
+  //   right: 0;
+  //   display: block;
+  //   width: 15px;
+  //   height: 15px;
+  //   border-top: 3px $font-color solid;
+  //   border-left: 3px $font-color solid;
+  //   transform: rotate(45deg);
+  // }
+  .s2 {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, 0);
+    display: block;
+    width: 3px;
+    height: 20px;
+    background-color: $font-color;
+  }
+}
+
 .page-title {
   position: fixed;
   left: 30px;
@@ -848,7 +883,6 @@ button{
   @media screen and (max-width: 800px) {
     background-color: white;
     padding: 10px 15px;
-    margin: 0 10px;
   }
 }
 
