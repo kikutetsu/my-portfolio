@@ -2,22 +2,19 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
-<article class="content-wrap">
 <div class="content-nav">
-  <div class="nav-left"><%= link_to("< works", "/works") %></div>
+  <div class="nav-left"></div>
   <div class="nav-right">
     <% if @work.previous %>
-    <%= link_to("back", "/works/#{@work.previous.id}", class: "previous") %>
+    <%= link_to("< back", "/works/#{@work.previous.id}", class: "previous") %>
     <% end %>
-    <% if @work.previous && @work.next %>
-     <span>|</span>
-    <% end %>
+    <span>|</span><%= link_to("works", "/works") %><span>|</span>
     <% if @work.next %>
-    <%= link_to("next", "/works/#{@work.next.id}", class: "next") %>
+    <%= link_to("next >", "/works/#{@work.next.id}", class: "next") %>
     <% end %>
   </div>
 </div>
-
+<article class="content-wrap">
 <h3 class="content-title"><%= @work.title %></h1>
 <%= link_to @work.category, "/works/category/#{@work.category}", class: "content-meta" %>
 <!-- <figure class="content-main-image"><img src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/thumb.jpg" %>"></figure> -->

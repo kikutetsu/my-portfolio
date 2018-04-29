@@ -229,7 +229,7 @@ button{
     position: relative;
     display: block;
     padding: 20px;
-    margin: 0 0 10px;
+    margin: 0;
     box-sizing: border-box;
     z-index: 200;
     pointer-events: none;
@@ -336,6 +336,37 @@ button{
   background: $main-color;
   pointer-events: painted;
   transform: translate(0, -50%);
+  .menu-icon {
+    vertical-align: -2px;
+    &.is-active {
+      width: 16px;
+      .mi1 {
+        transform: rotate(45deg) translate(2.5px, 2.5px);
+      }
+      .mi2 {
+        transform: rotate(-45deg) translate(2.5px, -2.5px);
+      }
+    }
+    width: 14px;
+    height: 16px;
+    position: relative;
+    display: inline-block;
+    .mi {
+      display: block;
+      height: 3px;
+      border-radius: 1.5px;
+      background: $font-color;
+      position: absolute;
+      left: 0;
+      right: 0;
+    }
+    .mi1 {
+      top: 3px;
+    }
+    .mi2 {
+      bottom: 3px;
+    }
+  }
   @media screen and (max-width: 800px) {
     display: block;
 
@@ -350,7 +381,7 @@ button{
   position: fixed;
   bottom: 20px;
   right: 40px;
-  z-index: 100;
+  z-index: 120;
   .btn-inner {
     position: relative;
   }
@@ -507,12 +538,12 @@ button{
 }
 
 .content-title {
-  font-size: 36px;
+  font-size: 32px;
   line-height: 1.2;
   font-weight: 900;
-  margin-bottom: 15px;
+  margin: 15px 0;
   @media screen and (max-width: 800px) {
-    font-size: 30px;
+    font-size: 24px;
   }
 }
 
@@ -523,9 +554,7 @@ button{
   z-index: 210;
   font-size: 14px;
   padding: 0;
-  padding-bottom: 20px;
-  margin-bottom: 40px;
-  border-bottom: 1px #999 solid;
+  margin-bottom: 20px;
   @media screen and (max-width: 800px) {
     margin-bottom: 20px;
     font-size: 12px;
@@ -535,6 +564,9 @@ button{
   }
   .nav-right {
     float: right;
+  }
+  span {
+    margin: 0 5px;
   }
   a {
     font-weight: 700;
@@ -787,7 +819,7 @@ button{
   margin-bottom: 50px;
   text-align: center;
   @media screen and (max-width: 800px) {
-    margin-bottom: 30px;
+    margin-bottom: 20px;
   }
   a {
     margin: 0 3px;

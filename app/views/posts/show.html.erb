@@ -9,22 +9,20 @@
   <h2 class="page-title">notes</h2>
 <% end %>
 
-<article class="content-wrap">
 <div class="content-nav">
-  <div class="nav-left"><%= link_to("< notes", "/notes") %></div>
+  <div class="nav-left"></div>
   <div class="nav-right">
     <% if @post.previous %>
-    <%= link_to("back", "/notes/#{@post.previous.id}", class: "previous") %>
+    <%= link_to("< back", "/notes/#{@post.previous.id}", class: "previous") %>
     <% end %>
-    <% if @post.previous && @post.next %>
-     <span>|</span>
-    <% end %>
+   <span>|</span><%= link_to("notes", "/notes") %><span>|</span>
     <% if @post.next %>
-    <%= link_to("next", "/notes/#{@post.next.id}", class: "next") %>
+    <%= link_to("next >", "/notes/#{@post.next.id}", class: "next") %>
     <% end %>
   </div>
 </div>
 
+<article class="content-wrap">
 <h2 class="content-title"><%= @post.title %></h2>
 <%= link_to @post.tag, "/notes/category/#{@post.tag}", class: "content-meta" %>
 <figure class="content-main-image"><%= image_tag("/posts/main_images/#{@post.main_image}") %></figure>

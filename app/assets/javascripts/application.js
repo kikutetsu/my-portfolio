@@ -3,14 +3,17 @@ document.addEventListener("DOMContentLoaded", function(){
   // mobile_menu
   var menuToggle = function(){
     var menu = document.getElementById("menu");
+    var menuIcon = document.getElementById("menu-icon");
     var menuBtn = document.getElementById("menu-open");
     var isActive = false;
     menuBtn.addEventListener("click", changeActive, false);
 
     function changeActive(){
       if (isActive) {
+        menuIcon.classList.remove('is-active');
         menu.classList.remove('is-active');
       } else {
+        menuIcon.classList.add('is-active');
         menu.classList.add('is-active');
       }
       isActive = !isActive;
