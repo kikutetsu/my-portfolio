@@ -9,7 +9,7 @@ $text-color: #444;
 
 html {
   font-family: "Open Sans", 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
-  background-color: #f7f7f7;
+  background-color: $main-color;
 }
 
 * {
@@ -41,6 +41,7 @@ body {
   box-sizing: border-box;
   &:before,
   &:after {
+      background-color: #f7f7f7;
       z-index: 0;
       content: '';
       user-select: none;
@@ -119,6 +120,9 @@ button{
     font-size: 14px;
     padding: 10px 15px;
   }
+  &:hover {
+    background-color: $main-color;
+  }
 }
 
 // layout
@@ -164,12 +168,6 @@ button{
       font-size: 24px;
       line-height: 40px;
       color: $font-color;
-      &:hover {
-        span {
-          margin-right: 30px;
-          font-size: 14px;
-        }
-      }
     }
   }
   .header-blank {
@@ -431,35 +429,38 @@ button{
   bottom: 30px;
   right: 60px;
   z-index: 120;
-  height: 30px;
+  height: 90px;
   @media screen and (max-width: 800px) {
     display: none;
   }
   &:hover {
-    height: 60px;
+    height: 110px;
   }
   .btn-inner {
-    width: 50px;
+    width: 40px;
     height: 100%;
     position: relative;
   }
-  .s1 {
+  .top-arrow1 {
     position: absolute;
-    top: -16px;
-    right: 19px;
-    display: block;
-    width: 12px;
-    height: 12px;
+    top: 0;
   }
-  .s2 {
+  .top-arrow2 {
+    display: block;
+    position: absolute;
+    bottom: 18px;
+    left: 15px;
+    width: 3px;
+    height: 50px;
+    background-color: #000;
+  }
+  .top-arrow3 {
+    display: block;
+    font-size: 12px;
+    font-weight: 900;
     position: absolute;
     bottom: 0;
-    left: 50%;
-    transform: translate(-50%, 0);
-    display: block;
-    width: 3px;
-    height: 100%;
-    background-color: $font-color;
+    left: 5px;
   }
 }
 
@@ -822,13 +823,13 @@ button{
     }
   }
   ul {
-    padding-left: 20px;
+    padding-left: 24px;
     li {
       list-style:  disc;
     }
   }
   ol {
-    padding-left: 20px;
+    padding-left: 24px;
     li {
       list-style:  decimal;
     }
@@ -911,11 +912,12 @@ button{
   .card-container {
     .card {
       width: 100%;
-      border: 1px #eee solid;
+      border: none;
       padding: 10px 20px;
-      background-color: #f7f7f7;
+      background-color: white;
       border-radius: 4px;
       margin-bottom: 20px;
+      box-shadow: 0 2px 8px rgba(0,0,0,.1);
       .title {
         padding: 0;
         font-size: 14px;
@@ -989,7 +991,7 @@ button{
     padding-top: 60%;
     display: block;
     content: "";
-    background-color: $main-color;
+    background-color: white;
   }
   img{
     position: absolute;
@@ -1002,25 +1004,49 @@ button{
 }
 
 .top-keyvisual {
-  position: fixed;
+  position: relative;
   top: 0;
   right: 0;
   left: 0;
   height: 400px;
   background-color: $main-color;
   z-index: 10;
+  @media screen and (max-width: 800px) {
+    height: 300px;
+  }
 }
 
 .home-top.inner.wrapper {
   padding-top: 60px;
-  h2, p {
+  h2 {
     margin-bottom: 20px;
   }
   h2 {
-    font-size: 50px;
+    font-size: 30px;
+    line-height: 1.4;
+  }
+  a {
+    color: $point-color;
+    &:hover {
+      color: $main-color;
+    }
+  }
+  .top-block {
+    padding: 40px 0;
+    &.about {
+    }
+    &.works {
+    }
+    &.notes {
+    }
+  }
+  button {
+    margin-top: 20px;
   }
   @media screen and (max-width: 800px) {
-    padding-right: 20px;
-    padding-left: 20px;
+    padding: 20px 30px 0;
+    .top-block {
+      padding: 30px 0;
+    }
   }
 }
