@@ -25,7 +25,7 @@
 <article class="content-wrap">
 <h2 class="content-title"><%= @post.title %></h2>
 <%= link_to @post.tag, "/notes/category/#{@post.tag}", class: "content-meta" %>
-<figure class="content-main-image"><img src="<%= asset_pack_path "images/posts/#{@post.slug}/thumb.png" %>"></figure>
+<figure class="content-main-image round"><img src="<%= asset_pack_path "images/posts/#{@post.slug}/thumb.png" %>"></figure>
 <div class="content">
   <%= sanitize markdown(@post.content) %>
 </div>

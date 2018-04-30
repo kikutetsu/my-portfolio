@@ -134,7 +134,7 @@ button{
   position: relative;
   z-index: 110;
   @media screen and (max-width: 800px) {
-    padding: 120px 10px 30px;
+    padding: 100px 10px 30px;
   }
   &.inner {
     max-width: 600px;
@@ -671,6 +671,9 @@ button{
   &.login {
     max-width: 450px;
     padding-top: 40px;
+    @media screen and (max-width: 800px) {
+      padding-top: 0;
+    }
     p {
       margin-bottom: 40px;
     }
@@ -790,13 +793,13 @@ button{
   }
 
   100% {
-    transform: translate(0, 30px);
+    transform: translate(0, 40px);
   }
 }
 
 @keyframes notify_slide_out {
   0% {
-    transform: translate(0, 30px);
+    transform: translate(0, 40px);
   }
 
   100% {
@@ -953,15 +956,16 @@ button{
 
 .users-show {
   h1 {
-    display: inline-block;
+    display: block;
     margin: 0 20px 20px 0;
   }
   .card-container {
     display: block;
+    margin: 0;
     .card {
-      display: inline-block;
+      display: block;
       width: 100%;
-      margin-bottom: 20px;
+      margin: 0 0 20px;
       padding: 20px;
       color: white;
       background-color: $point-color;
@@ -986,6 +990,9 @@ button{
 .content-main-image {
   position: relative;
   overflow: hidden;
+  &.round {
+    border-radius: 8px;
+  }
   &:after {
     width: 100%;
     padding-top: 60%;
