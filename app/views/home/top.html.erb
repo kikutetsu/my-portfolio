@@ -3,18 +3,30 @@
 <% end %>
 
 <section class="top-block about">
-<h2>デザイナー。コードも最近書いてます。</h2>
-<p>いままでエディトリアルデザインから、webデザインまでやってきて、HTML/CSSからはじめて、JavaScriptやRailを触っていてユーザーファーストなデザインはもちろんエンジニアリングも意識した制作をしていきたいです。</p>
+  <div>
+    <h2>デザイナー。コードも最近書いてます。</h2>
+    <p>いままでエディトリアルデザインから、webデザインまでやってきて、HTML/CSSからはじめて、JavaScriptやRailを触っていてユーザーファーストなデザインはもちろんエンジニアリングも意識した制作をしていきたいです。</p>
+  </div>
 </section>
 
 <section class="top-block works">
-  <h2>これまで担当したデザイン</h2>
-  <p>これまで仕事で担当してきたデザインを公開しています。閲覧するには<%= link_to("ログイン", "/login") %>が必要となります。</p>
-  <button>デザイン集を見る</button>
+  <div class="left">
+    <h2>works</h2>
+  </div>
+  <div class="right">
+    <h3>これまで担当したデザイン</h3>
+    <p>これまで仕事で担当してきたデザインを公開しています。閲覧するには<%= link_to("ログイン", "/login") %>が必要となります。</p>
+    <%= link_to("デザイン集を見る","/works", class: "button") %>
+  </div>
 </section>
 
 <section class="top-block notes">
-  <h2>感じたこと学んだことを残す</h2>
-  <p>デザインやプログラミングで気になった話題であったり、発見したこと身につけたことを記録できるようにしました。</p>
-  <button>ノートを見る</button>
+  <div class="left">
+    <h2>notes</h2>
+  </div>
+  <div class="right">
+    <h3>感じたこと学んだことを残す</h3>
+    <p>デザインやプログラミングで気になった話題であったり、発見したこと身につけたことを記録できるようにしました。</p>
+    <%= link_to("ノートを見る","/notes", class: "button") %>
+  </div>
 </section>
