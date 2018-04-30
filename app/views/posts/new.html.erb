@@ -8,6 +8,8 @@
       "frontend" => "frontend",
       "rails" => "rails"
     }, selected: @post.tag %>
+  <label>スラッグ</label>
+  <input type="text" name="slug" value="default">
   <label>本文</label>
   <textarea name="content"><%= @post.content %></textarea>
   <label>ステータス</label>

@@ -9,6 +9,8 @@
       "rails" => "rails"
       }, selected: @post.tag %>
     <input type="file" name="main_image">
+    <label>スラッグ</label>
+    <input type="text" name="slug" value="<%= @post.slug %>">
     <label>本文</label>
     <textarea name="content"><%= @post.content %></textarea>
     <label>ステータス</label>

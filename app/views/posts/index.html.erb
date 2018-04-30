@@ -15,7 +15,7 @@
   <div class="card">
     <%= link_to("/notes/#{post.id}") do %>
       <div class="card-inner">
-        <figure class="content-main-image"><%= image_tag("/posts/main_images/#{post.main_image}") %></figure>
+        <figure class="content-main-image"><img src="<%= asset_pack_path "images/posts/#{post.slug}/thumb.png" %>"></figure>
         <h3 class="title"><%= post.title %></h3>
         <div class="category-wrap">
           <p class="category"><%= post.tag %></p>
