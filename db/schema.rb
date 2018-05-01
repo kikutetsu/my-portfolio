@@ -20,7 +20,7 @@ ActiveRecord::Schema.define(version: 20180430062830) do
     t.string "main_image"
     t.string "tag"
     t.string "post_status"
-    t.string "slug"
+    t.string "slug", default: "default"
   end
 
   create_table "users", force: :cascade do |t|

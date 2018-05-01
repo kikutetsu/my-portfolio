@@ -1026,7 +1026,7 @@ button,
   top: 0;
   right: 0;
   left: 0;
-  height: 400px;
+  height: 600px;
   background-color: $main-color;
   z-index: 10;
   text-align: center;
@@ -1049,9 +1049,10 @@ button,
     }
   }
   @media screen and (max-width: 800px) {
+    height: 500px;
     h1 {
       font-size: 56px;
-      line-height: 300px;
+      line-height: 500px;
     }
   }
 }
