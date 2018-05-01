@@ -1,5 +1,5 @@
 class UsersController < ApplicationController
-  # before_action :check_admin_user, except: %i[login_form login logout]
+  before_action :check_admin_user, except: %i[login_form login logout]
 
   def index
     @users = User.all
