@@ -20,7 +20,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'bcrypt', '~> 3.1.7'
 
 # Use Capistrano for deployment
-# gem 'capistrano-rails', group: :development
+gem 'capistrano-rails', group: :development
 # Windows does not include zoneinfo files, so bundle the tzinfo-data gem
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 gem "react-rails"
@@ -46,5 +46,6 @@ group :development do
 end
 
 group :production do
- gem 'pg'
+ # gem 'pg'
+ gem 'mysql2', '~> 0.3.11'
 end

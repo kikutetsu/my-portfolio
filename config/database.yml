@@ -6,7 +6,8 @@
 #
 default: &default
   adapter: sqlite3
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
+  encoding: utf8
+  pool: 5
   timeout: 5000
 
 development:
@@ -22,6 +23,7 @@ test:
 
 production:
   <<: *default
-  adapter: postgresql
-  encoding: unicode
-  pool: 5
+  adapter: mysql
+  database: railsdb
+  username: root
+  password: Bz1OG8Lt
