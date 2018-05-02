@@ -4,7 +4,8 @@ document.addEventListener("DOMContentLoaded", function(){
   var menuToggle = function(){
     var header = document.getElementById("header");
     var menuBtn = document.getElementById("menu-open");
-    var menuBg = document.getElementById("menu-bg");
+    var menuBg1 = document.getElementById("menu-bg1");
+    var menuBg2 = document.getElementById("menu-bg2");
     var isActive = false;
     menuBtn.addEventListener("click", changeActive, false);
 
@@ -12,11 +13,13 @@ document.addEventListener("DOMContentLoaded", function(){
       if (isActive) {
         header.classList.add('is-deactive');
         menuBtn.classList.remove('is-active');
-        menuBg.classList.remove('is-active');
+        menuBg1.classList.remove('is-active');
+        menuBg2.classList.remove('is-active');
         header.classList.remove('is-active');
       } else {
         menuBtn.classList.add('is-active');
-        menuBg.classList.add('is-active');
+        menuBg1.classList.add('is-active');
+        menuBg2.classList.add('is-active');
         header.classList.add('is-active');
         header.classList.remove('is-deactive');
       }

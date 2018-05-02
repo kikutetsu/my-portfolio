@@ -132,7 +132,10 @@ button,
     padding: 100px 10px 30px;
   }
   &.inner {
-    max-width: 600px;
+    max-width: 620px;
+    @media screen and (min-width: 800px) {
+      max-width: 75%;
+    }
     @media screen and (min-width: 1200px) {
       max-width: 780px;
     }
@@ -365,7 +368,6 @@ button,
 
 @media screen and (max-width: 800px) {
   .menu-bg {
-    z-index: 150;
     position: fixed;
     top: 30px;
     right: 20px;
@@ -373,11 +375,23 @@ button,
     display: block;
     width: 40px;
     height: 40px;
-    background-color: $main-color;
     transform: scale(1);
     transition-duration: .5s;
+    &.menu-bg-1 {
+      background-color: $main-color;
+      z-index: 151;
+    }
+    &.menu-bg-2 {
+      background-color: darken($main-color, 5%);
+      z-index: 150;
+    }
     &.is-active {
-      transform: scale(100);
+      &.menu-bg-1 {
+        transform: scale(100);
+      }
+      &.menu-bg-2 {
+        transform: scale(1000);
+      }
     }
   }
 }
