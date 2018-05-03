@@ -28,7 +28,7 @@ body {
   padding: 0;
   border: 50px solid transparent;
   @media screen and (max-width: 800px) {
-    border: 10px solid transparent;
+    border: 3vw solid transparent;
     border-bottom-width: 0;
     border-top-width: 0;
   }
@@ -129,12 +129,12 @@ button,
   position: relative;
   z-index: 110;
   @media screen and (max-width: 800px) {
-    padding: 100px 10px 30px;
+    padding: 100px 3vw 30px;
   }
   &.inner {
     max-width: 620px;
     @media screen and (min-width: 800px) {
-      max-width: 75%;
+      max-width: 70vw;
     }
     @media screen and (min-width: 1200px) {
       max-width: 780px;
@@ -1011,7 +1011,7 @@ button,
   box-shadow: 0 2px 8px rgba(0,0,0,.1);
   @media screen and (max-width: 800px) {
     background-color: white;
-    padding: 5%;
+    padding: 4vw;
   }
 }
 
