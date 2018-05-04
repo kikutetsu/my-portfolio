@@ -20,7 +20,7 @@ class WorksController < ApplicationController
   end
 
   def create
-    @work = Work.new(title: params[:title], category: params[:category][:name], slug: params[:slug], description: params[:description], image_length: params[:image_length])
+    @work = Work.new(title: params[:title], category: params[:category][:name], slug: params[:slug], description: params[:description], image_length: params[:image_length], content: params[:content])
     if @work.save
       flash[:notice] = "作成しました"
       redirect_to("/works/#{@work.id}")
@@ -41,6 +41,7 @@ class WorksController < ApplicationController
     @work.slug = params[:slug]
     @work.description = params[:description]
     @work.image_length = params[:image_length]
+    @work.content = params[:content]
     if @work.save
       flash[:notice] = "保存しました"
       redirect_to("/works/#{@work.id}")

@@ -105,6 +105,7 @@ button {
 button,
 .button {
   display: block;
+  width: 100%;
   padding: 15px 20px;
   font-size: 16px;
   border-radius: 4px;
@@ -469,6 +470,11 @@ button,
     width: 40px;
     height: 100%;
     position: relative;
+  }
+  .top-arrow {
+    position: relative;
+    height: 100px;
+    width: 50px;
   }
   .top-arrow1 {
     position: absolute;
@@ -836,7 +842,6 @@ button,
   0% {
     transform: translate(0, -60px);
   }
-
   100% {
     transform: translate(0, 40px);
   }
@@ -846,8 +851,11 @@ button,
   0% {
     transform: translate(0, 40px);
   }
-
+  90% {
+    opacity: 1;
+  }
   100% {
+    opacity: 0;
     transform: translate(0, -60px);
   }
 }
