@@ -31,3 +31,4 @@ yarn-debug.log*
 /vendor/bundler
 package-lock.json
 /public/uploads/*
+.env
