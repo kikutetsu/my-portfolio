@@ -7,20 +7,20 @@
 
 <% content_for :page_title do%>
   <h2 class="page-title">notes</h2>
-<% end %>
-
-<div class="content-nav">
-  <div class="nav-left"></div>
-  <div class="nav-right">
+  <div class="content-nav">
     <% if @post.previous %>
-    <%= link_to("< back", "/notes/#{@post.previous.id}", class: "previous") %><span>|</span>
+    <%= link_to("< back", "/notes/#{@post.previous.id}", class: "previous") %>
+    <% else %>
+    <a class="disable">< back</a>
     <% end %>
-   <%= link_to("notes", "/notes") %>
+    <%= link_to("notes", "/notes") %>
     <% if @post.next %>
-    <span>|</span><%= link_to("next >", "/notes/#{@post.next.id}", class: "next") %>
+    <%= link_to("next >", "/notes/#{@post.next.id}", class: "next") %>
+    <% else %>
+    <a class="disable">next ></a>
     <% end %>
   </div>
-</div>
+<% end %>
 
 <article class="content-wrap">
 <h2 class="content-title"><%= @post.title %></h2>
