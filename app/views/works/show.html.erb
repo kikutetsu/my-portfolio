@@ -6,7 +6,7 @@
 <% end %>
 
 <% content_for :page_title do%>
-  <h2 class="page-title">notes</h2>
+  <h2 class="page-title">works</h2>
   <div class="content-nav">
     <% if @work.previous %>
     <%= link_to("< back", "/works/#{@work.previous.id}") %>
@@ -21,6 +21,7 @@
     <% end %>
   </div>
 <% end %>
+
 <article class="content-wrap">
 <h3 class="content-title"><%= @work.title %></h1>
 <%= link_to @work.category, "/works/category/#{@work.category}", class: "content-meta" %>
