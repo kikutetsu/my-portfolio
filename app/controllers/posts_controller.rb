@@ -31,6 +31,7 @@ class PostsController < ApplicationController
 
   def edit
     @post = Post.find_by(id: params[:id])
+    @images = PostImage.where("post_id = ?", params[:id])
   end
 
   def update

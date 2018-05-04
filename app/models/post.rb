@@ -1,4 +1,5 @@
 class Post < ApplicationRecord
+  has_many :post_images
   mount_uploader :image, ImagesUploader
   validates :content, {presence: true}
   validates :title, {presence: true}

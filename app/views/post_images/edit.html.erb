@@ -1,0 +1,7 @@
+<div class="form-container">
+  <%= form_tag("/notes/#{params[:id]}/upload", {multipart: true}) do %>
+    <label>写真をアップロード</label>
+    <input type="file" name="image">
+    <button type="submit">送信</button>
+  <% end %>
+</div>

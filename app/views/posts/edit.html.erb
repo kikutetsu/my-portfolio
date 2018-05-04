@@ -10,8 +10,12 @@
       }, selected: @post.tag %>
     <label>スラッグ</label>
     <input type="text" name="slug" value="<%= @post.slug %>">
-    <label>画像</label>
+    <label>メイン画像</label>
     <input type="file" name="image">
+    <% @images.each do |image| %>
+      <p class="file-name"><%= image.image.to_s %></p>
+    <% end %>
+    <%= link_to('本文用画像アップロード', "/notes/#{@post.id}/image_upload", class: 'button') %>
     <label>本文</label>
     <textarea name="content"><%= @post.content %></textarea>
     <label>ステータス</label>

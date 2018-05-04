@@ -22,6 +22,8 @@ Rails.application.routes.draw do
   get 'notes/new' => 'posts#new'
   post 'notes/create' => 'posts#create'
   get 'notes/:id/edit' => 'posts#edit'
+  get 'notes/:id/image_upload' => 'post_images#edit'
+  post 'notes/:id/upload' => 'post_images#upload'
   post 'notes/:id/update' => 'posts#update'
   post 'notes/:id/destroy' => 'posts#destroy'
   get 'notes/:id' => 'posts#show'
