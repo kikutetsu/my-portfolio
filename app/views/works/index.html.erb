@@ -17,6 +17,7 @@
         <figure class="content-main-image"><img src="<%= asset_pack_path "images/works/#{work.category}/#{work.slug}/thumb.jpg" %>"></figure>
         <h3 class="title"><%= work.title %></h3>
         <div class="category-wrap">
+          <% work.category = "UI/UX" if work.category == "ui_ux" %>
           <p class="category"><%= work.category %></p>
         </div>
       </div>
