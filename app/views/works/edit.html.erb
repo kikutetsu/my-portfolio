@@ -1,5 +1,5 @@
 <div class="form-container">
-<%= form_tag("/works/#{@work.id}/update") do %>
+<%= form_tag("/works/#{@work.id}/update", {multipart: true}) do %>
   <label>記事タイトル</label>
   <input type="text" name="title" value="<%= @work.title %>">
   <label>カテゴリー</label>

@@ -5,7 +5,7 @@ class WorkImagesController < ApplicationController
 
   def upload
     @image = WorkImage.create({
-        post_id: params[:id],
+        work_id: params[:id],
         image: params[:image]
     })
     flash[:notice] = '追加しました'
