@@ -23,7 +23,7 @@
     </div>
     <div class="file-list">
       <% @images.each do |image| %>
-        <p class="file-name"><%= image.image.to_s %></p>
+        <p class="file-name"><%= image_tag image.image.to_s %><span class="file-path"><%= image.image.to_s %></span><%= link_to("削除", "/notes/#{@post.id}/image_upload/#{image.id}/destroy", {method: :post, class: 'file-remove'}) %></p>
       <% end %>
     </div>
 

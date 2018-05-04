@@ -23,6 +23,7 @@ Rails.application.routes.draw do
   post 'notes/create' => 'posts#create'
   get 'notes/:id/edit' => 'posts#edit'
   get 'notes/:id/image_upload' => 'post_images#edit'
+  post 'notes/:id/image_upload/:image_id/destroy' => 'post_images#destroy'
   post 'notes/:id/upload' => 'post_images#upload'
   post 'notes/:id/update' => 'posts#update'
   post 'notes/:id/destroy' => 'posts#destroy'
