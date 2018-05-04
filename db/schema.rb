@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20180504101258) do
+ActiveRecord::Schema.define(version: 20180504145326) do
 
   create_table "post_images", force: :cascade do |t|
     t.string "image"
@@ -39,6 +39,13 @@ ActiveRecord::Schema.define(version: 20180504101258) do
     t.boolean "user_type", default: false, null: false
   end
 
+  create_table "work_images", force: :cascade do |t|
+    t.string "image"
+    t.integer "work_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
   create_table "works", force: :cascade do |t|
     t.string "title"
     t.text "description"
@@ -48,6 +55,7 @@ ActiveRecord::Schema.define(version: 20180504101258) do
     t.string "slug"
     t.integer "image_length"
     t.text "content"
+    t.string "image"
   end
 
 end

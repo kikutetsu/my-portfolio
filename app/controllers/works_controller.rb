@@ -20,7 +20,7 @@ class WorksController < ApplicationController
   end
 
   def create
-    @work = Work.new(title: params[:title], category: params[:category][:name], slug: params[:slug], description: params[:description], image_length: params[:image_length], content: params[:content])
+    @work = Work.new(title: params[:title], category: params[:category][:name], slug: params[:slug], description: params[:description], image_length: params[:image_length], content: params[:content], image: params[:image])
     if @work.save
       flash[:notice] = "作成しました"
       redirect_to("/works/#{@work.id}")
@@ -32,6 +32,7 @@ class WorksController < ApplicationController
 
   def edit
     @work = Work.find_by(id: params[:id])
+    @images = WorkImage.where("work_id = ?", params[:id])
   end
 
   def update
@@ -42,6 +43,7 @@ class WorksController < ApplicationController
     @work.description = params[:description]
     @work.image_length = params[:image_length]
     @work.content = params[:content]
+    @work.image = params[:image]
     if @work.save
       flash[:notice] = "保存しました"
       redirect_to("/works/#{@work.id}")

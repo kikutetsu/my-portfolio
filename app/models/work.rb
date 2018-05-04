@@ -1,4 +1,6 @@
 class Work < ApplicationRecord
+  has_many :work_images
+  mount_uploader :image, ImagesUploader
   validates :title, {presence: true}
   validates :category, {presence: true}
   validates :slug, {presence: true}
