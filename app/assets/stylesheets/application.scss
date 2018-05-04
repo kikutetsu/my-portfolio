@@ -99,6 +99,10 @@ button {
   cursor: pointer;
 }
 
+.mb-40 {
+  margin-bottom: 40px;
+}
+
 // button
 //---------------------------------------
 
@@ -112,12 +116,18 @@ button,
   font-weight: 500;
   background-color: $point-color;
   color: white;
+  text-align: center;
   @media screen and (max-width: 800px) {
     font-size: 14px;
     padding: 15px 15px;
   }
   &:hover {
     background-color: $main-color;
+  }
+
+  &.secondary {
+    background-color: $main-color;
+    color: $font-color;
   }
 }
 
@@ -759,7 +769,7 @@ button,
       border-radius: 4px;
       background-color: #e6e6e6;
       padding: 15px;
-      margin: 10px 0 20px;
+      margin: 10px 0 40px;
       font-weight: 600;
       letter-spacing: 2px;
       @media screen and (max-width: 800px) {
@@ -801,9 +811,38 @@ button,
         }
       }
     }
+    .title-wrapper {
+      display: flex;
+      width: 100%;
+      justify-content: space-between;
+      align-items: center;
+      .title-button {
+        width: 150px;
+        padding: 10px 15px;
+        font-size: 14px;
+        border-radius: 4px;
+        font-weight: 500;
+        background-color: $point-color;
+        color: white;
+        text-align: center;
+      }
+    }
+    .file-list {
+      background-color: white;
+      border: 2px #eee solid;
+      border-radius: 8px;
+      padding: 10px;
+      margin: 20px 0 40px;
+      height: 200px;
+      overflow: auto;
+    }
     .file-name {
       font-size: 12px;
       padding: 10px;
+      border-bottom: 1px solid #eee;
+      &:last-of-type {
+        border: none;
+      }
     }
   }
 }

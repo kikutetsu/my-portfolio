@@ -1,21 +1,32 @@
 <div class="form-container">
   <%= form_tag("/notes/#{@post.id}/update", {multipart: true}) do %>
+
     <label>記事タイトル</label>
     <input type="text" name="title" value="<%= @post.title %>">
+
     <label>カテゴリー</label>
     <%= select :post, :tag, {
       "design" => "design",
       "frontend" => "frontend",
       "rails" => "rails"
       }, selected: @post.tag %>
+
     <label>スラッグ</label>
     <input type="text" name="slug" value="<%= @post.slug %>">
+
     <label>メイン画像</label>
     <input type="file" name="image">
-    <% @images.each do |image| %>
-      <p class="file-name"><%= image.image.to_s %></p>
-    <% end %>
-    <%= link_to('本文用画像アップロード', "/notes/#{@post.id}/image_upload", class: 'button') %>
+
+    <div class="title-wrapper">
+      <label>本文用画像</label>
+      <%= link_to('画像アップロード', "/notes/#{@post.id}/image_upload", class: 'title-button') %>
+    </div>
+    <div class="file-list">
+      <% @images.each do |image| %>
+        <p class="file-name"><%= image.image.to_s %></p>
+      <% end %>
+    </div>
+
     <label>本文</label>
     <textarea name="content"><%= @post.content %></textarea>
     <label>ステータス</label>
