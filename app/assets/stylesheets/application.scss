@@ -159,6 +159,16 @@ button,
   }
 }
 
+.works-show,
+.posts-show {
+  &.wrapper {
+    padding-bottom: 110px;
+    @media screen and (max-width: 800px) {
+      padding-bottom: 100px;
+    }
+  }
+}
+
 .content {
   padding: 0;
   img {
