@@ -1007,13 +1007,21 @@ button,
       font-size: $fs-large;
     }
     h2 {
-      font-size: $fs-large;
+      font-size: $fs-midium;
     }
     h3 {
-      font-size: $fs-midium;
+      font-size: $fs-regular;
     }
     h4 {
       font-size: $fs-regular;
+    }
+    p {
+      font-size: $fs-regular;
+    }
+    ul,ol {
+      li {
+        font-size: $fs-regular;
+      }
     }
   }
 }
