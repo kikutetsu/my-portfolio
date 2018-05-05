@@ -4,10 +4,6 @@
   <input type="text" name="title" value="<%= @work.title %>">
   <label>カテゴリー</label>
   <%= select :category, :name, {"graphic" => "graphic", "editorial" => "editorial", "web" => "web", "UI/UX" => "ui_ux"}, :selected => @work.category %>
-  <label>スラッグ</label>
-  <input type="text" name="slug" value="<%= @work.slug %>">
-  <label>イメージ数</label>
-  <input type="number" name="image_length" value="<%= @work.image_length %>">
   <label>概要テキスト</label>
   <textarea name="description"><%= @work.description %></textarea>
   <label>本文</label>
