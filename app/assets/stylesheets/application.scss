@@ -7,9 +7,17 @@ $point-color: #20d9ac;
 $font-color: #222;
 $text-color: #444;
 
+$fs-xxlarge: 3.6rem;
+$fs-xlarge: 2.4rem;
+$fs-large: 2rem;
+$fs-midium: 1.6rem;
+$fs-regular: 1.4rem;
+$fs-small: 1.2rem;
+
 html {
   font-family: "Open Sans", 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   background-color: $main-color;
+  font-size: 62.5%;
 }
 
 * {
@@ -27,6 +35,7 @@ body {
   margin: 0;
   padding: 0;
   border: 50px solid transparent;
+  font-size: $fs-regular;
   @media screen and (max-width: 800px) {
     border: 3vw solid transparent;
     border-bottom-width: 0;
@@ -73,7 +82,7 @@ li {
 }
 
 p {
-  font-size: 16px;
+  font-size: $fs-midium;
   line-height: 2;
   font-weight: 400;
   color: $text-color;
@@ -111,14 +120,14 @@ button,
   display: block;
   width: 100%;
   padding: 15px 20px;
-  font-size: 16px;
+  font-size: $fs-midium;
   border-radius: 4px;
   font-weight: 500;
   background-color: $point-color;
   color: white;
   text-align: center;
   @media screen and (max-width: 800px) {
-    font-size: 14px;
+    font-size: $fs-regular;
     padding: 15px 15px;
   }
   &:hover {
@@ -193,7 +202,7 @@ button,
     .logo-text {
       color: $font-color;
       font-weight: 900;
-      font-size: 20px;
+      font-size: $fs-large;
     }
     a {
       &:hover {
@@ -230,7 +239,7 @@ button,
         position: relative;
         display: block;
         padding: 8px 0;
-        font-size: 24px;
+        font-size: $fs-large;
         font-weight: 700;
         color: $font-color;
         &:before {
@@ -253,7 +262,7 @@ button,
     .user-action {
       a {
         display: block;
-        font-size: 14px;
+        font-size: $fs-regular;
         font-weight: 700;
         color: $font-color;
         padding: 5px 0;
@@ -306,7 +315,7 @@ button,
           position: relative;
           display: inline-block;
           padding: 8px 0;
-          font-size: 24px;
+          font-size: $fs-large;
           font-weight: 700;
           color: $font-color;
           &:before {
@@ -329,7 +338,7 @@ button,
       .user-action {
         a {
           display: block;
-          font-size: 14px;
+          font-size: $fs-regular;
           font-weight: 700;
           color: $font-color;
           &:hover {
@@ -447,7 +456,7 @@ button,
   }
   .menu-icon {
     vertical-align: -2px;
-    width: 14px;
+    width: $fs-regular;
     height: 16px;
     position: relative;
     display: inline-block;
@@ -511,7 +520,7 @@ button,
   }
   .top-arrow3 {
     display: block;
-    font-size: 12px;
+    font-size: $fs-small;
     font-weight: 900;
     position: absolute;
     bottom: 0;
@@ -524,7 +533,7 @@ button,
   left: 30px;
   bottom: 20px;
   color: $font-color;
-  font-size: 36px;
+  font-size: $fs-xxlarge;
   font-weight: 900;
   letter-spacing: -2px;
   line-height: 1.2;
@@ -548,7 +557,7 @@ button,
     background-color: $point-color;
     text-align: center;
     span {
-      font-size: 12px;
+      font-size: $fs-small;
       font-weight: 500;
       color: white;
     }
@@ -604,14 +613,14 @@ button,
     .title {
       margin: 10px 0;
       padding: 0 20px;
-      font-size: 16px;
+      font-size: $fs-midium;
       line-height: 1.4;
       font-weight: 700;
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
       @media screen and (max-width: 800px) {
-        font-size: 11px;
+        font-size: 1.1rem;
         padding: 0 10px;
       }
     }
@@ -627,7 +636,7 @@ button,
       margin: 0;
       padding: 0 8px;
       height: 20px;
-      font-size: 10px;
+      font-size: 1rem;
       font-weight: 600;
       position: relative;
       line-height: 20px;
@@ -635,7 +644,6 @@ button,
       background-color: $point-color;
       color: white;
       @media screen and (max-width: 800px) {
-        font-size: 10px;
         height: 16px;
         line-height: 16px;
         padding: 0 6px;
@@ -649,13 +657,13 @@ button,
 }
 
 .content-title {
-  font-size: 32px;
+  font-size: 3.2rem;
   line-height: 1.2;
   font-weight: 900;
   margin: 15px 0;
   @media screen and (max-width: 800px) {
     margin: 10px 0;
-    font-size: 24px;
+    font-size: $fs-large;
   }
 }
 
@@ -669,7 +677,7 @@ button,
   text-align: right;
   overflow: hidden;
   z-index: 140;
-  font-size: 14px;
+  font-size: $fs-regular;
   line-height: 40px;
   border-radius: 20px;
   background-color: $point-color;
@@ -696,7 +704,7 @@ button,
     border-radius: 20px;
     min-width: 220px;
     a {
-      font-size: 14px;
+      font-size: $fs-regular;
       padding: 0 10px;
     }
   }
@@ -707,7 +715,7 @@ button,
   margin: 0 0 30px;
   padding: 0 8px;
   height: 20px;
-  font-size: 11px;
+  font-size: 1.1rem;
   font-weight: 700;
   position: relative;
   line-height: 20px;
@@ -753,10 +761,10 @@ button,
     margin: -10px auto 0;
     label {
       display: block;
-      font-size: 16px;
+      font-size: $fs-midium;
       font-weight: 600;
       @media screen and (max-width: 800px) {
-        font-size: 14px;
+        font-size: $fs-regular;
       }
     }
     textarea {
@@ -766,7 +774,7 @@ button,
       padding: 15px;
       border-radius: 4px;
       background-color: #e6e6e6;
-      font-size: 14px;
+      font-size: $fs-regular;
       font-weight: 500;
       line-height: 2;
       resize: none;
@@ -784,7 +792,7 @@ button,
       letter-spacing: 2px;
       @media screen and (max-width: 800px) {
         padding: 10px;
-        font-size: 14px;
+        font-size: $fs-regular;
       }
     }
     input[type="checkbox"] {
@@ -829,7 +837,7 @@ button,
       .title-button {
         width: 150px;
         padding: 10px 15px;
-        font-size: 14px;
+        font-size: $fs-regular;
         border-radius: 4px;
         font-weight: 500;
         background-color: $point-color;
@@ -847,7 +855,7 @@ button,
       overflow: auto;
     }
     .file-name {
-      font-size: 12px;
+      font-size: $fs-small;
       padding: 20px 40px 20px 10px;
       border-bottom: 1px solid #eee;
       height: 90px;
@@ -895,11 +903,11 @@ button,
     padding: 0 15px;
     transform: translate(0, 30px);
     color: white;
-    font-size: 14px;
+    font-size: $fs-regular;
     font-weight: 700;
     line-height: 30px;
     @media screen and (max-width: 800px) {
-      font-size: 12px;
+      font-size: $fs-small;
       height: 24px;
       line-height: 24px;
     }
@@ -956,12 +964,14 @@ button,
     padding-left: 24px;
     li {
       list-style:  disc;
+      font-size: $fs-midium;
     }
   }
   ol {
     padding-left: 24px;
     li {
       list-style:  decimal;
+      font-size: $fs-midium;
     }
   }
   blockquote {
@@ -994,16 +1004,16 @@ button,
       margin: 30px 0 20px;
     }
     h1 {
-      font-size: 24px;
+      font-size: $fs-large;
     }
     h2 {
-      font-size: 20px;
+      font-size: $fs-large;
     }
     h3 {
-      font-size: 18px;
+      font-size: $fs-midium;
     }
     h4 {
-      font-size: 16px;
+      font-size: $fs-regular;
     }
   }
 }
@@ -1016,7 +1026,7 @@ button,
   }
   a {
     margin: 0 3px;
-    font-size: 12px;
+    font-size: $fs-small;
     font-weight: 700;
     display: inline-block;
     background-color: $point-color;
@@ -1046,12 +1056,12 @@ button,
       box-shadow: 0 2px 8px rgba(0,0,0,.1);
       .title {
         padding: 0;
-        font-size: 14px;
+        font-size: $fs-regular;
         font-weight: 600;
       }
       .links {
         text-align: right;
-        font-size: 12px;
+        font-size: $fs-small;
         span {
           color: #999;
           vertical-align: 1px;
@@ -1146,7 +1156,7 @@ button,
   align-items: center;
   h1 {
     font-weight: 900;
-    font-size: 80px;
+    font-size: 8rem;
     letter-spacing: -2px;
     width: 100%;
     position: relative;
@@ -1180,14 +1190,14 @@ button,
     position: absolute;
     bottom: -100px;
     left: 50%;
-    font-size: 16px;
+    font-size: $fs-midium;
     transform: translate(-50%, 0);
     letter-spacing: 0;
   }
   @media screen and (max-width: 800px) {
     height: 500px;
     h1 {
-      font-size: 56px;
+      font-size: 5.6rem;
       line-height: 500px;
     }
     .profile-image {
@@ -1206,12 +1216,12 @@ button,
   padding-top: 60px;
   h3 {
     margin-bottom: 20px;
-    font-size: 24px;
+    font-size: $fs-large;
     line-height: 1.4;
   }
   h2 {
     margin-bottom: 40px;
-    font-size: 30px;
+    font-size: 3rem;
     line-height: 1.4;
   }
   a {
@@ -1234,7 +1244,7 @@ button,
         margin-bottom: 30px;
       }
       h2 {
-        font-size: 60px;
+        font-size: 6rem;
         line-height: 1.2;
         letter-spacing: -1px;
         font-weight: 900;
@@ -1255,7 +1265,7 @@ button,
       padding: 40px 0 50px;
       display: block;
       h3 {
-        font-size: 20px;
+        font-size: $fs-large;
       }
       &.about {
       }
@@ -1265,7 +1275,7 @@ button,
         padding: 40px 0;
         border-top: 1px #ccc solid;
         h2 {
-          font-size: 56px;
+          font-size: 5.6rem;
           margin-bottom: 30px;
         }
         .right {
