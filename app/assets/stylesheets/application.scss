@@ -735,6 +735,7 @@ button,
   margin-bottom: 40px;
   @media screen and (max-width: 800px) {
     margin-bottom: 20px;
+    font-size: $fs-regular;
   }
 }
 
@@ -1002,6 +1003,7 @@ button,
     }
     h1,h2,h3,h4,h5,h6 {
       margin: 30px 0 20px;
+      line-height: 1.4;
     }
     h1 {
       font-size: $fs-large;
