@@ -26,16 +26,8 @@
 <h3 class="content-title"><%= @work.title %></h1>
 <% @work.category == "ui_ux" ? work_category = "UI/UX" : work_category = @work.category %>
 <%= link_to work_category, "/works/category/#{@work.category}", class: "content-meta" %>
-<!-- <figure class="content-main-image"><img src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/thumb.jpg" %>"></figure> -->
 <p class="content-description"><%= @work.description %></p>
-<% if @work.image_length.positive? %>
-  <% @work.image_length.times do |image| %>
-    <img class="works-img" src="<%= asset_pack_path "images/works/#{@work.category}/#{@work.slug}/#{image + 1}.jpg" %>">
-  <% end %>
-<% end %>
-<% if @work.content.present? %>
-  <div class="content">
-    <%= sanitize markdown(@work.content) %>
-  </div>
-<% end %>
+<div class="content">
+  <%= sanitize markdown(@work.content) %>
+</div>
 </article>
