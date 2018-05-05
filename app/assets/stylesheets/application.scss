@@ -657,13 +657,13 @@ button,
 }
 
 .content-title {
-  font-size: 3.2rem;
+  font-size: 3rem;
   line-height: 1.4;
   font-weight: 900;
   margin: 15px 0;
   @media screen and (max-width: 800px) {
     margin: 10px 0;
-    font-size: $fs-large;
+    font-size: $fs-xlarge;
   }
 }
 
@@ -952,7 +952,7 @@ button,
     margin: 40px 0 20px;
   }
   h1 {
-    padding-bottom: 5px;
+    padding-bottom: 10px;
     border-bottom: #eee 2px solid;
   }
   a {
