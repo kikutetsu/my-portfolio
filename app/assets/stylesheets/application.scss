@@ -10,7 +10,7 @@ $text-color: #444;
 $fs-xxlarge: 3.6rem;
 $fs-xlarge: 2.4rem;
 $fs-large: 2rem;
-$fs-midium: 1.6rem;
+$fs-medium: 1.6rem;
 $fs-regular: 1.4rem;
 $fs-small: 1.2rem;
 
@@ -82,7 +82,7 @@ li {
 }
 
 p {
-  font-size: $fs-midium;
+  font-size: $fs-medium;
   line-height: 2;
   font-weight: 400;
   color: $text-color;
@@ -120,7 +120,7 @@ button,
   display: block;
   width: 100%;
   padding: 15px 20px;
-  font-size: $fs-midium;
+  font-size: $fs-medium;
   border-radius: 4px;
   font-weight: 500;
   background-color: $point-color;
@@ -304,18 +304,17 @@ button,
       right: 0;
       bottom: 0;
       left: 0;
-      padding: 0;
+      padding: 80px 12% 30px;
       // background-color: $main-color;
       .nav-list {
-        padding: 50px 30px 30px;
         li {
-          margin-bottom: 20px;
+          margin: 0 auto 30px;
         }
         a {
           position: relative;
           display: inline-block;
           padding: 8px 0;
-          font-size: $fs-large;
+          font-size: 3.6rem;
           font-weight: 700;
           color: $font-color;
           &:before {
@@ -336,10 +335,15 @@ button,
         }
       }
       .user-action {
+        width: 100%;
+        display: inline-block;
+        padding: 0;
         a {
+          padding: 0;
+          margin-bottom: 20px;
           display: block;
-          font-size: $fs-regular;
-          font-weight: 700;
+          font-size: $fs-medium;
+          font-weight: 600;
           color: $font-color;
           &:hover {
             span {
@@ -347,8 +351,6 @@ button,
             }
           }
         }
-        display: inline-block;
-        padding: 0 30px;
       }
     }
     &.is-active {
@@ -613,7 +615,7 @@ button,
     .title {
       margin: 10px 0;
       padding: 0 20px;
-      font-size: $fs-midium;
+      font-size: $fs-medium;
       line-height: 1.4;
       font-weight: 700;
       white-space: nowrap;
@@ -762,7 +764,7 @@ button,
     margin: -10px auto 0;
     label {
       display: block;
-      font-size: $fs-midium;
+      font-size: $fs-medium;
       font-weight: 600;
       @media screen and (max-width: 800px) {
         font-size: $fs-regular;
@@ -965,14 +967,14 @@ button,
     padding-left: 24px;
     li {
       list-style:  disc;
-      font-size: $fs-midium;
+      font-size: $fs-medium;
     }
   }
   ol {
     padding-left: 24px;
     li {
       list-style:  decimal;
-      font-size: $fs-midium;
+      font-size: $fs-medium;
     }
   }
   blockquote {
@@ -1009,7 +1011,7 @@ button,
       font-size: $fs-large;
     }
     h2 {
-      font-size: $fs-midium;
+      font-size: $fs-medium;
     }
     h3 {
       font-size: $fs-regular;
@@ -1200,7 +1202,7 @@ button,
     position: absolute;
     bottom: -100px;
     left: 50%;
-    font-size: $fs-midium;
+    font-size: $fs-medium;
     transform: translate(-50%, 0);
     letter-spacing: 0;
   }
