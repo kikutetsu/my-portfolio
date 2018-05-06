@@ -87,8 +87,8 @@ document.addEventListener("DOMContentLoaded", function(){
   }
 
   // fadein
-  scrollFadeIn('fadein', 'scrollin', 150);
+  scrollFadeIn('fadein', 'scrollin', 80);
   window.addEventListener('scroll', () => {
-    scrollFadeIn('fadein', 'scrollin', 150);
+    scrollFadeIn('fadein', 'scrollin', 80);
   }, false)
 }, false);
