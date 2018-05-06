@@ -72,21 +72,23 @@ document.addEventListener("DOMContentLoaded", function(){
 
   scrollTop();
 
-  //fadein_element
-  var scrollFadeIn = function(){
-    var fadeInElements = document.getElementsByClassName("fadein");
+  //scrollFadein
+  var scrollFadeIn = function(target, scrollin, duration){
+    var fadeInElements = document.getElementsByClassName(target);
     [].forEach.call(fadeInElements, (element,index) => {
       var rect = element.getBoundingClientRect();
       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
       var elementOffsetTop = rect.top + scrollTop;
-      var params = 150;
+      var params = duration;
       if (elementOffsetTop <= scrollTop + window.innerHeight - params && !element.classList.contains('scrollin')) {
-        element.classList.add('scrollin');
+        element.classList.add(scrollin);
       }
     });
   }
-  scrollFadeIn();
+
+  // fadein
+  scrollFadeIn('fadein', 'scrollin', 150);
   window.addEventListener('scroll', () => {
-    scrollFadeIn();
+    scrollFadeIn('fadein', 'scrollin', 150);
   }, false)
 }, false);
