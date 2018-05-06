@@ -79,7 +79,7 @@ document.addEventListener("DOMContentLoaded", function(){
       var rect = element.getBoundingClientRect();
       var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
       var elementOffsetTop = rect.top + scrollTop;
-      var params = 200;
+      var params = 150;
       if (elementOffsetTop <= scrollTop + window.innerHeight - params && !element.classList.contains('scrollin')) {
         element.classList.add('scrollin');
       }
