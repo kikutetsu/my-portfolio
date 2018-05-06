@@ -72,12 +72,21 @@ document.addEventListener("DOMContentLoaded", function(){
 
   scrollTop();
 
-  // fixed-login-form
-  // var loginForm = document.getElementById("login-form");
-  // if (loginForm) {
-  //   window.addEventListener("resize", function(){
-  //     console.log(window.innerHeight);
-  //     console.log(loginForm.clientHeight);
-  //   }, false);
-  // }
+  //fadein_element
+  var scrollFadeIn = function(){
+    var fadeInElements = document.getElementsByClassName("fadein");
+    [].forEach.call(fadeInElements, (element,index) => {
+      var rect = element.getBoundingClientRect();
+      var scrollTop = document.documentElement.scrollTop || document.body.scrollTop;
+      var elementOffsetTop = rect.top + scrollTop;
+      var params = 200;
+      if (elementOffsetTop <= scrollTop + window.innerHeight - params && !element.classList.contains('scrollin')) {
+        element.classList.add('scrollin');
+      }
+    });
+  }
+  scrollFadeIn();
+  window.addEventListener('scroll', () => {
+    scrollFadeIn();
+  }, false)
 }, false);

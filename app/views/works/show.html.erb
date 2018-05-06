@@ -22,7 +22,7 @@
   </div>
 <% end %>
 
-<article class="content-wrap">
+<article class="content-wrap fadein">
 <h3 class="content-title"><%= @work.title %></h1>
 <% @work.category == "ui_ux" ? work_category = "UI/UX" : work_category = @work.category %>
 <%= link_to work_category, "/works/category/#{@work.category}", class: "content-meta" %>

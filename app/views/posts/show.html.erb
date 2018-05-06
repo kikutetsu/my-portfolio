@@ -22,7 +22,7 @@
   </div>
 <% end %>
 
-<article class="content-wrap">
+<article class="content-wrap fadein">
 <h2 class="content-title"><%= @post.title %></h2>
 <%= link_to @post.tag, "/notes/category/#{@post.tag}", class: "content-meta" %>
 <figure class="content-main-image round"><%= image_tag @post.image.to_s %></figure>

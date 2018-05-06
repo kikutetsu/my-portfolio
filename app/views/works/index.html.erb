@@ -11,7 +11,7 @@
 
 <div class="card-container">
 <% @works.shuffle.each do |work| %>
-  <div class="card">
+  <div class="card fadein">
     <%= link_to("/works/#{work.id}") do %>
       <div class="card-inner">
         <figure class="content-main-image"><%= image_tag work.image.to_s %></figure>

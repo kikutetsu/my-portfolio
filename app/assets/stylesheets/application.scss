@@ -112,6 +112,16 @@ button {
   margin-bottom: 40px;
 }
 
+.fadein {
+  transition: all 1s ease;
+  opacity: 0;
+  transform: translateY(30px);
+  &.scrollin {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 // button
 //---------------------------------------
 
