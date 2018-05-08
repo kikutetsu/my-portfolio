@@ -1178,7 +1178,7 @@ button,
   align-items: center;
   h1 {
     font-weight: 900;
-    font-size: 8rem;
+    font-size: 6rem;
     letter-spacing: -2px;
     width: 100%;
     position: relative;
@@ -1186,10 +1186,37 @@ button,
     .profile-title {
       position: absolute;
       top: 50%;
-      width: 100%;
-      transform: translate(0, -50%);
-      display: block;
-      line-height: 1.2;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: inline-block;
+      line-height: 1;
+      word-break: keep-all;
+      &:after {
+        content: '';
+        position: absolute;
+        right: -20px;
+        bottom: 0;
+        width: 2px;
+        height: 100%;
+        background: #000;
+        animation: text-flash .5s linear 0s 1 alternate forwards;
+        animation-iteration-count: infinite;
+      }
+    }
+  }
+
+  @keyframes text-flash {
+    0% {
+      opacity: 0;
+    }
+    49% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+    100% {
+      opacity: 1;
     }
   }
   .profile-image {

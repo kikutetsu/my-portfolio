@@ -91,4 +91,17 @@ document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', () => {
     scrollFadeIn('fadein', 'scrollin', 80);
   }, false)
+
+  //top_animation
+  var topAnimation = function(){
+    var profileTitle = document.getElementById('profile-title');
+    if (profileTitle) {
+      var text = document.createTextNode('kiku');
+      profileTitle.appendChild(text);
+    }
+  }
+
+  // topAnimation();
+  setTimeout(topAnimation, 2000);
+
 }, false);
