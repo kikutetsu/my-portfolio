@@ -1,0 +1,16 @@
+@mixin bar1($width:120px, $height: 8px, $top: 100px, $left: 80px) {
+  position: absolute;
+  width: $width;
+  height: $height;
+  top: $top;
+  left: $left;
+  border-radius: $height / 2;
+  transform: rotate(-45deg);
+  overflow: hidden;
+  .inner {
+    width: $width;
+    height: $height;
+    border-radius: $height / 2;
+    background-color: $point-color;
+  }
+}

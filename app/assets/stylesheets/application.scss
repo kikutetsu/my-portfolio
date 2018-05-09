@@ -1,5 +1,6 @@
 @import url(https://fonts.googleapis.com/earlyaccess/notosansjp.css);
 @import "//fonts.googleapis.com/css?family=Open+Sans";
+@import 'mixins';
 @import 'normalize';
 
 $main-color: #ffe500;
@@ -1206,21 +1207,22 @@ button,
       transition-duration: 1s;
       box-shadow: 0 12px 24px rgba(0, 0, 0, .1);
     }
-    .box-bar {
-      position: absolute;
-      width: 100px;
-      height: 10px;
-      top: 100px;
-      left: 80px;
-      border-radius: 5px;
-      transform: rotate(-45deg);
-      overflow: hidden;
+    .box-bar1 {
+      @include bar1(120px, 6px, 100px, 100px);
       .inner {
-        width: 100px;
-        height: 10px;
-        border-radius: 5px;
-        background-color: $point-color;
         animation: slide-bar 1s ease-in 1s infinite normal backwards;
+      }
+    }
+    .box-bar2 {
+      @include bar1(80px, 6px, 150px, 100px);
+      .inner {
+        animation: slide-bar .5s ease-in .5s infinite normal backwards;
+      }
+    }
+    .box-bar3 {
+      @include bar1(10px, 10px, 250px, 80px);
+      .inner {
+        animation: slide-bar .5s ease-in 1s infinite normal backwards;
       }
     }
     @keyframes slide-bar {
@@ -1281,8 +1283,9 @@ button,
         right: -5px;
         top: -5%;
         bottom: -5%;
-        width: 5px;
+        width: 6px;
         height: 110%;
+        border-radius: 3px;
         background: $point-color;
         animation: text-flash .5s linear 0s 1 alternate forwards;
         animation-iteration-count: infinite;
@@ -1373,7 +1376,8 @@ button,
       line-height: 500px;
       .profile-title {
         &:after {
-          width: 3px;
+          width: 4px;
+          border-radius: 2px;
         }
       }
     }
