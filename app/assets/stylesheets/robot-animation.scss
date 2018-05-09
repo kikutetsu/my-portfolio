@@ -1,0 +1,68 @@
+$illust-color1: #BFBFBF;
+$illust-color2: #CCCCCC;
+$illust-color3: #DBDBDB;
+$illust-color4: #E0E0E0;
+
+.illust-robo {
+  .robo {
+    .robo-head {
+      .robo-head-main {
+        fill: $illust-color1;
+      }
+      .robo-eyes {
+        .robo-eye-l {
+          fill:#FFFFFF;
+        }
+        .robo-eye-r {
+          fill:#FFFFFF;
+        }
+      }
+    }
+    .robo-body {
+      fill: $illust-color1;
+    }
+    .robo-arms {
+      .robo-arm-r {
+        .robo-shoulder-r {
+          fill: $illust-color2;
+        }
+        .robo-second-arm-r {
+          fill: $illust-color1;
+        }
+        .robo-first-arm-r {
+          fill: $illust-color2;
+        }
+      }
+      .robo-arm-l {
+        .robo-shoulder-l {
+          fill: $illust-color2;
+        }
+        .robo-second-arm-l {
+          fill: $illust-color1;
+        }
+        .robo-first-arm-l {
+          fill: $illust-color2;
+        }
+      }
+    }
+  }
+  .pc {
+    .pc-display {
+      fill: $illust-color3;
+    }
+    .pc-body {
+      fill: $illust-color4;
+    }
+  }
+  .cup {
+    .cup-body {
+      fill: $illust-color2;
+    }
+    .cup-handle {
+      fill: none;
+      stroke: $illust-color2;
+      stroke-width: 4;
+      stroke-miterlimit: 10;
+    }
+  }
+}
