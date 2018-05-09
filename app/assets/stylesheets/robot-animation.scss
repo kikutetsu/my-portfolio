@@ -5,6 +5,7 @@ $illust-color4: #E0E0E0;
 
 .illust-robo {
   .robo {
+    animation: bound-body 1s ease-in 0s infinite alternate forwards;
     .robo-head {
       .robo-head-main {
         fill: $illust-color1;
@@ -20,9 +21,12 @@ $illust-color4: #E0E0E0;
     }
     .robo-body {
       fill: $illust-color1;
+      animation: bound-body 2s ease-in .5s infinite alternate forwards;
     }
     .robo-arms {
       .robo-arm-r {
+        transform-origin: top center;
+        animation: swing-arm-r .75s ease-in-out .5s infinite alternate forwards;
         .robo-shoulder-r {
           fill: $illust-color2;
         }
@@ -31,9 +35,12 @@ $illust-color4: #E0E0E0;
         }
         .robo-first-arm-r {
           fill: $illust-color2;
+          animation: swing-first-arm-r .5s ease-in-out 0s infinite alternate forwards;
         }
       }
       .robo-arm-l {
+        transform-origin: top center;
+        animation: swing-arm-l .5s ease-in-out 0s infinite alternate forwards;
         .robo-shoulder-l {
           fill: $illust-color2;
         }
@@ -42,6 +49,7 @@ $illust-color4: #E0E0E0;
         }
         .robo-first-arm-l {
           fill: $illust-color2;
+          animation: swing-first-arm-l .5s ease-in-out .5s infinite alternate forwards;
         }
       }
     }
@@ -64,5 +72,50 @@ $illust-color4: #E0E0E0;
       stroke-width: 4;
       stroke-miterlimit: 10;
     }
+  }
+}
+
+@keyframes swing-arm-l {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+  100% {
+    transform: rotate(5deg) translate(10px, 5px);
+  }
+}
+
+@keyframes swing-arm-r {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+  100% {
+    transform: rotate(-5deg) translate(-10px, 5px);
+  }
+}
+
+@keyframes swing-first-arm-r {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+  100% {
+    transform: rotate(5deg) translate(10px, -20px);
+  }
+}
+
+@keyframes swing-first-arm-l {
+  0% {
+    transform: rotate(0) translate(0, 0);
+  }
+  100% {
+    transform: rotate(-5deg) translate(-10px, 5px);
+  }
+}
+
+@keyframes bound-body {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(2px);
   }
 }
