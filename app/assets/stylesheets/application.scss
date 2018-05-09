@@ -1241,11 +1241,10 @@ button,
     }
     .box-illust {
       position: absolute;
-      width: 200px;
-      height: 200px;
-      background-color: $point-color;
+      width: 360px;
+      height: 240px;
       bottom: 0;
-      left: 80px;
+      left: 30px;
       @media screen and (max-width: 800px) {
         left: 50%;
         transform: translateX(-50%);
@@ -1276,6 +1275,9 @@ button,
       display: inline-block;
       line-height: 1;
       word-break: keep-all;
+      span {
+        text-decoration: underline;
+      }
       &:after {
         content: '';
         position: absolute;

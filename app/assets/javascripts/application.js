@@ -99,106 +99,130 @@ document.addEventListener("DOMContentLoaded", function(){
 
     if (!profileTitle) return;
     var addText1 = () => {
-      var text = document.createTextNode('k');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'k';
+      profileTitle.appendChild(span);
     }
     var addText2 = () => {
-      var text = document.createTextNode('i');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'i';
+      profileTitle.appendChild(span);
     }
     var addText3 = () => {
-      var text = document.createTextNode('k');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'k';
+      profileTitle.appendChild(span);
     }
     var addText4 = () => {
-      var text = document.createTextNode('u');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'u';
+      profileTitle.appendChild(span);
     }
     var addText5 = () => {
-      var text = document.createTextNode('c');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'c';
+      profileTitle.appendChild(span);
     }
     var addText6 = () => {
-      var text = document.createTextNode('h');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'h';
+      profileTitle.appendChild(span);
     }
     var addText7 = () => {
-      var text = document.createTextNode('i');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'i';
+      profileTitle.appendChild(span);
     }
     var removeText1 = () => {
       profileTitle.innerHTML = "菊地";
     }
     var addText8 = () => {
-      var text = document.createTextNode('t');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 't';
+      profileTitle.appendChild(span);
     }
     var addText9 = () => {
-      var text = document.createTextNode('e');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'e';
+      profileTitle.appendChild(span);
     }
     var addText10 = () => {
-      var text = document.createTextNode('t');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 't';
+      profileTitle.appendChild(span);
     }
     var addText11 = () => {
-      var text = document.createTextNode('s');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 's';
+      profileTitle.appendChild(span);
     }
     var addText12 = () => {
-      var text = document.createTextNode('u');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'u';
+      profileTitle.appendChild(span);
     }
     var addText13 = () => {
-      var text = document.createTextNode('r');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'r';
+      profileTitle.appendChild(span);
     }
     var addText14 = () => {
-      var text = document.createTextNode('o');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'o';
+      profileTitle.appendChild(span);
     }
     var addText14_2 = () => {
-      var text = document.createTextNode('u');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'u';
+      profileTitle.appendChild(span);
     }
     var removeText2 = () => {
       profileTitle.innerHTML = "菊地哲郎";
     }
     var addText15 = () => {
-      var text = document.createTextNode('d');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'd';
+      profileTitle.appendChild(span);
     }
     var addText16 = () => {
-      var text = document.createTextNode('e');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'e';
+      profileTitle.appendChild(span);
     }
     var addText17 = () => {
-      var text = document.createTextNode('h');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'h';
+      profileTitle.appendChild(span);
     }
     var addText18 = () => {
-      var text = document.createTextNode('u');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'u';
+      profileTitle.appendChild(span);
     }
     var addText19 = () => {
-      var text = document.createTextNode('d');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'd';
+      profileTitle.appendChild(span);
     }
     var addText20 = () => {
-      var text = document.createTextNode('e');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'e';
+      profileTitle.appendChild(span);
     }
     var addText21 = () => {
-      var text = document.createTextNode('s');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 's';
+      profileTitle.appendChild(span);
     }
     var addText22 = () => {
-      var text = document.createTextNode('u');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = 'u';
+      profileTitle.appendChild(span);
     }
     var addText23 = () => {
-      var text = document.createTextNode('。');
-      profileTitle.appendChild(text);
+      var span = document.createElement('span');
+      span.textContent = '。';
+      profileTitle.appendChild(span);
     }
     var removeText3 = () => {
       profileTitle.innerHTML = "菊地哲郎でふ";
@@ -213,6 +237,9 @@ document.addEventListener("DOMContentLoaded", function(){
       profileTitle.innerHTML = "菊地哲郎です";
     }
     var removeText7 = () => {
+      profileTitle.innerHTML = "菊地哲郎です。";
+    }
+    var removeText8 = () => {
       profileTitle.innerHTML = "";
     }
     setTimeout(addText1, 1000);
@@ -245,8 +272,9 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(addText22, 7500);
     setTimeout(removeText6, 7700);
     setTimeout(addText23, 8200);
+    setTimeout(removeText7, 8400);
     setTimeout(() => {profileTitle.classList.add('is-focus')}, 9000);
-    setTimeout(removeText7, 11000);
+    setTimeout(removeText8, 11000);
     setTimeout(() => {profileTitle.classList.remove('is-focus')}, 11000);
     setTimeout(() => {profileTitle.classList.add('is-active')}, 11200);
     setTimeout(() => {profileBox.classList.add('is-active')}, 12700);
