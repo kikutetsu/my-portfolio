@@ -246,10 +246,10 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(removeText6, 7700);
     setTimeout(addText23, 8200);
     setTimeout(() => {profileTitle.classList.add('is-focus')}, 9000);
-    setTimeout(removeText7, 9800);
-    setTimeout(() => {profileTitle.classList.remove('is-focus')}, 9800);
-    setTimeout(() => {profileTitle.classList.add('is-active')}, 10000);
-    setTimeout(() => {profileBox.classList.add('is-active')}, 11500);
+    setTimeout(removeText7, 11000);
+    setTimeout(() => {profileTitle.classList.remove('is-focus')}, 11000);
+    setTimeout(() => {profileTitle.classList.add('is-active')}, 11200);
+    setTimeout(() => {profileBox.classList.add('is-active')}, 12700);
   }
 
   topAnimation();

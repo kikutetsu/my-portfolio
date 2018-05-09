@@ -1192,16 +1192,31 @@ button,
     display: flex;
     align-items: center;
     justify-content: center;
-    padding: 20px;
+    padding: 80px 40px;
+    @media screen and (max-width: 800px) {
+      padding: 100px 3vw 40px;
+    }
     .box-image {
       width: 780px;
-      height: 400px;
+      height: 100%;
       border-radius: 12px;
       background-color: white;
       transform: translateY(50px);
       opacity: 0;
       transition-duration: 1s;
       box-shadow: 0 12px 24px rgba(0, 0, 0, .1);
+    }
+    .box-illust {
+      position: absolute;
+      width: 200px;
+      height: 200px;
+      background-color: $point-color;
+      bottom: 0;
+      left: 80px;
+      @media screen and (max-width: 800px) {
+        left: 50%;
+        transform: translateX(-50%);
+      }
     }
     &.is-active {
       .box-image {
@@ -1256,7 +1271,7 @@ button,
       }
       &.is-focus {
         &:after {
-          left: -10px;
+          left: -15px;
         }
         &:before {
           display: block;
