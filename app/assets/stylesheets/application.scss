@@ -222,12 +222,6 @@ button,
         }
       }
     }
-    &.is-hidden {
-      .circle {
-        opacity: 0;
-        transform: translateY(-15px);
-      }
-    }
     .circle {
       position: relative;
       display: inline-block;
@@ -441,15 +435,6 @@ button,
       &.menu-bg-2 {
         transform: scale(1000);
       }
-    }
-  }
-}
-
-.menu-wrap {
-  &.is-hidden {
-    .menu-btn, .menu-bg {
-      opacity: 0;
-      transform: translateY(-15px);
     }
   }
 }
@@ -1204,18 +1189,24 @@ button,
     background-color: #eee;
     transition-duration: 1s;
     overflow: hidden;
-    .box-circle {
-      width: 100px;
-      height: 100px;
-      border-radius: 50%;
-      background-color: $point-color;
-      left: 20%;
-      top: 100%;
-      position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    .box-image {
+      width: 780px;
+      height: 400px;
+      border-radius: 12px;
+      background-color: white;
+      transform: translateY(50px);
+      opacity: 0;
+      transition-duration: 1s;
+      box-shadow: 0 12px 24px rgba(0, 0, 0, .1);
     }
     &.is-active {
-      .box-circle {
-        top: 50%;
+      .box-image {
+        transform: translateY(0);
+        opacity: 1;
       }
     }
   }
