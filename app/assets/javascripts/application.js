@@ -95,13 +95,154 @@ document.addEventListener("DOMContentLoaded", function(){
   //top_animation
   var topAnimation = function(){
     var profileTitle = document.getElementById('profile-title');
-    if (profileTitle) {
-      var text = document.createTextNode('kiku');
+    if (!profileTitle) return;
+    var addText1 = () => {
+      var text = document.createTextNode('k');
       profileTitle.appendChild(text);
     }
+    var addText2 = () => {
+      var text = document.createTextNode('i');
+      profileTitle.appendChild(text);
+    }
+    var addText3 = () => {
+      var text = document.createTextNode('k');
+      profileTitle.appendChild(text);
+    }
+    var addText4 = () => {
+      var text = document.createTextNode('u');
+      profileTitle.appendChild(text);
+    }
+    var addText5 = () => {
+      var text = document.createTextNode('c');
+      profileTitle.appendChild(text);
+    }
+    var addText6 = () => {
+      var text = document.createTextNode('h');
+      profileTitle.appendChild(text);
+    }
+    var addText7 = () => {
+      var text = document.createTextNode('i');
+      profileTitle.appendChild(text);
+    }
+    var removeText1 = () => {
+      profileTitle.innerHTML = "菊地";
+    }
+    var addText8 = () => {
+      var text = document.createTextNode('t');
+      profileTitle.appendChild(text);
+    }
+    var addText9 = () => {
+      var text = document.createTextNode('e');
+      profileTitle.appendChild(text);
+    }
+    var addText10 = () => {
+      var text = document.createTextNode('t');
+      profileTitle.appendChild(text);
+    }
+    var addText11 = () => {
+      var text = document.createTextNode('s');
+      profileTitle.appendChild(text);
+    }
+    var addText12 = () => {
+      var text = document.createTextNode('u');
+      profileTitle.appendChild(text);
+    }
+    var addText13 = () => {
+      var text = document.createTextNode('r');
+      profileTitle.appendChild(text);
+    }
+    var addText14 = () => {
+      var text = document.createTextNode('o');
+      profileTitle.appendChild(text);
+    }
+    var removeText2 = () => {
+      profileTitle.innerHTML = "菊地哲郎";
+    }
+    var addText15 = () => {
+      var text = document.createTextNode('d');
+      profileTitle.appendChild(text);
+    }
+    var addText16 = () => {
+      var text = document.createTextNode('e');
+      profileTitle.appendChild(text);
+    }
+    var addText17 = () => {
+      var text = document.createTextNode('h');
+      profileTitle.appendChild(text);
+    }
+    var addText18 = () => {
+      var text = document.createTextNode('u');
+      profileTitle.appendChild(text);
+    }
+    var addText19 = () => {
+      var text = document.createTextNode('d');
+      profileTitle.appendChild(text);
+    }
+    var addText20 = () => {
+      var text = document.createTextNode('e');
+      profileTitle.appendChild(text);
+    }
+    var addText21 = () => {
+      var text = document.createTextNode('s');
+      profileTitle.appendChild(text);
+    }
+    var addText22 = () => {
+      var text = document.createTextNode('u');
+      profileTitle.appendChild(text);
+    }
+    var addText23 = () => {
+      var text = document.createTextNode('。');
+      profileTitle.appendChild(text);
+    }
+    var removeText3 = () => {
+      profileTitle.innerHTML = "菊地哲郎でふ";
+    }
+    var removeText4 = () => {
+      profileTitle.innerHTML = "菊地哲郎で";
+    }
+    var removeText5 = () => {
+      profileTitle.innerHTML = "菊地哲郎";
+    }
+    var removeText6 = () => {
+      profileTitle.innerHTML = "菊地哲郎です";
+    }
+    var removeText7 = () => {
+      profileTitle.innerHTML = "";
+    }
+    setTimeout(addText1, 1000);
+    setTimeout(addText2, 1200);
+    setTimeout(addText3, 1700);
+    setTimeout(addText4, 1900);
+    setTimeout(addText5, 2400);
+    setTimeout(addText6, 2600);
+    setTimeout(addText7, 2800);
+    setTimeout(removeText1, 3000);
+    setTimeout(addText8, 3100);
+    setTimeout(addText9, 3300);
+    setTimeout(addText10, 3800);
+    setTimeout(addText11, 4000);
+    setTimeout(addText12, 4200);
+    setTimeout(addText13, 4700);
+    setTimeout(addText14, 4900);
+    setTimeout(removeText2, 5100);
+    setTimeout(addText15, 5300);
+    setTimeout(addText16, 5500);
+    setTimeout(addText17, 5700);
+    setTimeout(addText18, 5900);
+    setTimeout(removeText3, 6100);
+    setTimeout(removeText4, 6400);
+    setTimeout(removeText5, 6600);
+    setTimeout(addText19, 6900);
+    setTimeout(addText20, 7100);
+    setTimeout(addText21, 7300);
+    setTimeout(addText22, 7500);
+    setTimeout(removeText6, 7700);
+    setTimeout(addText23, 8200);
+    setTimeout(() => {profileTitle.classList.add('focus')}, 9000);
+    setTimeout(removeText7, 9500);
+    setTimeout(() => {profileTitle.classList.remove('focus')}, 9500);
   }
 
-  // topAnimation();
-  setTimeout(topAnimation, 2000);
+  topAnimation();
 
 }, false);
