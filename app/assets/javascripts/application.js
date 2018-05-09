@@ -155,6 +155,10 @@ document.addEventListener("DOMContentLoaded", function(){
       var text = document.createTextNode('o');
       profileTitle.appendChild(text);
     }
+    var addText14_2 = () => {
+      var text = document.createTextNode('u');
+      profileTitle.appendChild(text);
+    }
     var removeText2 = () => {
       profileTitle.innerHTML = "菊地哲郎";
     }
@@ -224,6 +228,7 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(addText12, 4200);
     setTimeout(addText13, 4700);
     setTimeout(addText14, 4900);
+    setTimeout(addText14_2, 5000);
     setTimeout(removeText2, 5100);
     setTimeout(addText15, 5300);
     setTimeout(addText16, 5500);
