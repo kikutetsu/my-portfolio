@@ -1198,7 +1198,7 @@ button,
         position: absolute;
         right: -5px;
         bottom: -5%;
-        width: 3px;
+        width: 5px;
         height: 110%;
         background: $point-color;
         animation: text-flash .5s linear 0s 1 alternate forwards;
@@ -1269,8 +1269,13 @@ button,
   @media screen and (max-width: 800px) {
     height: 500px;
     h1 {
-      font-size: 5.6rem;
+      font-size: 3.2rem;
       line-height: 500px;
+      .profile-title {
+        &:after {
+          width: 3px;
+        }
+      }
     }
     .profile-image {
       width: 60px;
