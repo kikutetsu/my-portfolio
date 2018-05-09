@@ -244,8 +244,8 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(removeText6, 7700);
     setTimeout(addText23, 8200);
     setTimeout(() => {profileTitle.classList.add('focus')}, 9000);
-    setTimeout(removeText7, 9500);
-    setTimeout(() => {profileTitle.classList.remove('focus')}, 9500);
+    setTimeout(removeText7, 9800);
+    setTimeout(() => {profileTitle.classList.remove('focus')}, 9800);
   }
 
   topAnimation();
