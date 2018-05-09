@@ -1206,6 +1206,37 @@ button,
       transition-duration: 1s;
       box-shadow: 0 12px 24px rgba(0, 0, 0, .1);
     }
+    .box-bar {
+      position: absolute;
+      width: 100px;
+      height: 10px;
+      top: 100px;
+      left: 80px;
+      border-radius: 5px;
+      transform: rotate(-45deg);
+      overflow: hidden;
+      .inner {
+        width: 100px;
+        height: 10px;
+        border-radius: 5px;
+        background-color: $point-color;
+        animation: slide-bar 1s ease-in 1s infinite normal backwards;
+      }
+    }
+    @keyframes slide-bar {
+      0% {
+        transform: translateX(100%);
+      }
+      30% {
+        transform: translateX(0);
+      }
+      70% {
+        transform: translateX(0);
+      }
+      100% {
+        transform: translateX(-100%);
+      }
+    }
     .box-illust {
       position: absolute;
       width: 200px;
