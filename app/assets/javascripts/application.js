@@ -95,6 +95,10 @@ document.addEventListener("DOMContentLoaded", function(){
   //top_animation
   var topAnimation = function(){
     var profileTitle = document.getElementById('profile-title');
+    var profileBox = document.getElementById('profile-box');
+    var menu = document.getElementById('menu-wrap');
+    var logo = document.getElementById('logo');
+
     if (!profileTitle) return;
     var addText1 = () => {
       var text = document.createTextNode('k');
@@ -213,6 +217,8 @@ document.addEventListener("DOMContentLoaded", function(){
     var removeText7 = () => {
       profileTitle.innerHTML = "";
     }
+    menu.classList.add('is-hidden');
+    logo.classList.add('is-hidden');
     setTimeout(addText1, 1000);
     setTimeout(addText2, 1200);
     setTimeout(addText3, 1700);
@@ -247,6 +253,9 @@ document.addEventListener("DOMContentLoaded", function(){
     setTimeout(removeText7, 9800);
     setTimeout(() => {profileTitle.classList.remove('is-focus')}, 9800);
     setTimeout(() => {profileTitle.classList.add('is-active')}, 10000);
+    setTimeout(() => {profileBox.classList.add('is-active')}, 11500);
+    setTimeout(() => {menu.classList.remove('is-hidden')}, 11500);
+    setTimeout(() => {logo.classList.remove('is-hidden')}, 11500);
   }
 
   topAnimation();
