@@ -2,10 +2,10 @@ $illust-color1: #BFBFBF;
 $illust-color2: #CCCCCC;
 $illust-color3: #DBDBDB;
 $illust-color4: #E0E0E0;
+$illust-color5: #FFFFFF;
 
 .illust-robo {
   .robo {
-    animation: bound-body 1s ease-in 0s infinite alternate forwards;
     .robo-head {
       .robo-head-main {
         fill: $illust-color1;
@@ -21,12 +21,10 @@ $illust-color4: #E0E0E0;
     }
     .robo-body {
       fill: $illust-color1;
-      animation: bound-body 2s ease-in .5s infinite alternate forwards;
     }
     .robo-arms {
       .robo-arm-r {
         transform-origin: top center;
-        animation: swing-arm-r .75s ease-in-out .5s infinite alternate forwards;
         .robo-shoulder-r {
           fill: $illust-color2;
         }
@@ -35,12 +33,10 @@ $illust-color4: #E0E0E0;
         }
         .robo-first-arm-r {
           fill: $illust-color2;
-          animation: swing-first-arm-r .5s ease-in-out 0s infinite alternate forwards;
         }
       }
       .robo-arm-l {
         transform-origin: top center;
-        animation: swing-arm-l .5s ease-in-out 0s infinite alternate forwards;
         .robo-shoulder-l {
           fill: $illust-color2;
         }
@@ -49,7 +45,6 @@ $illust-color4: #E0E0E0;
         }
         .robo-first-arm-l {
           fill: $illust-color2;
-          animation: swing-first-arm-l .5s ease-in-out .5s infinite alternate forwards;
         }
       }
     }
@@ -62,15 +57,187 @@ $illust-color4: #E0E0E0;
       fill: $illust-color4;
     }
   }
+}
+
+.illust-cup{
   .cup {
     .cup-body {
-      fill: $illust-color2;
+      fill: $illust-color5;
     }
     .cup-handle {
       fill: none;
-      stroke: $illust-color2;
+      stroke: $illust-color5;
       stroke-width: 4;
       stroke-miterlimit: 10;
+    }
+  }
+}
+
+.illust-robo.is-animate {
+  .robo {
+    .robo-head {
+      animation: bound-head 1s ease-in 0s infinite alternate forwards;
+      .robo-head-main {
+      }
+      .robo-eyes {
+        animation: look-sky 1s ease-in 1s infinite alternate forwards;
+        .robo-eye-l {
+          animation: wink-eyes .5s ease-in 0s infinite alternate forwards;
+        }
+        .robo-eye-r {
+          animation: wink-eyes .5s ease-in 0s infinite alternate forwards;
+        }
+      }
+    }
+    .robo-body {
+      animation: bound-body 2s ease-in .5s infinite alternate forwards;
+    }
+    .robo-arms {
+      .robo-arm-r {
+        transform-origin: top center;
+        animation: swing-arm-r .25s ease-in-out .5s infinite alternate forwards;
+        .robo-shoulder-r {
+        }
+        .robo-second-arm-r {
+        }
+        .robo-first-arm-r {
+          animation: swing-first-arm-r .5s ease-in-out 0s infinite alternate forwards;
+        }
+      }
+      .robo-arm-l {
+        transform-origin: top center;
+        animation: swing-arm-l .3s ease-in-out 0s infinite alternate forwards;
+        .robo-shoulder-l {
+        }
+        .robo-second-arm-l {
+        }
+        .robo-first-arm-l {
+          animation: swing-first-arm-l .5s ease-in-out .5s infinite alternate forwards;
+        }
+      }
+    }
+  }
+  .pc {
+    .pc-display {
+    }
+    .pc-body {
+    }
+  }
+}
+
+.illust-cup.is-animate{
+  transform-origin: bottom right;
+  transform: rotate(90deg);
+  .cup {
+    .cup-body {
+    }
+    .cup-handle {
+    }
+  }
+}
+
+.illust-robo.is-animate.is-stop {
+  .robo {
+    .robo-head {
+      // animation-play-state: paused;
+      .robo-head-main {
+      }
+      .robo-eyes {
+        animation-play-state: paused;
+        .robo-eye-l {
+          animation-play-state: paused;
+        }
+        .robo-eye-r {
+          animation-play-state: paused;
+        }
+      }
+    }
+    .robo-body {
+      // animation-play-state: paused;
+    }
+    .robo-arms {
+      .robo-arm-r {
+        animation-play-state: paused;
+        .robo-shoulder-r {
+        }
+        .robo-second-arm-r {
+        }
+        .robo-first-arm-r {
+          animation-play-state: paused;
+        }
+      }
+      .robo-arm-l {
+        animation-play-state: paused;
+        .robo-shoulder-l {
+        }
+        .robo-second-arm-l {
+        }
+        .robo-first-arm-l {
+          animation-play-state: paused;
+        }
+      }
+    }
+  }
+  .pc {
+    .pc-display {
+    }
+    .pc-body {
+    }
+  }
+}
+
+.illust-robo.is-animate.is-stop.is-running {
+  .robo {
+    .robo-head {
+      .robo-head-main {
+      }
+      .robo-eyes {
+        // animation-play-state: running;
+        .robo-eye-l {
+          // animation-play-state: running;
+        }
+        .robo-eye-r {
+          // animation-play-state: running;
+        }
+      }
+    }
+    .robo-body {
+    }
+    .robo-arms {
+      .robo-arm-r {
+        // animation-play-state: running;
+        .robo-shoulder-r {
+        }
+        .robo-second-arm-r {
+        }
+        .robo-first-arm-r {
+          // animation-play-state: running;
+        }
+      }
+      .robo-arm-l {
+        // animation-play-state: running;
+        .robo-shoulder-l {
+        }
+        .robo-second-arm-l {
+        }
+        .robo-first-arm-l {
+          // animation-play-state: running;
+        }
+      }
+    }
+  }
+  .pc {
+    .pc-display {
+    }
+    .pc-body {
+    }
+  }
+  .cup {
+    transform-origin: center center;
+    animation: spilling-dring .5s ease 0s 1 normal forwards;
+    .cup-body {
+    }
+    .cup-handle {
     }
   }
 }
@@ -117,5 +284,41 @@ $illust-color4: #E0E0E0;
   }
   100% {
     transform: translateY(2px);
+  }
+}
+
+@keyframes bound-head {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(3px);
+  }
+}
+
+@keyframes wink-eyes {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: scaleY(.5) translateY(72px);
+  }
+}
+
+@keyframes look-sky {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-3px);
+  }
+}
+
+@keyframes spilling-dring {
+  0% {
+    transform: translate(-27px, -208px);
+  }
+  100% {
+    transform: rotate(90deg) translate(-27px, -208px);
   }
 }

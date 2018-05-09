@@ -282,4 +282,19 @@ document.addEventListener("DOMContentLoaded", function(){
 
   topAnimation();
 
+
+  var illustAnimation = () => {
+    var robo = document.getElementById('robo-illust');
+    var cup = document.getElementById('cup-illust');
+    if (robo) {
+      setTimeout(() => {robo.classList.add('is-animate');}, 1000);
+      setTimeout(() => {robo.classList.add('is-stop');}, 8800);
+      setTimeout(() => {robo.classList.remove('is-stop');}, 10000);
+      setTimeout(() => {robo.classList.add('is-stop');}, 11000);
+      setTimeout(() => {cup.classList.add('is-animate');}, 12000);
+    }
+  }
+
+  illustAnimation();
+
 }, false);

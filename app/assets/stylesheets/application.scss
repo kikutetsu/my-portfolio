@@ -1251,6 +1251,13 @@ button,
         transform: translateX(-50%);
       }
     }
+    .box-illust-cup {
+      position: absolute;
+      width: 33px;
+      height: 30px;
+      bottom: 0;
+      left: 300px;
+    }
     &.is-active {
       .box-image {
         transform: translateY(0);
