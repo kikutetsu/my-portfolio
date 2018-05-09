@@ -1197,7 +1197,9 @@ button,
       &:after {
         content: '';
         position: absolute;
+        display: block;
         right: -5px;
+        top: -5%;
         bottom: -5%;
         width: 5px;
         height: 110%;
@@ -1218,12 +1220,18 @@ button,
         background: $point-color;
         opacity: .5;
       }
-      &.focus {
+      &.is-focus {
         &:after {
           left: -10px;
         }
         &:before {
           display: block;
+        }
+      }
+      &.is-active {
+        &:after {
+          left: 0;
+          animation: show-keyvisual 1s ease .5s 1 alternate forwards;
         }
       }
     }
@@ -1241,6 +1249,17 @@ button,
     }
     100% {
       opacity: 1;
+    }
+  }
+  @keyframes show-keyvisual {
+    0% {
+      transform: rotate(0deg);
+    }
+    50% {
+      transform: rotate(225deg) translate(0, 0);
+    }
+    100% {
+      transform: rotate(225deg) translate(0, 2000px);
     }
   }
   .profile-image {
