@@ -1,4 +1,5 @@
 require.context('images', true, /\.(png|jpg|jpeg|svg)$/)
+import "babel-polyfill"
 import 'javascripts/application'
 import 'stylesheets/application'
 
