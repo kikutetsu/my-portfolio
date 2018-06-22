@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Design and Develop is FUN</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <!-- favicon -->
+    <!-- touch-icon -->
+    <%= csrf_meta_tags %>
+    <%= stylesheet_pack_tag 'fanclub' %>
+    <%= yield :page_specific_styles %>
+    <%= javascript_pack_tag 'app' %>
+  </head>
+
+  <body>
+    <header class="gl-header"></header>
+    <container>
+      <%= yield %>
+    </container>
+  </body>
+</html>

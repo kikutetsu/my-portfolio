@@ -33,6 +33,8 @@ Rails.application.routes.draw do
   get 'notes/:id' => 'posts#show'
 
   #users
+  get 'fanclub/' => 'fanclub#index'
+
   get 'users/' => 'users#index'
   get 'users/new' => 'users#new'
   post 'users/create' => 'users#create'
