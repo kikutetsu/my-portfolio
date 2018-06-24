@@ -12,8 +12,7 @@ body,html {
 }
 
 .gl-header {
-  height: 88px;
-  background: #eee;
+  height: 80px;
 }
 
 h1,h2,h3,h4,h5,h6 {
@@ -29,22 +28,119 @@ body {
   font-family: "Open Sans", 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
 }
 
+* {
+  transition: all .2s linear;
+}
+
+%clearfix {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
 .titlebox {
-  overflow: hidden;
+  @extend %clearfix;
   padding: 15px;
+  margin: 0 0 15px;
   &__title {
     float: left;
-    font-weight: 900;
+    font-weight: 700;
     color: #333;
+    font-size: 30px;
   }
   &__link {
+    display: block;
     float: right;
+    font-size: 14px;
+    text-decoration: none;
+    color: #666;
+    font-weight: 400;
+    padding: 12px 0;
+    &:hover {
+      color: #fe2f39;
+    }
   }
 }
 
 .fanclub-sec {
+  &--keyvisual {
+    margin-bottom: 60px;
+    padding: 0 30px 30px;
+    color: #fff;
+    text-align: center;
+    &__inner {
+      border-radius: 20px;
+      background: url(https://cdn.camp-fire.jp/img/curation/fanclub/keyvisual.jpg) no-repeat top;
+      background-size: cover;
+      position: relative;
+      padding: 120px 0;
+      &__title {
+        font-size: 60px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      &__text {
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 400;
+        max-width: 75%;
+        padding: 0 40px;
+        margin: 0 auto 40px;
+      }
+      &__button {
+        display: inline-block;
+        overflow: hidden;
+        .button {
+          float: left;
+          margin: 0 10px;
+        }
+      }
+      &__sns {
+        position: absolute;
+        display: inline-block;
+        right: 20px;
+        bottom: 20px;
+        @extend %clearfix;
+      }
+    }
+  }
+  &--banner {
+    margin-top: 60px;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    &__inner {
+      padding: 50px 0;
+      border-radius: 20px;
+      background: #eee;
+      background-image:url(https://cdn.camp-fire.jp/img/curation/fanclub/keyvisual.jpg);
+      &__title {
+        font-size: 36px;
+        font-weight: 700;
+        margin-bottom: 20px;
+      }
+      &__text {
+        font-size: 14px;
+        line-height: 2;
+        font-weight: 400;
+        max-width: 75%;
+        padding: 0 40px;
+        margin: 0 auto 40px;
+      }
+      &__button {
+        display: inline-block;
+        @extend %clearfix;
+        .button {
+          float: left;
+          margin: 0 10px;
+        }
+      }
+    }
+  }
   &--cards {
-    margin-bottom: 60px;  
+    margin-bottom: 40px;
   }
   &__inner {
     max-width: 1080px;
@@ -53,7 +149,7 @@ body {
 }
 
 .fanclub-cards {
-  overflow: hidden;
+  @extend %clearfix;
 }
 
 .fanclub-cards--3 {
@@ -65,6 +161,16 @@ body {
 .fanclub-cards--4 {
   .fanclub-card {
     width: 25%;
+    &__inner {
+      &__body {
+        &__title {
+          font-size: 14px;
+        }
+        &__name {
+          font-size: 10px;
+        }
+      }
+    }
   }
 }
 
@@ -78,13 +184,23 @@ body {
     overflow: hidden;
     display: block;
     text-decoration: none;
-    transition: box-shadow .2s linear;
     &:hover {
-      box-shadow: 0 8px 16px rgba(0,0,0,.2);
+      box-shadow: 0 8px 24px rgba(0,0,0,.2);
+      transform: translateY(-10px);
+      .fanclub-card {
+        // &__inner {
+        //   &__thumbnail {
+        //     img {
+        //       transform: scale(1.1,1.1);
+        //     }
+        //   }
+        // }
+      }
     }
     &__thumbnail {
       display: block;
       position: relative;
+      overflow: hidden;
       &:after {
         padding-top: 66.666%;
         display: block;
@@ -102,11 +218,11 @@ body {
       }
     }
     &__body {
-      padding: 10px 15px;
+      padding: 15px;
       &__title {
         margin-bottom: 10px;
         font-size: 16px;
-        line-height: 1.6;
+        line-height: 1.4;
         height: 3.2em;
         font-weight: 700;
         color: #333;
@@ -127,6 +243,162 @@ body {
         text-overflow: ellipsis;
         white-space: nowrap;
       }
+    }
+  }
+}
+
+.fanclub-card--activity {
+  width: 33.333%;
+  padding: 15px;
+  float: left;
+  &__inner {
+    height: 178px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,.1);
+    overflow: hidden;
+    display: block;
+    text-decoration: none;
+    padding: 20px;
+    &:hover {
+      box-shadow: 0 8px 24px rgba(0,0,0,.2);
+      transform: translateY(-10px);
+    }
+    &__profile {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      border: 1px #eee solid;
+      overflow: hidden;
+      float: left;
+    }
+    &__body {
+      float: left;
+      margin-left: 15px;
+      width: calc(100% - 55px);
+      &__name {
+        display: inline-block;
+        font-size: 12px;
+        font-weight: 700;
+        color: #999;
+        margin-right: 5px;
+      }
+      &__date {
+        font-size: 12px;
+        font-weight: 350;
+        color: #ccc;
+      }
+      &__title {
+        font-size: 16px;
+        font-weight: 700;
+        color: #333;
+        margin: 4px 0 8px;
+        line-height: 1.4;
+        max-height: 2.8em;
+        overflow: hidden;
+        display: -webkit-box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+      }
+      &__description {
+        font-size: 12px;
+        color: #666;
+        font-weight: 350;
+        line-height: 1.6;
+        height: 4.8em;
+        overflow: hidden;
+        display: -webkit-box;
+        word-wrap: break-word;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 3;
+      }
+      &__only-patron {
+        background: #f5f5f5;
+        border-radius: 4px;
+        color: #999;
+        font-size: 12px;
+        font-weight: 700;
+        text-align: center;
+        padding: 20px 0;
+      }
+    }
+  }
+}
+
+.button {
+  border-radius: 4px;
+  background: #eee;
+  padding: 15px 20px;
+  color: #666;
+  width: 240px;
+  text-decoration: none;
+  font-weight: 500;
+  &:hover {
+    opacity: .75;
+  }
+  &.red {
+    background-color: #f64744;
+    color: #fff;
+  }
+}
+
+.sns-item {
+  display: block;
+  float: left;
+  margin: 5px;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  background: #fff;
+  &:hover {
+    opacity: .75;
+  }
+  &--facebook {
+    background: #3b5998;
+  }
+  &--twitter {
+    background: #55acee;
+  }
+  &--line {
+    background: #00c300;
+  }
+}
+
+
+@media screen and (max-width: 768px) {
+  .fanclub-sec {
+    &--keyvisual {
+      padding: 0 10px 10px;
+    }
+    &--banner {
+      padding: 0 10px 10px;
+    }
+    &--cards {
+      margin-bottom: 30px;
+      padding: 0 8px
+    }
+    &__inner {
+    }
+  }
+
+  .fanclub-cards--3,
+  .fanclub-cards--4 {
+    .fanclub-card {
+      width: 50%;
+      padding: 8px;
+    }
+  }
+
+  .fanclub-card--activity {
+    width: 100%;
+  }
+
+  .titlebox {
+    &__title {
+      font-size: 20px;
+    }
+    &__link {
+      padding: 7px 0;
     }
   }
 }
