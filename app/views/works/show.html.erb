@@ -6,7 +6,6 @@
 <% end %>
 
 <% content_for :page_title do%>
-  <h2 class="page-title">works</h2>
   <div class="content-nav">
     <% if @work.previous %>
     <%= link_to("< back", "/works/#{@work.previous.id}") %>

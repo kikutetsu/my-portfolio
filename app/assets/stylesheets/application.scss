@@ -1188,7 +1188,7 @@ button,
     right: 0;
     left: 0;
     opacity: 1;
-    background-color: #eee;
+    background-color: #f7f7f7;
     transition-duration: 1s;
     overflow: hidden;
     display: flex;
@@ -1204,7 +1204,6 @@ button,
       border-radius: 12px;
       background-color: white;
       transform: translateY(50px);
-      opacity: 0;
       transition-duration: 1s;
       box-shadow: 0 12px 24px rgba(0, 0, 0, .1);
     }
