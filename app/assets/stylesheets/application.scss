@@ -1173,7 +1173,7 @@ button,
   top: 0;
   right: 0;
   left: 0;
-  height: 600px;
+  height: 100vh;
   // background-color: $main-color;
   z-index: 10;
   text-align: center;
@@ -1196,16 +1196,7 @@ button,
     justify-content: center;
     padding: 80px 40px;
     @media screen and (max-width: 800px) {
-      padding: 100px 3vw 40px;
-    }
-    .box-image {
-      width: 780px;
-      height: 100%;
-      border-radius: 12px;
-      background-color: white;
-      transform: translateY(50px);
-      transition-duration: 1s;
-      box-shadow: 0 12px 24px rgba(0, 0, 0, .1);
+      padding: 40px 3vw 40px;
     }
     .box-bar1 {
       @include bar1(120px, 6px, 100px, 100px);
