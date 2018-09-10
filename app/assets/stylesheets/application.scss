@@ -1412,15 +1412,20 @@ button,
     }
   }
   .top-block {
-    padding: 40px 0 50px;
-    display: flex;
+    padding: 20px;
     &.about {
+    }
+    &__inner {
+      background: #fff;
+      padding: 24px;
+      border-radius: 20px;
     }
     &.works,
     &.notes {
-      border-top: 1px #ccc solid;
-      margin: 0 -20px;
-      padding: 40px 20px 60px;
+      width: 50%;
+      @media screen and (max-width: 800px) {
+        width: 100%;
+      }
       p {
         margin-bottom: 30px;
       }
@@ -1440,6 +1445,12 @@ button,
       width: 100%;
       color: white;
     }
+    &__wrapper {
+      display: flex;
+      @media screen and (max-width: 800px) {
+        display: block;
+      }
+    }
   }
   @media screen and (max-width: 800px) {
     .top-block {
@@ -1454,7 +1465,6 @@ button,
       &.notes {
         margin: 0 0;
         padding: 40px 0;
-        border-top: 1px #ccc solid;
         h2 {
           font-size: 5.6rem;
           margin-bottom: 30px;
