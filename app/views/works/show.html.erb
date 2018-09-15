@@ -24,7 +24,7 @@
 <article class="content-wrap fadein">
 <h3 class="content-title"><%= @work.title %></h1>
 <% @work.category == "ui_ux" ? work_category = "UI/UX" : work_category = @work.category %>
-<%= link_to work_category, "/works/category/#{@work.category}", class: "content-meta" %>
+<p class="content-meta"><%= work_category %></p>
 <p class="content-description"><%= @work.description %></p>
 <div class="content">
   <%= sanitize markdown(@work.content) %>

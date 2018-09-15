@@ -22,6 +22,8 @@
     <div class="inner wrapper <%= "#{controller_name}-#{action_name}" %>">
       <%= yield %>
     </div>
-    <%= render "footer" %>
+    <% unless controller.controller_name == 'works' && controller.action_name == 'show' %>
+      <%= render "footer" %>
+    <% end %>
   </body>
 </html>
