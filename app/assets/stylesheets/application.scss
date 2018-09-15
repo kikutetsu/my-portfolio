@@ -588,7 +588,7 @@ button,
 .card-container {
   display: flex;
   flex-flow: row wrap;
-  margin: 0 -20px;
+  margin: 0;
   @media screen and (max-width: 800px) {
     margin: 0;
   }
@@ -618,7 +618,7 @@ button,
       border-radius: 8px;
       box-shadow: 0 2px 8px rgba(0,0,0,.1);
       &:hover {
-        transform: translateY(-10px);
+        transform: translateY(-4px);
         box-shadow: 0 4px 16px rgba(0,0,0,.1);
       }
     }
@@ -637,31 +637,22 @@ button,
       @media screen and (max-width: 800px) {
         font-size: 1.1rem;
         padding: 0 10px;
+        margin: 10px 0 5px;
       }
     }
     .category-wrap {
-      padding: 0 20px 15px;
-      text-align: right;
-      @media screen and (max-width: 800px) {
-        padding: 0 10px 15px;
-      }
     }
     .category {
-      display: inline-block;
+      display: block;
       margin: 0;
-      padding: 0 8px;
-      height: 20px;
-      font-size: 1rem;
-      font-weight: 600;
+      padding: 0 20px 20px;
+      font-size: 1.2rem;
+      font-weight: 400;
       position: relative;
-      line-height: 20px;
-      border-radius: 10px;
-      background-color: $point-color;
-      color: white;
+      color: #ccc;
       @media screen and (max-width: 800px) {
-        height: 16px;
-        line-height: 16px;
-        padding: 0 6px;
+        font-size: 1rem;
+        padding: 0 10px 10px;
       }
     }
   }
@@ -1395,22 +1386,6 @@ button,
 
 .home-top.inner.wrapper {
   padding-top: 60px;
-  h3 {
-    margin-bottom: 20px;
-    font-size: $fs-large;
-    line-height: 1.4;
-  }
-  h2 {
-    margin-bottom: 40px;
-    font-size: 3rem;
-    line-height: 1.4;
-  }
-  a {
-    color: $point-color;
-    &:hover {
-      color: $main-color;
-    }
-  }
   .top-block {
     padding: 20px;
     &.about {
