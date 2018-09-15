@@ -1,34 +1,5 @@
 document.addEventListener("DOMContentLoaded", function(){
 
-  // mobile_menu
-  var menuToggle = function(){
-    var header = document.getElementById("header");
-    var menuBtn = document.getElementById("menu-open");
-    var menuBg1 = document.getElementById("menu-bg1");
-    var menuBg2 = document.getElementById("menu-bg2");
-    var isActive = false;
-    menuBtn.addEventListener("click", changeActive, false);
-
-    function changeActive(){
-      if (isActive) {
-        header.classList.add('is-deactive');
-        menuBtn.classList.remove('is-active');
-        menuBg1.classList.remove('is-active');
-        menuBg2.classList.remove('is-active');
-        header.classList.remove('is-active');
-      } else {
-        menuBtn.classList.add('is-active');
-        menuBg1.classList.add('is-active');
-        menuBg2.classList.add('is-active');
-        header.classList.add('is-active');
-        header.classList.remove('is-deactive');
-      }
-      isActive = !isActive;
-    }
-  }
-
-  menuToggle();
-
   // notify_bar
   var notifyBarSlide = function(){
     var notifyBar = document.getElementById("notify-bar");
