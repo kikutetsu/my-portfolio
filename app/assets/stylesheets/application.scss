@@ -1362,62 +1362,11 @@ button,
 }
 .home-top.inner.wrapper {
   padding: 60px 0 40px;
-  .top-block {
-    padding: 20px;
-    margin-bottom: 20px;
-    @media screen and (max-width: 800px) {
-      margin-bottom: 10px;
-    }
-    &.about {
-      h2 {
-        font-size: 3rem;
-        line-height: 1.4;
-        letter-spacing: -1px;
-        font-weight: 900;
-        margin-bottom: 1em;
-        @media screen and (max-width: 800px) {
-          font-size: 2rem;
-        }
-      }
-    }
-    &__inner {
-      background: #fff;
-      padding: 24px;
-      border-radius: 20px;
-    }
-  }
-  @media screen and (max-width: 800px) {
-    .top-block {
-      padding: 40px 0 50px;
-      display: block;
-      h3 {
-        font-size: $fs-large;
-      }
-      &.about {
-      }
-      &.works,
-      &.notes {
-        margin: 0 0;
-        padding: 40px 0;
-        h2 {
-          font-size: 5.6rem;
-          margin-bottom: 30px;
-        }
-        .right {
-          padding-top: 0;
-          margin-left: 0;
-        }
-      }
-    }
-  }
   button {
     margin-top: 20px;
   }
   @media screen and (max-width: 800px) {
     padding: 20px 5% 20px;
-    .top-block {
-      padding: 30px 0;
-    }
   }
 }
 .footer {
@@ -1429,5 +1378,49 @@ button,
   small {
     color: #ccc;
     font-weight: 300;
+  }
+}
+.top-block {
+  padding: 20px;
+  margin-bottom: 20px;
+  &.about {
+    h2 {
+      font-size: 3rem;
+      line-height: 1.4;
+      letter-spacing: -1px;
+      font-weight: 900;
+      margin-bottom: 1em;
+      @media screen and (max-width: 800px) {
+        font-size: 2rem;
+      }
+    }
+  }
+  &__inner {
+    background: #fff;
+    padding: 24px;
+    border-radius: 20px;
+  }
+  @media screen and (max-width: 800px) {
+    padding: 30px 0;
+    margin-bottom: 10px;
+    display: block;
+    h3 {
+      font-size: $fs-large;
+    }
+    &.about {
+    }
+    &.works,
+    &.notes {
+      margin: 0 0;
+      padding: 40px 0;
+      h2 {
+        font-size: 5.6rem;
+        margin-bottom: 30px;
+      }
+      .right {
+        padding-top: 0;
+        margin-left: 0;
+      }
+    }
   }
 }

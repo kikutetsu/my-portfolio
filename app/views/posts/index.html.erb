@@ -1,6 +1,6 @@
-<div class="card-container full-size">
+<div class="card-container">
 <% @posts.each do |post| %>
-  <div class="card full-size fadein">
+  <div class="card fadein">
     <%= link_to("/notes/#{post.id}") do %>
       <div class="card-inner">
         <figure class="content-main-image"><%= image_tag post.image.to_s %></figure>
