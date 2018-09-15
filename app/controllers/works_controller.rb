@@ -1,6 +1,6 @@
 class WorksController < ApplicationController
   before_action :check_admin_user, except: %i[show index category]
-  before_action :authenticate_user, only: %i[show index category]
+  before_action :authenticate_user
 
   def index
     @works = Work.all

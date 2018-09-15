@@ -57,7 +57,7 @@ class UsersController < ApplicationController
     if @user && @user.authenticate(params[:password])
       session[:user_id] = @user.id
       flash[:notice] = "ログインしました"
-      redirect_to("/works")
+      redirect_to("/")
     else
       flash[:notice] = "ID,パスワードが違います"
       render("users/login_form")

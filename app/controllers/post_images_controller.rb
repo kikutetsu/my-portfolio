@@ -1,4 +1,5 @@
 class PostImagesController < ApplicationController
+  before_action :authenticate_user
   def edit
     @image = PostImage.new
   end
