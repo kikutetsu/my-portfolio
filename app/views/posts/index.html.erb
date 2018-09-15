@@ -5,7 +5,7 @@
 <%= link_to("/notes/category/rails") do %><span>rails</span><% end %>
 </div>
 
-<div class="card-container">
+<div class="card-container full-size">
 <% @posts.each do |post| %>
   <div class="card full-size fadein">
     <%= link_to("/notes/#{post.id}") do %>
