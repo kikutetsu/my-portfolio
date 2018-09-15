@@ -2,7 +2,6 @@
 @import "//fonts.googleapis.com/css?family=Open+Sans";
 @import 'normalize';
 @import 'mixins';
-@import 'robot-animation';
 
 $main-color: #ffe500;
 $point-color: #20d9ac;
@@ -366,20 +365,6 @@ button,
             }
           }
         }
-      }
-    }
-    &.is-active {
-      .header-logo {
-        opacity: 0;
-      }
-      .header-nav {
-        display: block;
-        animation: menu-open 1s ease 0s 1 alternate forwards;
-      }
-    }
-    &.is-deactive {
-      .header-logo {
-        animation: menu-open 1s ease 0s 1 alternate forwards;
       }
     }
   }
@@ -919,6 +904,46 @@ button,
   }
 }
 
+@keyframes fuwafuwa {
+  0% {
+    transform: translateY(15px);
+  }
+  100% {
+    transform: translateY(-15px);
+  }
+}
+
+@keyframes fuwafuwa_sp {
+  0% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes fuwafuwa_kage {
+  0% {
+    width: 70px;
+    opacity: 1;
+  }
+  100% {
+    width: 100px;
+    opacity: .8;
+  }
+}
+
+@keyframes fuwafuwa_kage_sp {
+  0% {
+    width: 50px;
+    opacity: 1;
+  }
+  100% {
+    width: 80px;
+    opacity: .8;
+  }
+}
+
 // markdown style
 .content {
   p,ul,ol {
@@ -1139,16 +1164,38 @@ button,
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    width: 60px;
-    height: 60px;
-    background: #aaa;
+    width: 200px;
+    height: 200px;
+    .logo {
+      animation: fuwafuwa 2s ease-in-out 0s infinite alternate-reverse;
+      @media screen and (max-width: 800px) {
+        animation: fuwafuwa_sp 2s ease-in-out 0s infinite alternate-reverse;
+      }
+    }
+    .logo_shadow {
+      position: absolute;
+      top: 100%;
+      left: 50%;
+      transform: translate(-50%, 30px);
+      width: 50px;
+      height: 10px;
+      border-radius: 50%;
+      background-color: #eaeaea;
+      animation: fuwafuwa_kage 2s ease-in-out 0s infinite alternate-reverse;
+      @media screen and (max-width: 800px) {
+        transform: translate(-50%, 20px);
+        animation: fuwafuwa_kage_sp 2s ease-in-out 0s infinite alternate-reverse;
+      }
+    }
+    @media screen and (max-width: 800px) {
+      width: 150px;
+      height: 150px;
+    }
   }
 
   @media screen and (max-width: 800px) {
     height: 240px;
     margin-bottom: 40px;
-    h1 {
-    }
   }
 }
 .top-button {
