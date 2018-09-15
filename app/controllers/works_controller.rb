@@ -3,7 +3,7 @@ class WorksController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @works = Work.all
+    @works = Work.all.order('id desc')
   end
 
   def show

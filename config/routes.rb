@@ -19,8 +19,11 @@ Rails.application.routes.draw do
   post 'works/:id/destroy' => 'works#destroy'
   get 'works/:id' => 'works#show'
 
+  #pages
+  get 'about/' => 'pages#about'
+
   #notes
-  get 'about/' => 'posts#index'
+  get 'notes/' => 'posts#index'
   get 'notes/category/:slug' => 'posts#category'
   get 'notes/new' => 'posts#new'
   post 'notes/create' => 'posts#create'

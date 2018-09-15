@@ -3,7 +3,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user
 
   def index
-    @posts = Post.where(post_status: "opened")
+    @posts = Post.where(post_status: "opened").order('id desc')
   end
 
   def show
