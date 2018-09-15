@@ -165,7 +165,7 @@ button,
   position: relative;
   z-index: 110;
   @media screen and (max-width: 800px) {
-    padding: 100px 3vw 30px;
+    padding: 0 3vw 30px;
   }
   &.inner {
     max-width: 620px;
@@ -294,7 +294,7 @@ button,
 
 @media screen and (max-width: 800px) {
   .header {
-    position: absolute;
+    position: relative;
     display: inline-block;
     padding: 20px 10px;
     margin: 0;
@@ -1132,225 +1132,21 @@ button,
 
 .top-keyvisual {
   position: relative;
-  top: 0;
-  right: 0;
-  left: 0;
   height: 400px;
-  // background-color: $main-color;
   z-index: 10;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  .profile-box {
-    width: 100%;
-    height: 100%;
+  &-icon {
     position: absolute;
-    top: 0;
-    bottom: 0;
-    right: 0;
-    left: 0;
-    opacity: 1;
-    background-color: #f7f7f7;
-    transition-duration: 1s;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    padding: 80px 40px;
-    @media screen and (max-width: 800px) {
-      padding: 40px 3vw 40px;
-    }
-    .box-bar1 {
-      @include bar1(120px, 6px, 100px, 100px);
-      .inner {
-        animation: slide-bar 1s ease-in 1s infinite normal backwards;
-      }
-    }
-    .box-bar2 {
-      @include bar1(80px, 6px, 150px, 100px);
-      .inner {
-        animation: slide-bar .5s ease-in .5s infinite normal backwards;
-      }
-    }
-    .box-bar3 {
-      @include bar1(10px, 10px, 250px, 80px);
-      .inner {
-        animation: slide-bar .5s ease-in 1s infinite normal backwards;
-      }
-    }
-    @keyframes slide-bar {
-      0% {
-        transform: translateX(100%);
-      }
-      30% {
-        transform: translateX(0);
-      }
-      70% {
-        transform: translateX(0);
-      }
-      100% {
-        transform: translateX(-100%);
-      }
-    }
-    .box-illust {
-      position: absolute;
-      width: 360px;
-      height: 240px;
-      bottom: 0;
-      left: 30px;
-      @media screen and (max-width: 800px) {
-        left: 50%;
-        transform: translateX(-50%);
-      }
-    }
-    .box-illust-cup {
-      position: absolute;
-      width: 33px;
-      height: 30px;
-      bottom: 0;
-      left: 300px;
-    }
-    &.is-active {
-      .box-image {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-  }
-  h1 {
-    font-weight: 900;
-    font-size: 6rem;
-    font-weight: 700;
-    letter-spacing: 0;
-    width: 100%;
-    position: relative;
-    text-align: center;
-    z-index: 100;
-    .profile-title {
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      height: 1em;
-      display: inline-block;
-      line-height: 1;
-      word-break: keep-all;
-      span {
-        text-decoration: underline;
-      }
-      &:after {
-        content: '';
-        position: absolute;
-        display: block;
-        right: -5px;
-        top: -5%;
-        bottom: -5%;
-        width: 6px;
-        height: 110%;
-        border-radius: 3px;
-        background: $point-color;
-        animation: text-flash .5s linear 0s 1 alternate forwards;
-        animation-iteration-count: infinite;
-      }
-      &:before {
-        display: none;
-        content: '';
-        position: absolute;
-        right: 0;
-        top: -5%;
-        bottom: -5%;
-        left: 0;
-        width: 100%;
-        height: 110%;
-        background: $point-color;
-        opacity: .5;
-      }
-      &.is-focus {
-        &:after {
-          left: -15px;
-        }
-        &:before {
-          display: block;
-        }
-      }
-      &.is-active {
-        &:after {
-          left: 0;
-          animation: show-keyvisual 1s ease .5s 1 alternate forwards;
-        }
-      }
-    }
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%,-50%);
+    width: 60px;
+    height: 60px;
+    background: #aaa;
   }
 
-  @keyframes text-flash {
-    0% {
-      opacity: 0;
-    }
-    49% {
-      opacity: 0;
-    }
-    50% {
-      opacity: 1;
-    }
-    100% {
-      opacity: 1;
-    }
-  }
-  @keyframes show-keyvisual {
-    0% {
-      transform: rotate(0deg);
-    }
-    50% {
-      transform: rotate(225deg) translate(0, 0);
-    }
-    100% {
-      transform: rotate(225deg) translate(0, 2000px);
-    }
-  }
-  .profile-image {
-    width: 80px;
-    height: 80px;
-    overflow: hidden;
-    border-radius: 50%;
-    position: absolute;
-    top: -140px;
-    left: 50%;
-    transform: translate(-50%, 0);
-    img {
-      display: block;
-      width: 100%;
-      height: 100%;
-    }
-  }
-  .profile-text {
-    width: 100%;
-    position: absolute;
-    bottom: -100px;
-    left: 50%;
-    font-size: $fs-medium;
-    transform: translate(-50%, 0);
-    letter-spacing: 0;
-  }
   @media screen and (max-width: 800px) {
-    height: 500px;
+    height: 240px;
     h1 {
-      font-size: 3.2rem;
-      line-height: 500px;
-      .profile-title {
-        &:after {
-          width: 4px;
-          border-radius: 2px;
-        }
-      }
-    }
-    .profile-image {
-      width: 60px;
-      height: 60px;
-      top: -120px;
-    }
-    .profile-text {
-      line-height: 1.2;
-      bottom: -80px;
     }
   }
 }
@@ -1361,12 +1157,12 @@ button,
   }
 }
 .home-top.inner.wrapper {
-  padding: 60px 0 40px;
+  padding: 0 0 40px;
   button {
     margin-top: 20px;
   }
   @media screen and (max-width: 800px) {
-    padding: 20px 5% 20px;
+    padding: 0 5% 20px;
   }
 }
 .footer {
@@ -1401,7 +1197,7 @@ button,
     border-radius: 20px;
   }
   @media screen and (max-width: 800px) {
-    padding: 30px 0;
+    padding: 10px 0;
     margin-bottom: 10px;
     display: block;
     h3 {
