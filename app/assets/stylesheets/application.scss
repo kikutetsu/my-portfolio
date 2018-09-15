@@ -345,13 +345,13 @@ button,
           }
           &:hover {
             &:before {
-              width: 60px;
+              width: 50px;
             }
           }
         }
       }
       .user-action {
-        display: inline-block;
+        display: none;
         padding: 0 10px;
         a {
           padding: 0;
@@ -871,7 +871,7 @@ button,
   left: 50px;
   right: 50px;
   text-align: center;
-  z-index: 150;
+  z-index: 9999;
   span {
     display: inline-block;
     background: $point-color;

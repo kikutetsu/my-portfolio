@@ -20,7 +20,7 @@ Rails.application.routes.draw do
   get 'works/:id' => 'works#show'
 
   #notes
-  get 'notes/' => 'posts#index'
+  get 'about/' => 'posts#index'
   get 'notes/category/:slug' => 'posts#category'
   get 'notes/new' => 'posts#new'
   post 'notes/create' => 'posts#create'
