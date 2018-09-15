@@ -5,21 +5,23 @@
     <% end %>
   </div>
   <div class="header-blank"></div>
-  <nav class="header-nav">
-    <ul class="nav-list">
-      <li><%= link_to("notes", "/notes") %></li>
-      <li><%= link_to("works", "/works") %></li>
-    </ul>
-    <div class="user-action">
-      <% if session[:user_id] %>
+  <% if session[:user_id] %>
+    <nav class="header-nav">
+      <ul class="nav-list">
+        <li><%= link_to("notes", "/notes") %></li>
+        <li><%= link_to("works", "/works") %></li>
+      </ul>
+      <div class="user-action">
         <% if is_admin? %>
           <%= link_to("- #{@current_user.name}", "/users/#{@current_user.id}") %>
         <% end %>
         <%= link_to "- logout", "/logout", {method: "post"} %>
-      <% end %>
-    </div>
-  </nav>
+      </div>
+    </nav>
+  <% end %>
 </header>
-<div class="menu-btn" id="menu-open"><div class="menu-icon"><span class="mi mi1"></span><span class="mi mi2"></span></div></div>
-<div class="menu-bg menu-bg-1" id="menu-bg1"></div>
-<div class="menu-bg menu-bg-2" id="menu-bg2"></div>
+<% if session[:user_id] %>
+  <div class="menu-btn" id="menu-open"><div class="menu-icon"><span class="mi mi1"></span><span class="mi mi2"></span></div></div>
+  <div class="menu-bg menu-bg-1" id="menu-bg1"></div>
+  <div class="menu-bg menu-bg-2" id="menu-bg2"></div>
+<% end %>
