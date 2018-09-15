@@ -1132,7 +1132,7 @@ button,
 
 .top-keyvisual {
   position: relative;
-  height: 400px;
+  height: 500px;
   z-index: 10;
   &-icon {
     position: absolute;
@@ -1146,6 +1146,7 @@ button,
 
   @media screen and (max-width: 800px) {
     height: 240px;
+    margin-bottom: 40px;
     h1 {
     }
   }
