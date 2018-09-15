@@ -1,9 +1,11 @@
 <header class="header" id="header">
-  <div class="header-logo">
-    <%= link_to("/") do %>
-      <span class="circle"></span>
-    <% end %>
-  </div>
+  <% unless controller.controller_name == 'home' %>
+    <div class="header-logo">
+      <%= link_to("/") do %>
+        <span class="circle"></span>
+      <% end %>
+    </div>
+  <% end %>
   <div class="header-blank"></div>
   <% if session[:user_id] %>
     <nav class="header-nav">
