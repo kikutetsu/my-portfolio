@@ -1,10 +1,11 @@
-<section class="top-block about fadein">
-  <div>
-    <h2>デザイナー。コードも最近書いてます。</h2>
-    <p>いままでエディトリアルデザインからはじまり、webデザインにも挑戦するため、HTML/CSSを勉強sはじめました。今ではJavaScriptやRailsを軽く触ったりしています。これからはユーザーファーストなデザインはもちろんエンジニアリングも意識したデザインをしていきたいです。</p>
-  </div>
+<section class="top-block about fadein" >
+  <figure class="content-main-image" style="margin-bottom: 60px;">
+    <img src="<%= asset_pack_path 'images/default.jpg' %>" alt="">
+  </figure>
+  <h2>デザイナー。コードも最近書いてます。</h2>
+  <p>いままでエディトリアルデザインからはじまり、webデザインにも挑戦するため、HTML/CSSを勉強sはじめました。今ではJavaScriptやRailsを軽く触ったりしています。これからはユーザーファーストなデザインはもちろんエンジニアリングも意識したデザインをしていきたいです。</p>
 </section>
-<div class="card-container full-size">
+<!-- <div class="card-container full-size">
 <% @posts.each do |post| %>
   <div class="card full-size fadein">
     <%= link_to("/notes/#{post.id}") do %>
@@ -21,4 +22,4 @@
 </div>
 <div class="top-button">
   <%= link_to("もっと見る", "/notes", class: 'button fadein') %>
-</div>
+</div> -->
