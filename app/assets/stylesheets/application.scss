@@ -906,19 +906,19 @@ button,
 
 @keyframes fuwafuwa {
   0% {
-    transform: translateY(15px);
+    transform: translateY(5px);
   }
   100% {
-    transform: translateY(-15px);
+    transform: translateY(-5px);
   }
 }
 
 @keyframes fuwafuwa_sp {
   0% {
-    transform: translateY(10px);
+    transform: translateY(5px);
   }
   100% {
-    transform: translateY(-10px);
+    transform: translateY(-5px);
   }
 }
 
@@ -1164,8 +1164,8 @@ button,
     left: 50%;
     top: 50%;
     transform: translate(-50%,-50%);
-    width: 200px;
-    height: 200px;
+    width: 240px;
+    height: 240px;
     .logo {
       animation: fuwafuwa 2s ease-in-out 0s infinite alternate-reverse;
       @media screen and (max-width: 800px) {
@@ -1188,8 +1188,8 @@ button,
       }
     }
     @media screen and (max-width: 800px) {
-      width: 150px;
-      height: 150px;
+      width: 200px;
+      height: 200px;
     }
   }
 
