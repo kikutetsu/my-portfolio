@@ -13,22 +13,19 @@
   </div>
 </section>
 
-<div class="top-block__wrapper">
-  <section class="top-block notes fadein">
-    <div class="top-block__inner">
-      <img src="<%= asset_pack_path 'images/default.jpg' %>" alt="">
-      <h3>感じたこと学んだことを残す</h3>
-      <p>デザインやプログラミングで気になった話題であったり、発見したこと身につけたことを記録できるようにしました。</p>
-      <%= link_to("ノートを見る","/notes", class: "button") %>
-    </div>
-  </section>
-
-  <section class="top-block works fadein">
-    <div class="top-block__inner">
-      <img src="<%= asset_pack_path 'images/default.jpg' %>" alt="">
-      <h3>これまで担当したデザイン</h3>
-      <p>これまで仕事で担当してきたデザインを公開しています。閲覧するには<%= link_to("ログイン", "/login") %>が必要となります。</p>
-      <%= link_to("ポートフォリオを見る","/works", class: "button") %>
-    </div>
-  </section>
+<div class="card-container">
+<% @works.shuffle.each do |work| %>
+  <div class="card fadein">
+    <%= link_to("/works/#{work.id}") do %>
+      <div class="card-inner">
+        <figure class="content-main-image"><%= image_tag work.image.to_s %></figure>
+        <h3 class="title"><%= work.title %></h3>
+        <div class="category-wrap">
+          <% work.category = "UI/UX" if work.category == "ui_ux" %>
+          <p class="category"><%= work.category %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
 </div>
