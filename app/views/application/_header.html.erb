@@ -1,5 +1,9 @@
 <header class="header" id="header">
-  <% unless controller.controller_name == 'home' %>
+  <% if controller.action_name == 'login_form' %>
+    <div class="header-logo">
+      <span class="logo-text">LOGIN</span>
+    </div>
+  <% elsif controller.controller_name != 'home' %>
     <div class="header-logo">
       <%= link_to("/", class: 'logo-text') do %>
         HOME
