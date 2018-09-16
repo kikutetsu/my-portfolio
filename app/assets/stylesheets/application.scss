@@ -1333,5 +1333,11 @@ button,
     font-weight: 900;
     padding: 10px;
     text-align: center;
+    span {
+      font-size: 1.2rem;
+      font-weight: 400;
+      color: #999;
+      display: block;
+    }
   }
 }
