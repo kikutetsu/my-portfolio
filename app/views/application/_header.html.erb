@@ -1,8 +1,8 @@
 <header class="header" id="header">
   <% unless controller.controller_name == 'home' %>
     <div class="header-logo">
-      <%= link_to("/") do %>
-        <span class="circle"></span>
+      <%= link_to("/", class: 'logo-text') do %>
+        HOME
       <% end %>
     </div>
   <% end %>
