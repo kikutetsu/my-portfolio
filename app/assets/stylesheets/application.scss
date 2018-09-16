@@ -18,7 +18,6 @@ $fs-small: 1.2rem;
 html {
   font-family: "Open Sans", 'Noto Sans JP', "Hiragino Kaku Gothic ProN", Meiryo, sans-serif;
   font-feature-settings: "palt";
-  background-color: $main-color;
   font-size: 62.5%;
 }
 
@@ -1246,7 +1245,7 @@ button,
       line-height: 1.4;
       letter-spacing: -1px;
       font-weight: 900;
-      margin-bottom: 1em;
+      margin-bottom: .5em;
       @media screen and (max-width: 800px) {
         font-size: 2.4rem;
       }
