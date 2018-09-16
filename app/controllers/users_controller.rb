@@ -59,7 +59,7 @@ class UsersController < ApplicationController
       flash[:notice] = nil
       redirect_to("/")
     else
-      flash[:notice] = "ID,パスワードが違います"
+      flash[:notice] = "再入力してください"
       render("users/login_form")
     end
   end
