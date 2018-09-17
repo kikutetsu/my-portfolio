@@ -20,7 +20,7 @@ class WorksController < ApplicationController
   end
 
   def create
-    @work = Work.new(title: params[:title], category: params[:category][:name], slug: params[:slug], description: params[:description], image_length: params[:image_length], content: params[:content], image: params[:image])
+    @work = Work.new(title: params[:title], category: params[:category][:name], description: params[:description], content: params[:content], image: params[:image])
     if @work.save
       flash[:notice] = "作成しました"
       redirect_to("/works/#{@work.id}")
@@ -39,9 +39,7 @@ class WorksController < ApplicationController
     @work = Work.find_by(id: params[:id])
     @work.title = params[:title]
     @work.category = params[:category][:name]
-    @work.slug = params[:slug]
     @work.description = params[:description]
-    @work.image_length = params[:image_length]
     @work.content = params[:content]
     @work.image = params[:image]
     if @work.save
