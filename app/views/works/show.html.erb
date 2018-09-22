@@ -22,11 +22,11 @@
 <% end %>
 
 <article class="content-wrap fadein">
-<h3 class="content-title"><%= @work.title %></h1>
-<% @work.category == "ui_ux" ? work_category = "UI/UX" : work_category = @work.category %>
-<p class="content-meta"><%= work_category %></p>
-<p class="content-description"><%= @work.description %></p>
-<div class="content">
-  <%= sanitize markdown(@work.content) %>
-</div>
+  <h2 class="content-title"><%= @work.title %></h2>
+  <% @work.category == "ui_ux" ? work_category = "UI/UX" : work_category = @work.category %>
+  <p class="content-meta"><%= work_category %></p>
+  <p class="content-description"><%= @work.description %></p>
+  <div class="content">
+    <%= sanitize markdown(@work.content) %>
+  </div>
 </article>
