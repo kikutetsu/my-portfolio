@@ -1,4 +1,5 @@
 class WorkImagesController < ApplicationController
+  protect_from_forgery except: :upload
   def edit
     @image = WorkImage.new
   end

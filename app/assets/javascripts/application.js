@@ -2,7 +2,20 @@ import Dropzone from 'dropzone'
 Dropzone.autoDiscover = false;
 Dropzone.options.dropzoneArea = {
   paramName: 'image',
-  clickable: false
+  clickable: false,
+  init: function () {
+      this.on("addedfile", function (file) {
+        console.log("アップロード中です");
+      });
+      this.on("success", function (file) {
+        console.log("アップロード成功しました。");
+      });
+      this.on("error", function (file) {
+        console.log("アップロードに失敗しました。");
+      });
+      this.on("complete", function (file) {
+      });
+  }
 };
 
 document.addEventListener("DOMContentLoaded", function(){
@@ -76,5 +89,14 @@ document.addEventListener("DOMContentLoaded", function(){
     var myDropzone = new Dropzone("textarea#dropzone-area", { url: uploadUrl});
     // other code here
   }
+
+  // テキストエリア
+  var field = document.getElementById('dropzone-area');
+
+  field.addEventListener('keypress', function(e) {
+    var index = field.selectionStart;
+    console.log(index);
+    return false;
+  });
 
 }, false);
