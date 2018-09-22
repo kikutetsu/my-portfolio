@@ -1,22 +1,5 @@
 import Dropzone from 'dropzone'
 Dropzone.autoDiscover = false;
-Dropzone.options.dropzoneArea = {
-  paramName: 'image',
-  clickable: false,
-  init: function () {
-    this.on("addedfile", function (file) {
-      console.log("アップロード中です");
-    });
-    this.on("success", function (file) {
-      console.log("アップロード成功しました。");
-    });
-    this.on("error", function (file) {
-      console.log("アップロードに失敗しました。");
-    });
-    this.on("complete", function (file) {
-    });
-  }
-};
 
 document.addEventListener("DOMContentLoaded", function(){
 
