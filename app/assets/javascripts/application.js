@@ -1,5 +1,3 @@
-import Dropzone from 'dropzone'
-
 document.addEventListener("DOMContentLoaded", function(){
 
   // notify_bar
