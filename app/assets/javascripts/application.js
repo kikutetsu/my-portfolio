@@ -1,5 +1,4 @@
 import Dropzone from 'dropzone'
-Dropzone.autoDiscover = false;
 
 document.addEventListener("DOMContentLoaded", function(){
 
