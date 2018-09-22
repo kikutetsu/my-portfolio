@@ -139,6 +139,16 @@ button,
   }
 }
 
+.add-btn {
+  display: block;
+  width: 100%;
+  background-color: $point-color;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 4px;
+}
+
 // layout
 //---------------------------------------
 
@@ -862,65 +872,22 @@ button,
   }
 }
 
-.users-works_index,
-.users-posts_index,
-.users-index {
-  .card-container {
-    display: flex;
-    flex-flow: row wrap;
-    margin: 0;
-    @media screen and (max-width: 800px) {
-      margin: 0 -5px;
-    }
-    * {
-      line-height: 1.2;
-    }
-    a {
-      display: block;
-      color: $font-color;
-      &:hover {
-        .title {
-          color: $point-color;
-        }
-      }
-    }
-    .card {
-      width: 100%;
-      border: none;
-      padding: 10px 20px;
-      background-color: white;
-      border-radius: 4px;
-      margin-bottom: 20px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.1);
+.user-container {
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0;
+  @media screen and (max-width: 800px) {
+    margin: 0 -5px;
+  }
+  * {
+    line-height: 1.2;
+  }
+  a {
+    display: block;
+    &:hover {
       .title {
-        padding: 0;
-        font-size: $fs-regular;
-        font-weight: 600;
+        color: $point-color;
       }
-      .links {
-        text-align: right;
-        font-size: $fs-small;
-        span {
-          color: #999;
-          vertical-align: 1px;
-        }
-        a {
-          display: inline-block;
-          color: $point-color;
-          &:hover {
-            color: $main-color;
-          }
-        }
-      }
-    }
-    .add-card {
-      display: block;
-      width: 100%;
-      background-color: $point-color;
-      color: white;
-      padding: 20px;
-      text-align: center;
-      border-radius: 4px;
     }
   }
 }
@@ -1322,6 +1289,36 @@ button,
             font-size: 1.2rem;
             padding: 0 4% 10px;
           }
+        }
+      }
+    }
+  }
+  &--user {
+    width: 100%;
+    border: none;
+    padding: 10px 20px;
+    background-color: white;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    .title {
+      padding: 0;
+      font-size: $fs-regular;
+      font-weight: 600;
+      color: $font-color;
+    }
+    .links {
+      text-align: right;
+      font-size: $fs-small;
+      span {
+        color: #999;
+        vertical-align: 1px;
+      }
+      a {
+        display: inline-block;
+        color: $point-color;
+        &:hover {
+          color: $main-color;
         }
       }
     }

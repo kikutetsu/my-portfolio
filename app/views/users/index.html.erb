@@ -1,6 +1,6 @@
-<div class="card-container">
+<div class="user-container">
 <% @users.each do |user| %>
-  <div class="card">
+  <div class="card card--user">
     <div><%= link_to("/users/#{user.id}") do %><h3 class="title"><%= user.name %></h3><% end %></div>
     <div class="links">
       <%= link_to("編集", "/users/#{user.id}/edit") %>
@@ -9,5 +9,5 @@
     </div>
   </div>
 <% end %>
-<%= link_to("追加", "/users/new", class: "add-card") %>
+<%= link_to("追加", "/users/new", class: "add-btn") %>
 </div>

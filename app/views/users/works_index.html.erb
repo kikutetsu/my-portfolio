@@ -1,6 +1,6 @@
-<div class="card-container">
+<div class="user-container">
 <% @works.each do |work| %>
-  <div class="card">
+  <div class="card card--user">
     <div><%= link_to("/works/#{work.id}") do %><h3 class="title"><%= work.title %></h3><% end %></div>
     <div class="links">
       <%= link_to("編集", "/works/#{work.id}/edit") %>
@@ -9,5 +9,5 @@
     </div>
   </div>
 <% end %>
-<%= link_to("追加", "/works/new", class: "add-card") %>
+<%= link_to("追加", "/works/new", class: "add-btn") %>
 </div>
