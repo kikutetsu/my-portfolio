@@ -1,0 +1,14 @@
+<% works.each do |work| %>
+  <div class="card full-size fadein">
+    <%= link_to("/works/#{work.id}") do %>
+      <div class="card-inner">
+        <figure class="content-main-image"><%= image_tag work.image.to_s %></figure>
+        <h3 class="title"><%= work.title %></h3>
+        <div class="category-wrap">
+          <% work.category = "UI/UX" if work.category == "ui_ux" %>
+          <p class="category"><%= work.category %></p>
+        </div>
+      </div>
+    <% end %>
+  </div>
+<% end %>
