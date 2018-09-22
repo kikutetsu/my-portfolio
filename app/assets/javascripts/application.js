@@ -1,3 +1,10 @@
+import Dropzone from 'dropzone'
+Dropzone.autoDiscover = false;
+Dropzone.options.dropzoneArea = {
+  paramName: 'image',
+  clickable: false
+};
+
 document.addEventListener("DOMContentLoaded", function(){
 
   // notify_bar
@@ -62,5 +69,12 @@ document.addEventListener("DOMContentLoaded", function(){
   window.addEventListener('scroll', () => {
     scrollFadeIn('fadein', 'scrollin', 40);
   }, false)
+
+  if (document.getElementById('dropzone-area')) {
+    var url = location.href
+    var uploadUrl = url.replace('edit', 'upload');
+    var myDropzone = new Dropzone("textarea#dropzone-area", { url: uploadUrl});
+    // other code here
+  }
 
 }, false);

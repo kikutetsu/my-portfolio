@@ -15,6 +15,7 @@
     "redux-saga": "^0.16.0"
   },
   "devDependencies": {
+    "dropzone": "^5.5.1",
     "webpack-dev-server": "2.11.2"
   }
 }

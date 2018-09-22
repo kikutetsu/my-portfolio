@@ -4,12 +4,22 @@ class WorkImagesController < ApplicationController
   end
 
   def upload
-    @image = WorkImage.create({
-        work_id: params[:id],
-        image: params[:image]
-    })
-    flash[:notice] = '追加しました'
-    redirect_to("/works/#{params[:id]}/edit")
+    respond_to do |format|
+      format.html {
+        @image = WorkImage.create({
+            work_id: params[:id],
+            image: params[:image]
+        })
+        flash[:notice] = '追加しました'
+        redirect_to("/works/#{params[:id]}/edit")
+      }
+      format.json {
+        @image = WorkImage.create({
+            work_id: params[:id],
+            image: params[:image]
+        })
+      }
+    end
   end
 
   def destroy
