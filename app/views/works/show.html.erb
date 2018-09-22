@@ -6,7 +6,7 @@
 <% end %>
 
 <% content_for :page_title do%>
-  <div class="content-nav">
+  <div class="content__nav">
     <% if @work.previous %>
     <%= link_to("< back", "/works/#{@work.previous.id}") %>
     <% else %>
@@ -21,12 +21,12 @@
   </div>
 <% end %>
 
-<article class="content-wrap fadein">
-  <h2 class="content-title"><%= @work.title %></h2>
+<article class="content fadein">
+  <h2 class="content__title"><%= @work.title %></h2>
   <% @work.category == "ui_ux" ? work_category = "UI/UX" : work_category = @work.category %>
-  <p class="content-meta"><%= work_category %></p>
-  <p class="content-description"><%= @work.description %></p>
-  <div class="content">
+  <p class="content__meta"><%= work_category %></p>
+  <p class="content__description"><%= @work.description %></p>
+  <div class="content__main">
     <%= sanitize markdown(@work.content) %>
   </div>
 </article>

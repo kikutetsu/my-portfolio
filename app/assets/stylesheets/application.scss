@@ -107,6 +107,10 @@ button {
   }
 }
 
+.works-img {
+  margin-bottom: 30px;
+}
+
 // button
 //---------------------------------------
 
@@ -172,14 +176,6 @@ button,
     @media screen and (max-width: 800px) {
       padding-bottom: 100px;
     }
-  }
-}
-
-.content {
-  padding: 0;
-  img {
-    width: 100%;
-    background-color: #f5f5f5;
   }
 }
 
@@ -515,183 +511,6 @@ button,
   }
 }
 
-// works
-//---------------------------------------
-
-.card-container {
-  display: flex;
-  flex-flow: row wrap;
-  margin: 0;
-  &.full-size {
-    @media screen and (max-width: 800px) {
-      margin: 0 -10px;
-    }
-  }
-  @media screen and (max-width: 800px) {
-    margin: 0 -5px;
-  }
-  * {
-    line-height: 1.2;
-  }
-  a {
-    display: block;
-    color: $font-color;
-    &:hover {
-      .title {
-        color: $point-color;
-      }
-    }
-  }
-  .card {
-    box-sizing: border-box;
-    width: 50%;
-    padding: 20px;
-    &.full-size {
-      @media screen and (max-width: 800px) {
-      width: 100%;
-      padding: 10px;
-      }
-      .title {
-        @media screen and (max-width: 800px) {
-          font-size: $fs-regular;
-          padding: 0 4%;
-        }
-      }
-      .category {
-        @media screen and (max-width: 800px) {
-          font-size: 1.2rem;
-          padding: 0 4% 10px;
-        }
-      }
-    }
-    @media screen and (max-width: 600px) {
-      padding: 5px;
-    }
-    > a {
-      position: relative;
-      overflow: hidden;
-      border: 1px #eee solid;
-      border-radius: 8px;
-      box-shadow: 0 2px 8px rgba(0,0,0,.1);
-      &:hover {
-        transform: translateY(-4px);
-        box-shadow: 0 4px 16px rgba(0,0,0,.1);
-      }
-    }
-    .card-inner {
-      background-color: white;
-    }
-    .title {
-      margin: 10px 0;
-      padding: 0 20px;
-      font-size: $fs-medium;
-      line-height: 1.4;
-      font-weight: 700;
-      white-space: nowrap;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      @media screen and (max-width: 800px) {
-        font-size: 1.1rem;
-        padding: 0 10px;
-        margin: 10px 0 5px;
-      }
-    }
-    .category-wrap {
-    }
-    .category {
-      display: block;
-      margin: 0;
-      padding: 0 20px 20px;
-      font-size: 1.2rem;
-      font-weight: 400;
-      position: relative;
-      color: #999;
-      @media screen and (max-width: 800px) {
-        font-size: 1rem;
-        padding: 0 10px 10px;
-      }
-    }
-  }
-}
-
-.works-img {
-  margin-bottom: 30px;
-}
-
-.content-title {
-  font-size: 3rem;
-  line-height: 1.4;
-  font-weight: 900;
-  margin: 15px 0;
-  @media screen and (max-width: 800px) {
-    margin: 10px 0;
-    font-size: $fs-xlarge;
-  }
-}
-
-.content-nav {
-  display: block;
-  position: fixed;
-  bottom: 30px;
-  left: 50%;
-  padding: 0 10px;
-  transform: translate(-50%, 0);
-  text-align: right;
-  overflow: hidden;
-  z-index: 140;
-  font-size: $fs-regular;
-  line-height: 40px;
-  border-radius: 20px;
-  background-color: $point-color;
-  box-shadow: 0 2px 8px rgba(0,0,0,.1), 0 4px 16px rgba(0,0,0,.1);
-  text-align: center;
-  a {
-    font-weight: 700;
-    display: inline-block;
-    padding: 0 10px;
-    color: white;
-    &:hover {
-      color: rgba(255,255,255,.6);
-    }
-    &.disable {
-      color: rgba(255,255,255,.6);
-      &:hover {
-        color: rgba(255,255,255,.6);
-      }
-    }
-  }
-  @media screen and (max-width: 800px) {
-    padding: 0 5px;
-    line-height: 40px;
-    border-radius: 20px;
-    min-width: 220px;
-    a {
-      font-size: $fs-regular;
-      padding: 0 10px;
-    }
-  }
-}
-
-.content-meta {
-  display: inline-block;
-  margin: 0 0 30px;
-  font-size: 1.2rem;
-  font-weight: 400;
-  position: relative;
-  color: #999;
-  @media screen and (max-width: 800px) {
-    margin-bottom: 20px;
-  }
-}
-
-.content-description {
-  margin-bottom: 40px;
-  @media screen and (max-width: 800px) {
-    margin-bottom: 20px;
-    font-size: $fs-regular;
-  }
-}
-
 // form
 //---------------------------------------
 .form-container {
@@ -938,7 +757,7 @@ button,
 }
 
 // markdown style
-.content {
+.content__main {
   p,ul,ol {
     margin: 30px 0;
   }
@@ -988,10 +807,7 @@ button,
       background-color: inherit;
     }
   }
-}
-
-@media screen and (max-width: 800px) {
-  .content {
+  @media screen and (max-width: 800px) {
     p,ul,ol {
       margin: 20px 0;
     }
@@ -1050,6 +866,24 @@ button,
 .users-posts_index,
 .users-index {
   .card-container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    @media screen and (max-width: 800px) {
+      margin: 0 -5px;
+    }
+    * {
+      line-height: 1.2;
+    }
+    a {
+      display: block;
+      color: $font-color;
+      &:hover {
+        .title {
+          color: $point-color;
+        }
+      }
+    }
     .card {
       width: 100%;
       border: none;
@@ -1366,6 +1200,221 @@ button,
     object-fit: cover;
     @media screen and (max-width: 800px) {
       transform: scale(1.2);
+    }
+  }
+}
+
+
+// ================================
+// components
+// ================================
+
+// *** card ***
+
+.card {
+  box-sizing: border-box;
+  width: 50%;
+  padding: 20px;
+  @media screen and (max-width: 600px) {
+    padding: 5px;
+  }
+  > a {
+    position: relative;
+    overflow: hidden;
+    border: 1px #eee solid;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1);
+    &:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 4px 16px rgba(0,0,0,.1);
+    }
+  }
+  .inner {
+    background-color: white;
+  }
+  .image {
+    position: relative;
+    overflow: hidden;
+    &.round {
+      border-radius: 8px;
+    }
+    &:after {
+      width: 100%;
+      padding-top: 60%;
+      display: block;
+      content: "";
+      background-color: white;
+    }
+    img{
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: block;
+      border-radius: 0;
+      border: none;
+      object-fit: cover;
+    }
+  }
+  .title {
+    margin: 10px 0;
+    padding: 0 20px;
+    font-size: $fs-medium;
+    line-height: 1.4;
+    font-weight: 700;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    @media screen and (max-width: 800px) {
+      font-size: 1.1rem;
+      padding: 0 10px;
+      margin: 10px 0 5px;
+    }
+  }
+  .sub {
+    display: block;
+    margin: 0;
+    padding: 0 20px 20px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    position: relative;
+    color: #999;
+    @media screen and (max-width: 800px) {
+      font-size: 1rem;
+      padding: 0 10px 10px;
+    }
+  }
+  &--container {
+    display: flex;
+    flex-flow: row wrap;
+    margin: 0;
+    @media screen and (max-width: 800px) {
+      margin: 0 -5px;
+    }
+    * {
+      line-height: 1.2;
+    }
+    a {
+      display: block;
+      color: $font-color;
+      &:hover {
+        .title {
+          color: $point-color;
+        }
+      }
+    }
+    &.full-size {
+      @media screen and (max-width: 800px) {
+        margin: 0 -10px;
+      }
+      .card {
+        @media screen and (max-width: 800px) {
+        width: 100%;
+        padding: 10px;
+        }
+        .title {
+          @media screen and (max-width: 800px) {
+            font-size: $fs-regular;
+            padding: 0 4%;
+          }
+        }
+        .sub {
+          @media screen and (max-width: 800px) {
+            font-size: 1.2rem;
+            padding: 0 4% 10px;
+          }
+        }
+      }
+    }
+  }
+}
+
+// *** content ***
+
+.content {
+  background-color: white;
+  border-radius: 8px;
+  padding: 30px;
+  box-shadow: 0 2px 8px rgba(0,0,0,.1);
+  @media screen and (max-width: 800px) {
+    background-color: white;
+    padding: 4vw;
+  }
+  &__main {
+    padding: 0;
+    img {
+      width: 100%;
+      background-color: #f5f5f5;
+    }
+  }
+  &__title {
+    font-size: 3rem;
+    line-height: 1.4;
+    font-weight: 900;
+    margin: 15px 0;
+    @media screen and (max-width: 800px) {
+      margin: 10px 0;
+      font-size: $fs-xlarge;
+    }
+  }
+  &__nav {
+    display: block;
+    position: fixed;
+    bottom: 30px;
+    left: 50%;
+    padding: 0 10px;
+    transform: translate(-50%, 0);
+    text-align: right;
+    overflow: hidden;
+    z-index: 140;
+    font-size: $fs-regular;
+    line-height: 40px;
+    border-radius: 20px;
+    background-color: $point-color;
+    box-shadow: 0 2px 8px rgba(0,0,0,.1), 0 4px 16px rgba(0,0,0,.1);
+    text-align: center;
+    a {
+      font-weight: 700;
+      display: inline-block;
+      padding: 0 10px;
+      color: white;
+      &:hover {
+        color: rgba(255,255,255,.6);
+      }
+      &.disable {
+        color: rgba(255,255,255,.6);
+        &:hover {
+          color: rgba(255,255,255,.6);
+        }
+      }
+    }
+    @media screen and (max-width: 800px) {
+      padding: 0 5px;
+      line-height: 40px;
+      border-radius: 20px;
+      min-width: 220px;
+      a {
+        font-size: $fs-regular;
+        padding: 0 10px;
+      }
+    }
+  }
+
+  &__meta {
+    display: inline-block;
+    margin: 0 0 30px;
+    font-size: 1.2rem;
+    font-weight: 400;
+    position: relative;
+    color: #999;
+    @media screen and (max-width: 800px) {
+      margin-bottom: 20px;
+    }
+  }
+  &__description {
+    margin-bottom: 40px;
+    @media screen and (max-width: 800px) {
+      margin-bottom: 20px;
+      font-size: $fs-regular;
     }
   }
 }
