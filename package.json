@@ -4,6 +4,7 @@
   "dependencies": {
     "@rails/webpacker": "3.4",
     "babel-preset-react": "^6.24.1",
+    "dropzone": "^5.5.1",
     "prop-types": "^15.6.1",
     "rails-erb-loader": "^5.4.1",
     "rails-ujs": "^5.2.0",
@@ -15,7 +16,6 @@
     "redux-saga": "^0.16.0"
   },
   "devDependencies": {
-    "dropzone": "^5.5.1",
     "webpack-dev-server": "2.11.2"
   }
 }
