@@ -7,6 +7,7 @@ Dropzone.options.dropzoneArea = {
   init: function () {
     this.on("addedfile", function (file) {
       console.log("アップロード中です");
+      nowUploading();
     });
     this.on("success", function (file, response) {
       console.log("アップロード成功しました。");
@@ -28,26 +29,22 @@ const insertImage = (imageUrl) => {
 
 const insertText = (textarea, src) => {
   var sentence = textarea.value;
+  var word = `![altText](${src})`;
+  sentence = sentence.replace('Now Uploading Image...', word);
+  textarea.value = sentence;
+}
+
+const nowUploading = () => {
+  var textarea = document.querySelector('#dropzone-area');
+  var sentence = textarea.value;
   var len = sentence.length;
   var pos = textarea.selectionStart;
   var before = sentence.substr(0, pos);
   var after = sentence.substr(pos, len);
-  var word = `![altText](${src})`;
+  var word = 'Now Uploading Image...';
   sentence = before + word + after;
   textarea.value = sentence;
 }
-
-// const nowUploading = () => {
-//   var textarea = document.querySelector('#dropzone-area');
-//   var sentence = textarea.value;
-//   var len = sentence.length;
-//   var pos = textarea.selectionStart;
-//   var before = sentence.substr(0, pos);
-//   var after = sentence.substr(pos, len);
-//   var word = 'Now Uploading Image!';
-//   sentence = before + word + after;
-//   textarea.value = sentence;
-// }
 
 document.addEventListener("DOMContentLoaded", function(){
 
