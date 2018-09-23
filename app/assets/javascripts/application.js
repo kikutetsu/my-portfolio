@@ -8,8 +8,9 @@ Dropzone.options.dropzoneArea = {
       this.on("addedfile", function (file) {
         console.log("アップロード中です");
       });
-      this.on("success", function (file) {
+      this.on("success", function (file, response) {
         console.log("アップロード成功しました。");
+        console.log(response.image.url);
       });
       this.on("error", function (file) {
         console.log("アップロードに失敗しました。");

@@ -19,6 +19,8 @@ class WorkImagesController < ApplicationController
             work_id: params[:id],
             image: params[:image]
         })
+        response = {"image": @image.image}
+        render json: response
       }
     end
   end
