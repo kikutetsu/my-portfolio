@@ -15,6 +15,7 @@ Dropzone.options.dropzoneArea = {
     });
     this.on("error", function (file) {
       console.log("アップロードに失敗しました。");
+      uploadError();
     });
     this.on("complete", function (file) {
     });
@@ -43,6 +44,12 @@ const nowUploading = () => {
   var after = sentence.substr(pos, len);
   var word = 'Now Uploading Image...';
   sentence = before + word + after;
+  textarea.value = sentence;
+}
+
+const uploadError = () => {
+  var sentence = textarea.value;
+  sentence = sentence.replace('Now Uploading Image...', '');
   textarea.value = sentence;
 }
 
