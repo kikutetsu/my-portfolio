@@ -5,20 +5,49 @@ Dropzone.options.dropzoneArea = {
   paramName: 'image',
   clickable: false,
   init: function () {
-      this.on("addedfile", function (file) {
-        console.log("アップロード中です");
-      });
-      this.on("success", function (file, response) {
-        console.log("アップロード成功しました。");
-        console.log(response.image.url);
-      });
-      this.on("error", function (file) {
-        console.log("アップロードに失敗しました。");
-      });
-      this.on("complete", function (file) {
-      });
+    this.on("addedfile", function (file) {
+      console.log("アップロード中です");
+    });
+    this.on("success", function (file, response) {
+      console.log("アップロード成功しました。");
+      insertImage(response.image.url);
+    });
+    this.on("error", function (file) {
+      console.log("アップロードに失敗しました。");
+    });
+    this.on("complete", function (file) {
+    });
   }
 };
+
+const insertImage = (imageUrl) => {
+  var field = document.querySelector('#dropzone-area');
+  var index = field.selectionStart;
+  insertText(field, imageUrl)
+}
+
+const insertText = (textarea, src) => {
+  var sentence = textarea.value;
+  var len = sentence.length;
+  var pos = textarea.selectionStart;
+  var before = sentence.substr(0, pos);
+  var after = sentence.substr(pos, len);
+  var word = `![altText](${src})`;
+  sentence = before + word + after;
+  textarea.value = sentence;
+}
+
+// const nowUploading = () => {
+//   var textarea = document.querySelector('#dropzone-area');
+//   var sentence = textarea.value;
+//   var len = sentence.length;
+//   var pos = textarea.selectionStart;
+//   var before = sentence.substr(0, pos);
+//   var after = sentence.substr(pos, len);
+//   var word = 'Now Uploading Image!';
+//   sentence = before + word + after;
+//   textarea.value = sentence;
+// }
 
 document.addEventListener("DOMContentLoaded", function(){
 
@@ -89,16 +118,6 @@ document.addEventListener("DOMContentLoaded", function(){
     var url = location.href
     var uploadUrl = url.replace('edit', 'upload');
     var myDropzone = new Dropzone("textarea#dropzone-area", { url: uploadUrl});
-    // other code here
   }
-
-  // テキストエリア
-  var field = document.getElementById('dropzone-area');
-
-  field.addEventListener('keypress', function(e) {
-    var index = field.selectionStart;
-    console.log(index);
-    return false;
-  });
 
 }, false);
