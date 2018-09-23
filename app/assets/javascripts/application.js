@@ -1,4 +1,4 @@
-import Dropzone from 'dropzone/dist/dropzone';
+import Dropzone from '../../../node_modules/dropzone/dist/dropzone';
 
 Dropzone.autoDiscover = false;
 Dropzone.options.dropzoneArea = {
