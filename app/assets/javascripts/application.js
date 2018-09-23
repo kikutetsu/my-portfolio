@@ -1,4 +1,4 @@
-const Dropzone = require('dropzone');
+import Dropzone from 'dropzone/dist/dropzone';
 
 Dropzone.autoDiscover = false;
 Dropzone.options.dropzoneArea = {
