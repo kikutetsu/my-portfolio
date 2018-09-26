@@ -778,6 +778,9 @@ button,
     padding-bottom: 10px;
     border-bottom: #eee 2px solid;
   }
+  p {
+    font-size: $fs-regular;
+  }
   a {
     color: $point-color;
     &:hover {
@@ -788,7 +791,7 @@ button,
     padding-left: 24px;
     li {
       list-style:  disc;
-      font-size: $fs-medium;
+      font-size: $fs-regular;
       padding: .2em 0;
     }
   }
@@ -796,7 +799,7 @@ button,
     padding-left: 24px;
     li {
       list-style:  decimal;
-      font-size: $fs-medium;
+      font-size: $fs-regular;
       padding: .2em 0;
     }
   }
