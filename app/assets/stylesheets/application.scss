@@ -63,12 +63,12 @@ li {
 }
 
 p {
-  font-size: $fs-regular;
+  font-size: $fs-medium;
   line-height: 2;
   font-weight: 400;
   color: $text-color;
   @media screen and (max-width: 800px) {
-    font-size: $fs-small;
+    font-size: $fs-regular;
     line-height: 1.8;
   }
 }
@@ -836,11 +836,11 @@ button,
       font-size: $fs-regular;
     }
     p {
-      font-size: $fs-regular;
+      font-size: $fs-small;
     }
     ul,ol {
       li {
-        font-size: $fs-regular;
+        font-size: $fs-small;
       }
     }
   }
