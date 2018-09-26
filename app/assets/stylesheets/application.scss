@@ -63,13 +63,13 @@ li {
 }
 
 p {
-  font-size: $fs-medium;
+  font-size: $fs-regular;
   line-height: 2;
   font-weight: 400;
   color: $text-color;
   @media screen and (max-width: 800px) {
-    font-size: $fs-regular;
-    line-height: 1.6;
+    font-size: $fs-small;
+    line-height: 1.8;
   }
 }
 
