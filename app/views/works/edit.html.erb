@@ -8,15 +8,6 @@
   <input type="file" name="image">
   <label>概要テキスト</label>
   <textarea name="description"><%= @work.description %></textarea>
-  <div class="title-wrapper">
-    <label>本文用画像</label>
-    <%= link_to('画像アップロード', "/works/#{@work.id}/image_upload", class: 'title-button') %>
-  </div>
-  <div class="file-list">
-    <% @images.each do |image| %>
-      <p class="file-name"><%= image_tag image.image.to_s %><span class="file-path"><%= image.image.to_s %></span><%= link_to("削除", "/works/#{@work.id}/image_upload/#{image.id}/destroy", {method: :post, class: 'file-remove'}) %></p>
-    <% end %>
-  </div>
   <label>本文</label>
   <textarea name="content" id="dropzone-area"><%= @work.content %></textarea>
   <button type="submit">編集</button>
